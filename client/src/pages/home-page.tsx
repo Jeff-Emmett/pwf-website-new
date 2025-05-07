@@ -1,0 +1,27 @@
+import { HeroSection } from "@/components/home/hero-section";
+import { FeaturesSection } from "@/components/home/feature-card";
+import { AboutSection } from "@/components/about/about-section";
+import { ClassesSection } from "@/components/classes/classes-section";
+import { CommunitySection } from "@/components/community/community-section";
+import { NewsletterSection } from "@/components/newsletter/newsletter-section";
+import { ContactSection } from "@/components/contact/contact-section";
+import { useEffect } from "react";
+
+export default function HomePage() {
+  // Set meta data for SEO
+  useEffect(() => {
+    document.title = "Pilates with Fadia | Find Balance, Strength & Inner Peace";
+  }, []);
+
+  return (
+    <main>
+      <HeroSection />
+      <FeaturesSection />
+      <AboutSection />
+      <ClassesSection />
+      <CommunitySection />
+      <NewsletterSection />
+      <ContactSection />
+    </main>
+  );
+}
