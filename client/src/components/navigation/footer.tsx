@@ -33,28 +33,43 @@ export default function Footer() {
             <h3 className="font-playfair font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/">
-                  <a className="text-gray-400 hover:text-white transition duration-300">Home</a>
+                <Link 
+                  href="/" 
+                  className="text-gray-400 hover:text-white transition duration-300"
+                >
+                  Home
                 </Link>
               </li>
               <li>
-                <Link href="/about">
-                  <a className="text-gray-400 hover:text-white transition duration-300">About Fadia</a>
+                <Link 
+                  href="/about" 
+                  className="text-gray-400 hover:text-white transition duration-300"
+                >
+                  About Fadia
                 </Link>
               </li>
               <li>
-                <Link href="/classes">
-                  <a className="text-gray-400 hover:text-white transition duration-300">Classes</a>
+                <Link 
+                  href="/classes" 
+                  className="text-gray-400 hover:text-white transition duration-300"
+                >
+                  Classes
                 </Link>
               </li>
               <li>
-                <Link href="/community">
-                  <a className="text-gray-400 hover:text-white transition duration-300">Community</a>
+                <Link 
+                  href="/community" 
+                  className="text-gray-400 hover:text-white transition duration-300"
+                >
+                  Community
                 </Link>
               </li>
               <li>
-                <Link href="/contact">
-                  <a className="text-gray-400 hover:text-white transition duration-300">Contact</a>
+                <Link 
+                  href="/contact" 
+                  className="text-gray-400 hover:text-white transition duration-300"
+                >
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -64,13 +79,19 @@ export default function Footer() {
             <h3 className="font-playfair font-bold text-lg mb-4">Classes</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/classes">
-                  <a className="text-gray-400 hover:text-white transition duration-300">Mat Pilates</a>
+                <Link 
+                  href="/classes" 
+                  className="text-gray-400 hover:text-white transition duration-300"
+                >
+                  Mat Pilates
                 </Link>
               </li>
               <li>
-                <Link href="/classes">
-                  <a className="text-gray-400 hover:text-white transition duration-300">Reformer</a>
+                <Link 
+                  href="/classes" 
+                  className="text-gray-400 hover:text-white transition duration-300"
+                >
+                  Reformer
                 </Link>
               </li>
               <li>

@@ -66,15 +66,17 @@ export default function Header() {
               </>
             ) : (
               <>
-                <Link href="/auth">
-                  <a className="text-teal hover:text-teal-600 transition-colors duration-200 font-raleway font-medium">
-                    Login
-                  </a>
+                <Link 
+                  href="/auth" 
+                  className="text-teal hover:text-teal-600 transition-colors duration-200 font-raleway font-medium"
+                >
+                  Login
                 </Link>
-                <Link href="/auth">
-                  <a className="bg-teal text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-colors duration-200 font-raleway font-medium">
-                    Sign Up
-                  </a>
+                <Link 
+                  href="/auth" 
+                  className="bg-teal text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-colors duration-200 font-raleway font-medium"
+                >
+                  Sign Up
                 </Link>
               </>
             )}
@@ -93,10 +95,11 @@ export default function Header() {
                 <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
                   {navLinks.map((link) => (
                     <SheetClose asChild key={link.path}>
-                      <Link href={link.path}>
-                        <a className={`block px-3 py-2 text-base font-medium ${isActive(link.path)}`}>
-                          {link.name}
-                        </a>
+                      <Link 
+                        href={link.path}
+                        className={`block px-3 py-2 text-base font-medium ${isActive(link.path)}`}
+                      >
+                        {link.name}
                       </Link>
                     </SheetClose>
                   ))}
@@ -119,17 +122,19 @@ export default function Header() {
                   ) : (
                     <>
                       <SheetClose asChild>
-                        <Link href="/auth">
-                          <a className="block px-3 py-2 text-base font-medium text-teal hover:text-teal-600">
-                            Login
-                          </a>
+                        <Link 
+                          href="/auth"
+                          className="block px-3 py-2 text-base font-medium text-teal hover:text-teal-600"
+                        >
+                          Login
                         </Link>
                       </SheetClose>
                       <SheetClose asChild>
-                        <Link href="/auth">
-                          <a className="block px-3 py-2 text-base font-medium text-white bg-teal rounded-full text-center hover:bg-opacity-90">
-                            Sign Up
-                          </a>
+                        <Link 
+                          href="/auth"
+                          className="block px-3 py-2 text-base font-medium text-white bg-teal rounded-full text-center hover:bg-opacity-90"
+                        >
+                          Sign Up
                         </Link>
                       </SheetClose>
                     </>
