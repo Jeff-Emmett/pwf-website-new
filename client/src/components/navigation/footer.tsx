@@ -95,18 +95,27 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/classes">
-                  <a className="text-gray-400 hover:text-white transition duration-300">Private Sessions</a>
+                <Link 
+                  href="/classes" 
+                  className="text-gray-400 hover:text-white transition duration-300"
+                >
+                  Private Sessions
                 </Link>
               </li>
               <li>
-                <Link href="/classes">
-                  <a className="text-gray-400 hover:text-white transition duration-300">Group Classes</a>
+                <Link 
+                  href="/classes" 
+                  className="text-gray-400 hover:text-white transition duration-300"
+                >
+                  Group Classes
                 </Link>
               </li>
               <li>
-                <Link href="/classes">
-                  <a className="text-gray-400 hover:text-white transition duration-300">Special Workshops</a>
+                <Link 
+                  href="/classes" 
+                  className="text-gray-400 hover:text-white transition duration-300"
+                >
+                  Special Workshops
                 </Link>
               </li>
             </ul>

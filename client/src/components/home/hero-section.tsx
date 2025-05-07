@@ -14,15 +14,17 @@ export function HeroSection() {
             Transform your body and mind through the art of Pilates. Join our serene studio for personalized sessions that promote harmony, flexibility, and strength.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link href="/classes">
-              <a className="bg-teal hover:bg-opacity-90 text-white font-medium py-3 px-6 rounded-full transition duration-300 text-center">
-                Book a Class
-              </a>
+            <Link
+              href="/classes"
+              className="bg-teal hover:bg-opacity-90 text-white font-medium py-3 px-6 rounded-full transition duration-300 text-center"
+            >
+              Book a Class
             </Link>
-            <Link href="/about">
-              <a className="bg-purple hover:bg-opacity-90 text-white font-medium py-3 px-6 rounded-full transition duration-300 text-center">
-                About Fadia
-              </a>
+            <Link
+              href="/about"
+              className="bg-purple hover:bg-opacity-90 text-white font-medium py-3 px-6 rounded-full transition duration-300 text-center"
+            >
+              About Fadia
             </Link>
           </div>
         </div>

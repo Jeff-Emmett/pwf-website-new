@@ -8,8 +8,10 @@ export function Logo({ className = "", size = "regular" }: { className?: string,
   };
 
   return (
-    <Link href="/">
-      <a className={`inline-block ${className}`}>
+    <Link 
+      href="/"
+      className={`inline-block ${className}`}
+    >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 600 100"
@@ -27,7 +29,6 @@ export function Logo({ className = "", size = "regular" }: { className?: string,
             Pilates with Fadia
           </text>
         </svg>
-      </a>
     </Link>
   );
 }
