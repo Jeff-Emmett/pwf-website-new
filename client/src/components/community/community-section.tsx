@@ -98,10 +98,11 @@ export function CommunitySection() {
                 <p className="text-gray-600 text-sm">Share your journey, ask questions, and connect with others.</p>
               </div>
               {!user && (
-                <Link href="/auth">
-                  <a className="bg-purple text-white font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition duration-300">
-                    Sign Up to Participate
-                  </a>
+                <Link 
+                  href="/auth"
+                  className="bg-purple text-white font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition duration-300"
+                >
+                  Sign Up to Participate
                 </Link>
               )}
             </div>
