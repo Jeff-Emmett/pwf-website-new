@@ -69,7 +69,7 @@ export function ClassCard({ classData, onBookClick }: ClassCardProps) {
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105">
       <img 
-        src={classData.imageUrl || "https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop"} 
+        src={classData.imageUrl as string || "https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop"} 
         alt={classData.name} 
         className="w-full h-48 object-cover" 
       />

@@ -40,10 +40,12 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
-              <Link key={link.path} href={link.path}>
-                <a className={`transition-colors duration-200 font-raleway font-medium ${isActive(link.path)}`}>
-                  {link.name}
-                </a>
+              <Link 
+                key={link.path} 
+                href={link.path} 
+                className={`transition-colors duration-200 font-raleway font-medium ${isActive(link.path)}`}
+              >
+                {link.name}
               </Link>
             ))}
           </nav>
