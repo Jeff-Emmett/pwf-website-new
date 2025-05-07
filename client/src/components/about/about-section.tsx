@@ -69,11 +69,10 @@ export function AboutSection() {
               </div>
               
               <div className="mt-8">
-                <Link 
-                  href="/contact"
-                  className="inline-block bg-teal text-white font-medium py-3 px-6 rounded-full hover:bg-opacity-90 transition duration-300"
-                >
-                  Connect with Me
+                <Link href="/contact">
+                  <a className="inline-block bg-teal text-white font-medium py-3 px-6 rounded-full hover:bg-opacity-90 transition duration-300">
+                    Connect with Me
+                  </a>
                 </Link>
               </div>
             </div>
