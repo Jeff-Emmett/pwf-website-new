@@ -1,4 +1,5 @@
 import React from "react";
+import { SectionDividerBottom, CrescentDivider } from "@/components/ui/section-divider";
 
 interface FeatureCardProps {
   title: string;
@@ -84,12 +85,33 @@ export function FeaturesSection() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {features.map((feature, index) => (
-          <FeatureCard key={index} {...feature} />
-        ))}
+    <section className="relative py-20 overflow-hidden">
+      <div className="absolute inset-0 bg-white"></div>
+      
+      <div className="relative">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gray-800 relative inline-block">
+            <span className="relative z-10">Core Benefits</span>
+            <div className="absolute -bottom-3 left-0 w-full h-1 bg-purple opacity-20"></div>
+          </h2>
+          <CrescentDivider color="purple" className="mt-4" />
+          <p className="mt-4 max-w-2xl mx-auto text-gray-600">
+            Experience the transformative power of Pilates through these foundational principles
+          </p>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <FeatureCard key={index} {...feature} />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+      
+      <div className="mt-16">
+        <SectionDividerBottom color="purple" />
+      </div>
+    </section>
   );
 }
