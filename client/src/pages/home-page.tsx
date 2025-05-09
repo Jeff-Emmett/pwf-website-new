@@ -5,6 +5,7 @@ import { ClassesSection } from "@/components/classes/classes-section";
 import { CommunitySection } from "@/components/community/community-section";
 import { NewsletterSection } from "@/components/newsletter/newsletter-section";
 import { ContactSection } from "@/components/contact/contact-section";
+import { CTASection } from "@/components/home/cta-section";
 import { useEffect } from "react";
 
 export default function HomePage() {
@@ -21,6 +22,7 @@ export default function HomePage() {
       <ClassesSection />
       <CommunitySection />
       <NewsletterSection />
+      <CTASection />
       <ContactSection />
     </main>
   );

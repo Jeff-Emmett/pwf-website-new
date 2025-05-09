@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { SectionDivider, SectionDividerBottom } from "@/components/ui/section-divider";
-import { ArabicPattern } from "@/components/ui/section-divider";
+import { IslamicPattern } from "@/components/ui/section-divider";
 
 export function CTASection() {
   return (
@@ -8,7 +8,7 @@ export function CTASection() {
       <SectionDivider color="purple" />
       
       <div className="relative py-20 bg-purple text-white">
-        <ArabicPattern color="purple" opacity={10} />
+        <IslamicPattern color="purple" opacity={10} />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-6">
