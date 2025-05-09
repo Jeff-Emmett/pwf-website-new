@@ -1,5 +1,4 @@
 import React from "react";
-import { SectionDividerBottom, CrescentDivider } from "@/components/ui/section-divider";
 
 interface FeatureCardProps {
   title: string;
@@ -9,54 +8,17 @@ interface FeatureCardProps {
 }
 
 export function FeatureCard({ title, description, icon, color }: FeatureCardProps) {
-  const colorClasses = {
-    teal: {
-      bg: "bg-teal-light",
-      iconBg: "bg-teal",
-      text: "text-teal",
-      pattern: "islamic-pattern-teal",
-    },
-    purple: {
-      bg: "bg-purple-light",
-      iconBg: "bg-purple",
-      text: "text-purple",
-      pattern: "islamic-pattern",
-    },
-    rose: {
-      bg: "bg-rose-light",
-      iconBg: "bg-rose",
-      text: "text-rose",
-      pattern: "islamic-pattern-rose",
-    },
+  const colorMap = {
+    teal: "#0c8991",
+    purple: "#9D5E9B",
+    rose: "#B55076"
   };
-
+  
   return (
-    <div className="group relative rounded-lg p-6 text-center transition-all duration-300 hover:shadow-lg overflow-hidden bg-white">
-      <div className={`absolute inset-0 ${colorClasses[color].pattern} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-      
-      {/* Icon container with geometric border */}
-      <div className="relative">
-        <div className={`w-20 h-20 ${colorClasses[color].iconBg} rounded-full flex items-center justify-center mx-auto mb-5 transform transition-transform group-hover:scale-110 duration-300`}>
-          <i className={`fas ${icon} text-white text-2xl`}></i>
-        </div>
-        
-        {/* Decorative elements */}
-        <div className="absolute top-9 left-1/2 transform -translate-x-1/2 -z-10">
-          <svg width="120" height="120" viewBox="0 0 120 120" className="absolute top-0 left-0 -mt-10 -ml-10">
-            <polygon 
-              points="60,0 77.8,42.2 120,42.2 85.1,68.2 97.1,110.3 60,86.3 22.9,110.3 34.9,68.2 0,42.2 42.2,42.2" 
-              fill="none" 
-              stroke={color === "teal" ? "#0c8991" : color === "purple" ? "#9D5E9B" : "#B55076"} 
-              strokeWidth="1"
-              strokeOpacity="0.2"
-              className="transform scale-75 origin-center"
-            />
-          </svg>
-        </div>
-      </div>
-      
-      <h3 className={`text-xl font-playfair font-bold mb-3 ${colorClasses[color].text}`}>{title}</h3>
-      <p className="text-gray-600 relative z-10">{description}</p>
+    <div className="text-center p-8 transition duration-300 hover:shadow-md">
+      <i className={`fas ${icon} text-2xl`} style={{ color: colorMap[color] }}></i>
+      <h3 className="text-xl font-playfair font-semibold mt-4 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
     </div>
   );
 }
@@ -84,38 +46,21 @@ export function FeaturesSection() {
   ];
 
   return (
-    <section className="relative py-20 overflow-hidden bg-purple">      
-      <div className="relative">
+    <section className="py-16 bg-purple">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white relative inline-block">
-            <span className="relative z-10">Core Benefits</span>
-            <div className="absolute -bottom-3 left-0 w-full h-1 bg-white opacity-30"></div>
+          <h2 className="text-3xl font-playfair font-semibold text-white mb-4">
+            Core Benefits
           </h2>
-          <div className="flex items-center justify-center py-6">
-            <div className="w-1/3 h-px bg-white opacity-30"></div>
-            <div className="mx-4">
-              <svg width="40" height="40" viewBox="0 0 100 100">
-                <path
-                  d="M50,10 A40,40 0 0 1 50,90 A40,40 0 0 1 50,10 A30,30 0 0 0 50,70 A30,30 0 0 0 50,10"
-                  fill="#FFFFFF"
-                  fillOpacity="0.8"
-                />
-                <circle cx="60" cy="40" r="5" fill="#9D5E9B" />
-              </svg>
-            </div>
-            <div className="w-1/3 h-px bg-white opacity-30"></div>
-          </div>
-          <p className="mt-4 max-w-2xl mx-auto text-white text-opacity-90">
+          <p className="text-white text-opacity-90 max-w-2xl mx-auto">
             Experience the transformative power of Pilates through these foundational principles
           </p>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <FeatureCard key={index} {...feature} />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-white p-6">
+          {features.map((feature, index) => (
+            <FeatureCard key={index} {...feature} />
+          ))}
         </div>
       </div>
     </section>
