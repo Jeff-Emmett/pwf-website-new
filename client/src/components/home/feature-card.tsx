@@ -31,8 +31,7 @@ export function FeatureCard({ title, description, icon, color }: FeatureCardProp
   };
 
   return (
-    <div className="group relative rounded-lg p-6 text-center transition-all duration-300 hover:shadow-lg overflow-hidden">
-      <div className={`absolute inset-0 ${colorClasses[color].bg} opacity-40`}></div>
+    <div className="group relative rounded-lg p-6 text-center transition-all duration-300 hover:shadow-lg overflow-hidden bg-white">
       <div className={`absolute inset-0 ${colorClasses[color].pattern} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
       
       {/* Icon container with geometric border */}
@@ -85,17 +84,28 @@ export function FeaturesSection() {
   ];
 
   return (
-    <section className="relative py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-white"></div>
-      
+    <section className="relative py-20 overflow-hidden bg-purple">      
       <div className="relative">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gray-800 relative inline-block">
+          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white relative inline-block">
             <span className="relative z-10">Core Benefits</span>
-            <div className="absolute -bottom-3 left-0 w-full h-1 bg-purple opacity-20"></div>
+            <div className="absolute -bottom-3 left-0 w-full h-1 bg-white opacity-30"></div>
           </h2>
-          <CrescentDivider color="purple" className="mt-4" />
-          <p className="mt-4 max-w-2xl mx-auto text-gray-600">
+          <div className="flex items-center justify-center py-6">
+            <div className="w-1/3 h-px bg-white opacity-30"></div>
+            <div className="mx-4">
+              <svg width="40" height="40" viewBox="0 0 100 100">
+                <path
+                  d="M50,10 A40,40 0 0 1 50,90 A40,40 0 0 1 50,10 A30,30 0 0 0 50,70 A30,30 0 0 0 50,10"
+                  fill="#FFFFFF"
+                  fillOpacity="0.8"
+                />
+                <circle cx="60" cy="40" r="5" fill="#9D5E9B" />
+              </svg>
+            </div>
+            <div className="w-1/3 h-px bg-white opacity-30"></div>
+          </div>
+          <p className="mt-4 max-w-2xl mx-auto text-white text-opacity-90">
             Experience the transformative power of Pilates through these foundational principles
           </p>
         </div>
@@ -107,10 +117,6 @@ export function FeaturesSection() {
             ))}
           </div>
         </div>
-      </div>
-      
-      <div className="mt-16">
-        <SectionDividerBottom color="purple" />
       </div>
     </section>
   );

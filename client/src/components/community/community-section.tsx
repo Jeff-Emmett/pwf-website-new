@@ -4,6 +4,8 @@ import { useAuth } from "@/hooks/use-auth";
 import { Link } from "wouter";
 import { ArabicDecoration } from "@/components/ui/arabic-decoration";
 import { Card, CardContent } from "@/components/ui/card";
+import { SectionDivider, SectionDividerBottom, StarDivider } from "@/components/ui/section-divider";
+import { IslamicPattern } from "@/components/ui/section-divider";
 
 export function CommunitySection() {
   const { user } = useAuth();
