@@ -18,65 +18,26 @@ export function ClassesSection() {
   
   const handleBookClick = (classId: number) => {
     setSelectedClassId(classId);
-    
-    // Scroll to booking calendar
-    const bookingCalendar = document.getElementById("booking-calendar");
-    if (bookingCalendar) {
-      bookingCalendar.scrollIntoView({ behavior: "smooth" });
+    const element = document.getElementById('booking-calendar');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
   
-  if (error) {
-    return (
-      <div className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-red-500">Error loading classes. Please try again later.</p>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <section className="py-20 bg-rose-light">
+    <section className="py-20 bg-teal bg-opacity-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-playfair font-semibold text-gray-800 mb-4">
-            Class Offerings
+            Our Classes
           </h2>
           <p className="max-w-3xl mx-auto text-gray-600">
-            Choose from our variety of class options designed to match your individual needs
+            Join our supportive, personalized classes where you'll discover strength, flexibility, and mindfulness.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-16">
-          <div className="text-center p-6 bg-white">
-            <h3 className="font-playfair text-lg font-semibold text-rose mb-3">Mat Pilates</h3>
-            <p className="text-sm text-gray-600">Foundational strength, posture, and mobility</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white">
-            <h3 className="font-playfair text-lg font-semibold text-rose mb-3">Reformer & Equipment</h3>
-            <p className="text-sm text-gray-600">Deeper resistance, alignment, and control</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white">
-            <h3 className="font-playfair text-lg font-semibold text-rose mb-3">Beginner Foundations</h3>
-            <p className="text-sm text-gray-600">For those new to movement or Pilates</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white">
-            <h3 className="font-playfair text-lg font-semibold text-rose mb-3">Live Online Classes</h3>
-            <p className="text-sm text-gray-600">Accessible from anywhere</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white">
-            <h3 className="font-playfair text-lg font-semibold text-rose mb-3">Workshops & Events</h3>
-            <p className="text-sm text-gray-600">Special themed sessions and gatherings</p>
-          </div>
-        </div>
-        
-        <div className="p-8 bg-white mb-16">
-          <div className="flex flex-col md:flex-row items-center justify-between">
+        <div className="bg-white p-6 md:p-8 rounded-lg mb-16 border border-gray-100">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
             <div>
               <h3 className="font-playfair text-xl font-semibold text-gray-800 mb-3">
                 ✨ In-Person Classes
@@ -98,37 +59,48 @@ export function ClassesSection() {
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-3">
                     <Skeleton className="h-6 w-32" />
-                    <Skeleton className="h-5 w-16 rounded-full" />
+                    <Skeleton className="h-6 w-20" />
                   </div>
-                  <Skeleton className="h-4 w-full my-2" />
-                  <Skeleton className="h-4 w-full my-2" />
-                  <Skeleton className="h-4 w-3/4 my-2" />
-                  <div className="flex justify-between items-center mt-4">
-                    <Skeleton className="h-4 w-24" />
-                    <Skeleton className="h-4 w-20" />
-                  </div>
-                  <Skeleton className="h-10 w-full mt-4 rounded-md" />
+                  <Skeleton className="h-4 w-full mb-2" />
+                  <Skeleton className="h-4 w-full mb-2" />
+                  <Skeleton className="h-4 w-3/4 mb-4" />
+                  <Skeleton className="h-8 w-24 mt-4" />
                 </div>
               </div>
             ))}
           </div>
+        ) : error ? (
+          <div className="text-center text-red-500">
+            <p>Error loading classes. Please try again later.</p>
+          </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {classes?.map(classItem => (
+            {classes?.map((classData) => (
               <ClassCard 
-                key={classItem.id} 
-                classData={classItem} 
-                onBookClick={handleBookClick}
+                key={classData.id} 
+                classData={classData} 
+                onBookClick={handleBookClick} 
               />
             ))}
           </div>
         )}
         
-        <div id="booking-calendar" className="pt-8">
-          {selectedClass && (
+        {selectedClass && (
+          <div id="booking-calendar" className="mt-20 pt-10 border-t border-gray-200">
+            <h3 className="text-2xl font-playfair font-semibold text-center mb-8">
+              Book Your {selectedClass.name} Class
+            </h3>
             <BookingCalendar selectedClass={selectedClass} />
-          )}
-        </div>
+            <div className="text-center mt-8">
+              <button 
+                onClick={() => setSelectedClassId(null)} 
+                className="px-6 py-2 text-gray-600 hover:text-gray-900 border border-gray-300 hover:border-gray-500 transition-colors"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

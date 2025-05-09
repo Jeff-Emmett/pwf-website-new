@@ -58,7 +58,7 @@ export function NewsletterSection() {
   };
 
   return (
-    <section className="py-20 bg-teal text-white">
+    <section className="py-20 bg-rose bg-opacity-10 text-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-playfair font-semibold mb-4">
@@ -70,14 +70,14 @@ export function NewsletterSection() {
         </div>
         
         <div className="max-w-2xl mx-auto">
-          <form className="bg-white/10 p-8" onSubmit={handleSubmit}>
+          <form className="bg-white p-8 shadow-sm" onSubmit={handleSubmit}>
             <div className="flex flex-col mb-6">
-              <label htmlFor="email" className="mb-2 text-white font-medium">Email Address</label>
+              <label htmlFor="email" className="mb-2 text-gray-700 font-medium">Email Address</label>
               <input 
                 id="email"
                 type="email" 
                 placeholder="Your email address" 
-                className="px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 placeholder-white placeholder-opacity-60 text-white focus:outline-none focus:border-white"
+                className="px-4 py-3 bg-white border border-gray-300 placeholder-gray-500 text-gray-800 focus:outline-none focus:border-rose"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -88,18 +88,18 @@ export function NewsletterSection() {
               <label className="flex items-center cursor-pointer">
                 <input 
                   type="checkbox" 
-                  className="form-checkbox h-4 w-4 border-white text-teal"
+                  className="form-checkbox h-4 w-4 border-gray-300 text-rose"
                   checked={agreedToTerms}
                   onChange={(e) => setAgreedToTerms(e.target.checked)}
                   required
                 />
-                <span className="ml-2 text-white">I agree to receive emails from Pilates with Fadia</span>
+                <span className="ml-2 text-gray-700">I agree to receive emails from Pilates with Fadia</span>
               </label>
             </div>
             
             <button 
               type="submit" 
-              className="w-full px-6 py-3 bg-white text-teal font-medium hover:bg-opacity-90 transition duration-300 flex items-center justify-center"
+              className="w-full px-6 py-3 bg-rose text-white font-medium hover:bg-opacity-90 transition duration-300 flex items-center justify-center"
               disabled={newsletterMutation.isPending}
             >
               {newsletterMutation.isPending ? (
