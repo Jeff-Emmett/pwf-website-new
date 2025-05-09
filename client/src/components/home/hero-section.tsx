@@ -11,8 +11,11 @@ export function HeroSection() {
           <div className="relative">
             <span className="absolute -left-4 -top-4 text-4xl text-white opacity-30 font-aref">بسم الله</span>
           </div>
+          <h2 className="text-2xl md:text-3xl font-playfair text-white leading-tight mb-2">
+            Pilates with Fadia
+          </h2>
           <h1 className="text-4xl md:text-5xl font-playfair font-bold text-white leading-tight">
-            Find Balance, Strength & Inner Peace
+            Where Strength Meets Serenity
           </h1>
           
           <div className="flex items-center my-6">
@@ -21,8 +24,11 @@ export function HeroSection() {
             <div className="h-px flex-grow bg-white opacity-50"></div>
           </div>
           
+          <p className="text-lg text-white text-opacity-90 font-raleway mb-4">
+            Graceful, mindful movement for real strength and deep connection.
+          </p>
           <p className="text-lg text-white text-opacity-90 font-raleway mb-8">
-            Transform your body and mind through the art of Pilates. Join our serene studio for personalized sessions that promote harmony, flexibility, and strength.
+            Join a global community tuning into their bodies—building strength through awareness, breath, and flow.
           </p>
           
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
@@ -30,13 +36,13 @@ export function HeroSection() {
               href="/classes"
               className="bg-white text-teal font-medium py-3 px-8 rounded-full transition duration-300 text-center hover:bg-opacity-90"
             >
-              Book a Class
+              Join a Class
             </Link>
             <Link
-              href="/about"
+              href="/classes"
               className="bg-transparent border-2 border-white text-white font-medium py-3 px-8 rounded-full transition duration-300 text-center hover:bg-white hover:bg-opacity-10"
             >
-              About Fadia
+              Try a Free Session
             </Link>
           </div>
         </div>

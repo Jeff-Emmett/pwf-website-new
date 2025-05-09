@@ -73,7 +73,13 @@ export function CommunitySection() {
               <div className="w-1/3 h-px bg-white opacity-30"></div>
             </div>
             <p className="mt-6 max-w-3xl mx-auto text-white text-opacity-90">
-              Connect with like-minded individuals on your wellness journey through our digital community board.
+              A Global Space for Movement & Connection
+            </p>
+            <p className="mt-3 max-w-3xl mx-auto text-white text-opacity-80">
+              Whether you're joining from your living room in Cairo or your studio in Berlin, you're part of a larger collective—a community that values strength, softness, breath, and belonging.
+            </p>
+            <p className="mt-3 max-w-3xl mx-auto text-white text-opacity-80">
+              Here, we move to feel good. To age with agency. To grow stronger with grace.
             </p>
           </div>
           

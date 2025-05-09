@@ -61,20 +61,60 @@ export function AboutSection() {
             
             <div className="md:w-1/2">
               <div className="prose max-w-none">
-                <h3 className="text-2xl font-playfair font-semibold text-purple mb-4">My Pilates Journey</h3>
+                <h3 className="text-2xl font-playfair font-semibold text-purple mb-4">Meet Fadia</h3>
                 <p className="text-gray-600 mb-4">
-                  With over a decade of experience in the art of Pilates, I have dedicated my life to understanding the profound connection between movement, breath, and wellness. My journey began in 2010 when I discovered how Pilates transformed not only my physical strength but my entire approach to well-being.
+                  Fadia is a former lawyer, community builder, and agile mover with a deep belief in the power of people—and movement—to create change. Her journey weaves between Cairo, Egypt, and Berlin, Germany, where she now teaches movement both online and in-person.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  After years of seeking healing and emotional release through movement, Fadia's path led her from home yoga classes to dance, martial arts, and ultimately, Pilates. What began as a suggestion from a dance teacher soon turned into a life-changing passion.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  She trained in classical Pilates with a program aligned with the German Pilates Association and now teaches both mat and equipment Pilates—including the Reformer, Cadillac, Wunda Chair, and Spine Corrector.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  In every class, her goal is the same: to help people reconnect with their bodies, move with intention, and build deep, functional strength.
                 </p>
                 
-                <h3 className="text-2xl font-playfair font-semibold text-purple mb-4">My Teaching Philosophy</h3>
+                <h3 className="text-2xl font-playfair font-semibold text-purple mb-4 mt-8">My Story</h3>
+                <h4 className="text-xl font-playfair text-purple-dark mb-3">From Healing to Empowerment</h4>
                 <p className="text-gray-600 mb-4">
-                  I believe that Pilates is more than exercise—it's a path to self-discovery and inner harmony. My teaching combines classical techniques with modern approaches, always honoring the core principles of concentration, control, centering, flow, precision, and breath.
+                  I came to movement as a way to feel better in my body and begin healing emotions I hadn't yet processed. What started with yoga at home slowly became something more—a pathway to connection and transformation.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  During a two-year dance program in Berlin, I was introduced to Pilates. My first class? A bit confusing. The simplicity and focused cueing felt foreign. But by the second class, something clicked. Within a month, I was sold—both on the method and the way it made me feel.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  Pilates became my anchor. It grounded me in my body, gave me strength, and helped me move with more confidence and clarity—on the mat, and in life.
                 </p>
                 
-                <div className="mt-8">
-                  <p className="italic text-gray-700 border-l-4 border-purple pl-4 py-2 font-aref text-lg">
-                    "Movement is medicine for creating change in a person's physical, emotional, and mental states."
-                  </p>
+                <h3 className="text-2xl font-playfair font-semibold text-purple mb-4 mt-8">My Philosophy</h3>
+                <p className="text-gray-600 mb-4">
+                  I believe movement is a game changer—not just physically, but mentally and emotionally. My personal journey includes martial arts like Capoeira and Parkour, in addition to Pilates and dance. This rich background taught me that movement isn't just about exercise—it's about agency, healing, and joy.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  Movement reminds us of our power. It helps us live with more awareness, vitality, and self-trust.
+                </p>
+                
+                <div className="mt-6 bg-white/50 p-6 rounded-lg shadow-sm">
+                  <p className="font-medium text-gray-800 mb-2">In my classes, you'll:</p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start">
+                      <span className="text-purple font-bold mr-2">✔</span>
+                      <span>Move mindfully and with intention</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple font-bold mr-2">✔</span>
+                      <span>Build strength from the inside out</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple font-bold mr-2">✔</span>
+                      <span>Learn to breathe, connect, and listen to your body</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple font-bold mr-2">✔</span>
+                      <span>Be supported—no matter your age or level</span>
+                    </li>
+                  </ul>
                 </div>
                 
                 <div className="mt-8">
