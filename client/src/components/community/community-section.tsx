@@ -14,107 +14,105 @@ export function CommunitySection() {
       author: "Sarah H.",
       memberSince: "2021",
       initials: "SH",
-      color: "teal" as const,
+      color: "teal",
     },
     {
-      quote: "As someone recovering from back surgery, I was hesitant to try Pilates. Fadia's expertise made me feel safe and I've gained strength I never thought possible.",
-      author: "Michael K.",
-      memberSince: "2022",
-      initials: "MK",
-      color: "purple" as const,
+      quote: "I've seen incredible improvements in my posture and core strength since joining Fadia's classes. She truly understands how to help each individual.",
+      author: "Ahmed M.",
+      memberSince: "2022", 
+      initials: "AM",
+      color: "purple",
     },
     {
-      quote: "The community aspect of Pilates with Fadia sets it apart. I've not only improved my physical health but have made wonderful connections with fellow members.",
-      author: "Amina L.",
-      memberSince: "2020",
-      initials: "AL",
-      color: "rose" as const,
-    },
+      quote: "The mindful approach to movement has helped my chronic back pain tremendously. I look forward to every class!",
+      author: "Laila K.",
+      memberSince: "2023",
+      initials: "LK", 
+      color: "rose",
+    }
   ];
-  
-  // This function would load the actual whiteboard in a real implementation
-  // For now, we're simulating the load timing
+
+  // Handle the iframe loading
   useEffect(() => {
     if (user) {
       const timer = setTimeout(() => {
         setIframeLoaded(true);
-      }, 1000);
+      }, 1500);
       
       return () => clearTimeout(timer);
     }
   }, [user]);
-
+  
   return (
-    <section className="py-20 bg-rose text-white">
+    <section className="py-20 bg-purple bg-opacity-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-playfair font-semibold mb-4">
+          <h2 className="text-3xl md:text-4xl font-playfair font-semibold text-gray-800 mb-4">
             Our Community
           </h2>
-          <p className="max-w-3xl mx-auto">
-            A Global Space for Movement & Connection
-          </p>
-          <p className="mt-3 max-w-3xl mx-auto text-white text-opacity-80">
-            Whether you're joining from your living room in Cairo or your studio in Berlin, you're part of a larger collective—a community that values strength, softness, breath, and belonging.
+          <p className="max-w-3xl mx-auto text-gray-600">
+            Join our supportive community of like-minded individuals committed to health and wellness.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {testimonials.map((testimonial, index) => (
-            <Testimonial key={index} {...testimonial} />
+            <Testimonial
+              key={index}
+              quote={testimonial.quote}
+              author={testimonial.author}
+              memberSince={testimonial.memberSince}
+              initials={testimonial.initials}
+              color={testimonial.color as "teal" | "purple" | "rose"}
+            />
           ))}
         </div>
         
-        <Card className="bg-white text-gray-800 overflow-hidden">
-          <div className="border-b border-gray-200 py-4 px-6">
-            <h3 className="font-playfair font-semibold text-xl">Community Digital Whiteboard</h3>
-          </div>
+        <div className="mt-10">
+          <h3 className="text-2xl font-playfair font-semibold text-gray-800 text-center mb-8">
+            Community Whiteboard
+          </h3>
           
-          <CardContent className="p-0">
-            <div className="h-96 bg-gray-100 flex items-center justify-center">
-              {user ? (
-                iframeLoaded ? (
-                  <iframe 
-                    src="https://miro.com/app/board/uXjVKEqwAH8=/"
-                    title="Community Whiteboard"
-                    className="w-full h-full border-0"
-                  />
+          <Card className="mx-auto max-w-4xl">
+            <CardContent className="p-6">
+              <div className="aspect-w-16 aspect-h-9 rounded-md overflow-hidden bg-white">
+                {user ? (
+                  iframeLoaded ? (
+                    <iframe
+                      src="https://excalidraw.com/#room=pilateswithfadia"
+                      title="Community Whiteboard"
+                      onLoad={() => setIframeLoaded(true)}
+                      className="w-full h-full border-0"
+                    />
+                  ) : (
+                    <div className="text-center">
+                      <i className="fas fa-spinner fa-spin text-5xl text-gray-400 mb-4"></i>
+                      <p className="text-gray-500">Loading whiteboard content...</p>
+                    </div>
+                  )
                 ) : (
                   <div className="text-center">
-                    <i className="fas fa-spinner fa-spin text-5xl text-gray-400 mb-4"></i>
-                    <p className="text-gray-500">Loading whiteboard content...</p>
+                    <i className="fas fa-chalkboard text-5xl text-gray-400 mb-4"></i>
+                    <p className="text-gray-500">
+                      Digital whiteboard content will be available after login
+                    </p>
+                    <p className="text-sm text-gray-400 mt-2">
+                      <i className="fas fa-info-circle mr-1"></i> Please sign in to access community features
+                    </p>
                   </div>
-                )
-              ) : (
-                <div className="text-center">
-                  <i className="fas fa-chalkboard text-5xl text-gray-400 mb-4"></i>
-                  <p className="text-gray-500">
-                    Digital whiteboard content will be available after login
-                  </p>
-                  <p className="text-sm text-gray-400 mt-2">
-                    <i className="fas fa-info-circle mr-1"></i> Please sign in to access community features
-                  </p>
-                </div>
-              )}
-            </div>
-          </CardContent>
-          
-          <div className="p-6 border-t border-gray-200">
-            <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="mb-4 md:mb-0">
-                <h4 className="font-playfair font-medium text-lg mb-1">Join Our Community</h4>
-                <p className="text-gray-600 text-sm">Share your journey, ask questions, and connect with others.</p>
+                )}
               </div>
-              {!user && (
-                <Link href="/auth">
-                  <span className="bg-rose text-white font-medium py-2 px-6 hover:bg-opacity-90 transition duration-300 cursor-pointer">
-                    Sign Up to Participate
-                  </span>
-                </Link>
-              )}
-            </div>
-          </div>
-        </Card>
+            </CardContent>
+          </Card>
+        </div>
+        
+        <div className="text-center mt-12">
+          <Link to="/auth">
+            <button className="px-8 py-3 bg-purple text-white font-medium rounded hover:bg-opacity-90 transition duration-300">
+              {user ? "Access Community Dashboard" : "Join Our Community"}
+            </button>
+          </Link>
+        </div>
       </div>
     </section>
   );
