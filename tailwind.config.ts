@@ -11,6 +11,12 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        teal: "#0c8991",
+        purple: "#9D5E9B",
+        rose: "#B55076",
+        "teal-light": "rgba(12, 137, 145, 0.1)",
+        "purple-light": "rgba(157, 94, 155, 0.1)",
+        "rose-light": "rgba(181, 80, 118, 0.1)",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
