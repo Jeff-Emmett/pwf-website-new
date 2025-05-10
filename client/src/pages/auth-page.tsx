@@ -221,7 +221,7 @@ export default function AuthPage() {
                         />
                         <Button 
                           type="submit" 
-                          className="w-full bg-purple text-white" 
+                          className="w-full bg-teal text-white" 
                           disabled={registerMutation.isPending}
                         >
                           {registerMutation.isPending ? (

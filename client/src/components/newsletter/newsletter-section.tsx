@@ -88,7 +88,7 @@ export function NewsletterSection() {
               <label className="flex items-center cursor-pointer">
                 <input 
                   type="checkbox" 
-                  className="form-checkbox h-4 w-4 border-gray-300 text-rose"
+                  className="form-checkbox h-4 w-4 border-gray-300 text-teal"
                   checked={agreedToTerms}
                   onChange={(e) => setAgreedToTerms(e.target.checked)}
                   required
@@ -99,7 +99,7 @@ export function NewsletterSection() {
             
             <button 
               type="submit" 
-              className="w-full px-6 py-3 bg-rose text-white font-medium hover:bg-opacity-90 transition duration-300 flex items-center justify-center"
+              className="w-full px-6 py-3 bg-teal text-white font-medium hover:bg-opacity-90 transition duration-300 flex items-center justify-center"
               disabled={newsletterMutation.isPending}
             >
               {newsletterMutation.isPending ? (
