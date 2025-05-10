@@ -197,7 +197,7 @@ export default function AuthPage() {
                             <FormItem>
                               <FormLabel>Full Name</FormLabel>
                               <FormControl>
-                                <Input placeholder="Enter your full name" {...field} />
+                                <Input placeholder="Enter your full name" {...field} value={typeof field.value === 'string' ? field.value : ''} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>

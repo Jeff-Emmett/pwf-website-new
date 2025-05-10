@@ -135,7 +135,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center">
-                <i className="fas fa-phone-alt mr-2 text-teal"></i>
+                <i className="fas fa-phone-alt mr-2 text-white"></i>
                 <a href="tel:+97150123567" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
                   +971 50 123 4567
                 </a>
