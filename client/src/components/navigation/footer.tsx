@@ -126,7 +126,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <i className="fas fa-map-marker-alt mt-1 mr-2 text-teal"></i>
-                <span className="text-gray-400">123 Serenity Lane, Wellness District<br/>Dubai, UAE</span>
+                <span className="text-white text-opacity-70">123 Serenity Lane, Wellness District<br/>Dubai, UAE</span>
               </li>
               <li className="flex items-center">
                 <i className="fas fa-envelope mr-2 text-teal"></i>
