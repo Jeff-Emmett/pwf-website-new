@@ -69,35 +69,39 @@ export function CommunitySection() {
         </div>
         
         <div className="mt-10">
-          <h3 className="text-2xl font-playfair font-semibold text-gray-800 text-center mb-8">
+          <h3 className="text-2xl font-playfair font-semibold text-teal text-center mb-8">
             Community Whiteboard
           </h3>
           
           <Card className="mx-auto max-w-4xl">
             <CardContent className="p-6">
-              <div className="aspect-w-16 aspect-h-9 rounded-md overflow-hidden bg-white">
+              <div className="rounded-md overflow-hidden bg-white" style={{ height: '600px' }}>
                 {user ? (
                   iframeLoaded ? (
                     <iframe
-                      src="https://excalidraw.com/#room=pilateswithfadia"
+                      src="https://www.jeffemmett.com/board/pilateswithfadia"
                       title="Community Whiteboard"
                       onLoad={() => setIframeLoaded(true)}
-                      className="w-full h-full border-0"
+                      className="w-full h-full border-0" style={{ minHeight: '100%' }}
                     />
                   ) : (
-                    <div className="text-center">
-                      <i className="fas fa-spinner fa-spin text-5xl text-gray-400 mb-4"></i>
-                      <p className="text-gray-500">Loading whiteboard content...</p>
+                    <div className="text-center py-16">
+                      <i className="fas fa-spinner fa-spin text-5xl text-teal mb-6"></i>
+                      <p className="text-gray-600 text-lg">Loading community whiteboard...</p>
+                      <p className="text-gray-500 mt-2">This interactive board allows you to share ideas with other community members</p>
                     </div>
                   )
                 ) : (
-                  <div className="text-center">
-                    <i className="fas fa-chalkboard text-5xl text-gray-400 mb-4"></i>
-                    <p className="text-gray-500">
-                      Digital whiteboard content will be available after login
+                  <div className="text-center py-16">
+                    <i className="fas fa-chalkboard text-5xl text-teal mb-6"></i>
+                    <p className="text-gray-600 text-lg">
+                      Interactive Community Whiteboard
                     </p>
-                    <p className="text-sm text-gray-400 mt-2">
-                      <i className="fas fa-info-circle mr-1"></i> Please sign in to access community features
+                    <p className="text-gray-500 mt-2 max-w-lg mx-auto">
+                      Our exclusive digital whiteboard allows members to share exercise routines, wellness tips, and more with the Pilates with Fadia community.
+                    </p>
+                    <p className="text-sm text-gray-500 mt-6 flex items-center justify-center">
+                      <i className="fas fa-lock mr-2 text-teal"></i> Please sign in to unlock this feature
                     </p>
                   </div>
                 )}
