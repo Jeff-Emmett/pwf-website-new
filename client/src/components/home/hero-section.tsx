@@ -1,11 +1,12 @@
 import { Link } from "wouter";
+import FadiaHeroImage from "../../assets/Fadia-15.jpg";
 
 export function HeroSection() {
   return (
     <section className="relative">
       <div className="bg-cover bg-center h-[90vh] flex items-center justify-center" 
            style={{
-             backgroundImage: "url('https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')",
+             backgroundImage: `url(${FadiaHeroImage})`,
              backgroundPosition: "center"
            }}>
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>

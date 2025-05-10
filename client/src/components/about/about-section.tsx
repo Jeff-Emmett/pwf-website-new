@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import FadiaImage from "../../assets/Fadia-132.jpg";
 
 export function AboutSection() {
   return (
@@ -16,8 +17,8 @@ export function AboutSection() {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 md:pr-12 mb-8 md:mb-0">
             <img 
-              src="https://images.unsplash.com/photo-1581122584612-713f89daa8eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=900" 
-              alt="Pilates instructor demonstrating a pose with elegant form" 
+              src={FadiaImage} 
+              alt="Fadia teaching a pilates class" 
               className="w-full h-auto" 
             />
           </div>

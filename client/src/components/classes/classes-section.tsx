@@ -4,6 +4,7 @@ import { BookingCalendar } from "./booking-calendar";
 import { useQuery } from "@tanstack/react-query";
 import { Class } from "@shared/schema";
 import { Skeleton } from "@/components/ui/skeleton";
+import FadiaClassImage from "../../assets/Fadia-156.jpg";
 
 export function ClassesSection() {
   const [selectedClassId, setSelectedClassId] = useState<number | null>(null);
