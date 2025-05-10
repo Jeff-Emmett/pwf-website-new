@@ -3,7 +3,9 @@ import { useAuth } from "@/hooks/use-auth";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useLocation } from "wouter";
-import FadiaClassImage from "../../assets/Fadia-156.jpg";
+import FadiaGroupClassImage from "../../assets/Fadia-15.jpg";
+import FadiaSmallGroupClassImage from "../../assets/Fadia-156.jpg";
+import FadiaPrivateClassImage from "../../assets/Fadia-132.jpg";
 
 interface ClassCardProps {
   classData: Class;
@@ -67,10 +69,20 @@ export function ClassCard({ classData, onBookClick }: ClassCardProps) {
     }
   };
 
+  // Get class image based on class type
+  const getClassImage = () => {
+    switch (classData.classType) {
+      case "group": return FadiaGroupClassImage;
+      case "small-group": return FadiaSmallGroupClassImage;
+      case "private": return FadiaPrivateClassImage;
+      default: return FadiaGroupClassImage;
+    }
+  };
+
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105">
       <img 
-        src={FadiaClassImage} 
+        src={getClassImage()} 
         alt={classData.name} 
         className="w-full h-48 object-cover" 
       />

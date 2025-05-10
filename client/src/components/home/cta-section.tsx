@@ -2,7 +2,7 @@ import { Link } from "wouter";
 
 export function CTASection() {
   return (
-    <section className="py-20 text-white" style={{ backgroundColor: '#9D5E9B' }}>
+    <section className="py-20 text-white" style={{ backgroundColor: '#0c8991' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-4xl font-playfair font-semibold mb-6">
           Ready to feel stronger, more connected, and at home in your body?
@@ -15,13 +15,13 @@ export function CTASection() {
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
           <Link
             href="/classes"
-            className="bg-white text-purple font-medium py-3 px-10 hover:bg-opacity-90 transition duration-300"
+            className="bg-white text-teal font-medium py-3 px-10 hover:bg-opacity-90 transition duration-300"
           >
             Join a Class
           </Link>
           <Link
             href="/contact"
-            className="bg-transparent border border-white text-white font-medium py-3 px-10 hover:bg-white hover:text-purple transition duration-300"
+            className="bg-transparent border border-white text-white font-medium py-3 px-10 hover:bg-white hover:text-teal transition duration-300"
           >
             Contact Fadia
           </Link>
