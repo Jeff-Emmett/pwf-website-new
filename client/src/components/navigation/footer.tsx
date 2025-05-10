@@ -30,7 +30,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="font-playfair font-bold text-lg mb-4">Quick Links</h3>
+            <h3 className="font-playfair font-bold text-lg mb-4 text-white">Quick Links</h3>
             <ul className="space-y-3">
               <li>
                 <Link 
@@ -76,7 +76,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="font-playfair font-bold text-lg mb-4">Classes</h3>
+            <h3 className="font-playfair font-bold text-lg mb-4 text-white">Classes</h3>
             <ul className="space-y-3">
               <li>
                 <Link 
@@ -105,7 +105,7 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/classes" 
-                  className="text-gray-400 hover:text-white transition duration-300"
+                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
                 >
                   Group Classes
                 </Link>
@@ -113,7 +113,7 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/classes" 
-                  className="text-gray-400 hover:text-white transition duration-300"
+                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
                 >
                   Special Workshops
                 </Link>
@@ -122,14 +122,14 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="font-playfair font-bold text-lg mb-4">Contact</h3>
+            <h3 className="font-playfair font-bold text-lg mb-4 text-white">Contact</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <i className="fas fa-map-marker-alt mt-1 mr-2 text-teal"></i>
+                <i className="fas fa-map-marker-alt mt-1 mr-2 text-white"></i>
                 <span className="text-white text-opacity-70">123 Serenity Lane, Wellness District<br/>Dubai, UAE</span>
               </li>
               <li className="flex items-center">
-                <i className="fas fa-envelope mr-2 text-teal"></i>
+                <i className="fas fa-envelope mr-2 text-white"></i>
                 <a href="mailto:hello@pilateswithfadia.com" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
                   hello@pilateswithfadia.com
                 </a>
