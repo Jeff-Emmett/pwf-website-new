@@ -3,6 +3,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useLocation } from "wouter";
+import FadiaClassImage from "../../assets/Fadia-156.jpg";
 
 interface ClassCardProps {
   classData: Class;
@@ -69,7 +70,7 @@ export function ClassCard({ classData, onBookClick }: ClassCardProps) {
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105">
       <img 
-        src={classData.imageUrl as string || "https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop"} 
+        src={FadiaClassImage} 
         alt={classData.name} 
         className="w-full h-48 object-cover" 
       />

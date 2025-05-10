@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import LogoImage from "../../assets/Pilates with Fadia.png";
 
 export function Logo({ className = "", size = "regular" }: { className?: string, size?: "small" | "regular" | "large" }) {
   const sizeClasses = {
@@ -12,23 +13,11 @@ export function Logo({ className = "", size = "regular" }: { className?: string,
       href="/"
       className={`inline-block ${className}`}
     >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 600 100"
-          className={`${sizeClasses[size]}`}
-        >
-          <text
-            x="20"
-            y="70"
-            fontFamily="'Playfair Display', serif"
-            fontSize="80"
-            fontWeight="400"
-            fill="#0c8991"
-            textAnchor="start"
-          >
-            Pilates with Fadia
-          </text>
-        </svg>
+      <img 
+        src={LogoImage} 
+        alt="Pilates with Fadia" 
+        className={`${sizeClasses[size]}`}
+      />
     </Link>
   );
 }
