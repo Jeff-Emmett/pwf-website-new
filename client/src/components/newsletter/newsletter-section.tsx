@@ -58,7 +58,7 @@ export function NewsletterSection() {
   };
 
   return (
-    <section className="py-20 text-gray-800" style={{ backgroundColor: 'rgba(181, 80, 118, 0.1)' }}>
+    <section className="py-20 text-gray-800" style={{ backgroundColor: 'rgba(12, 137, 145, 0.1)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-playfair font-semibold mb-4">
@@ -77,7 +77,7 @@ export function NewsletterSection() {
                 id="email"
                 type="email" 
                 placeholder="Your email address" 
-                className="px-4 py-3 bg-white border border-gray-300 placeholder-gray-500 text-gray-800 focus:outline-none focus:border-rose"
+                className="px-4 py-3 bg-white border border-gray-300 placeholder-gray-500 text-gray-800 focus:outline-none focus:border-teal"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required

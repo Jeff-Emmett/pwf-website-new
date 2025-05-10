@@ -49,14 +49,9 @@ export function ClassCard({ classData, onBookClick }: ClassCardProps) {
     }
   };
   
-  // Determine button color based on class type
+  // All buttons use teal as the primary color
   const buttonColor = () => {
-    switch (classData.classType) {
-      case "group": return "bg-teal text-white";
-      case "small-group": return "bg-purple text-white";
-      case "private": return "bg-rose text-white";
-      default: return "bg-gray-500 text-white";
-    }
+    return "bg-teal text-white";
   };
   
   // Format class type for display
