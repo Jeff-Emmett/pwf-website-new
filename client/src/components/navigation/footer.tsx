@@ -43,7 +43,7 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/about" 
-                  className="text-gray-400 hover:text-white transition duration-300"
+                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
                 >
                   About Fadia
                 </Link>
@@ -51,7 +51,7 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/classes" 
-                  className="text-gray-400 hover:text-white transition duration-300"
+                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
                 >
                   Classes
                 </Link>
@@ -59,7 +59,7 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/community" 
-                  className="text-gray-400 hover:text-white transition duration-300"
+                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
                 >
                   Community
                 </Link>
@@ -67,7 +67,7 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/contact" 
-                  className="text-gray-400 hover:text-white transition duration-300"
+                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
                 >
                   Contact
                 </Link>
@@ -81,7 +81,7 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/classes" 
-                  className="text-gray-400 hover:text-white transition duration-300"
+                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
                 >
                   Mat Pilates
                 </Link>
@@ -89,7 +89,7 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/classes" 
-                  className="text-gray-400 hover:text-white transition duration-300"
+                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
                 >
                   Reformer
                 </Link>
@@ -97,7 +97,7 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/classes" 
-                  className="text-gray-400 hover:text-white transition duration-300"
+                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
                 >
                   Private Sessions
                 </Link>
@@ -130,13 +130,13 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <i className="fas fa-envelope mr-2 text-teal"></i>
-                <a href="mailto:hello@pilateswithfadia.com" className="text-gray-400 hover:text-white transition duration-300">
+                <a href="mailto:hello@pilateswithfadia.com" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
                   hello@pilateswithfadia.com
                 </a>
               </li>
               <li className="flex items-center">
                 <i className="fas fa-phone-alt mr-2 text-teal"></i>
-                <a href="tel:+97150123567" className="text-gray-400 hover:text-white transition duration-300">
+                <a href="tel:+97150123567" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
                   +971 50 123 4567
                 </a>
               </li>
