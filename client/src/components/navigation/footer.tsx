@@ -10,7 +10,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <Logo className="mb-4" />
+            <img 
+              src={SquareLogo} 
+              alt="Pilates with Fadia" 
+              className="h-24 mb-4"
+              style={{ filter: "brightness(1.1)" }}
+            />
             <p className="text-white text-opacity-80 mb-4">
               Transforming bodies and minds through the art of Pilates with a touch of cultural elegance.
             </p>

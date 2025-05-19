@@ -32,7 +32,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 bg-white bg-opacity-95 shadow-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-2">
           <div className="flex items-center">
             <Logo />
           </div>
