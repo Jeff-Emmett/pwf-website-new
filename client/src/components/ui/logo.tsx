@@ -3,9 +3,9 @@ import LogoImage from "../../assets/rectangular-logo.png";
 
 export function Logo({ className = "", size = "regular" }: { className?: string, size?: "small" | "regular" | "large" }) {
   const sizeClasses = {
-    small: "h-12", /* reduced size */
-    regular: "h-16", /* reduced size */
-    large: "h-20", /* reduced size */
+    small: "h-24", /* twice the size */
+    regular: "h-32", /* twice the size */
+    large: "h-40", /* twice the size */
   };
 
   return (
