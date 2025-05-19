@@ -9,7 +9,7 @@ export function HeroSection() {
              backgroundImage: `url(${FadiaHeroImage})`,
              backgroundPosition: "center"
            }}>
-        <div className="absolute inset-0 bg-rose bg-opacity-30"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         
         <div className="relative text-center px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-playfair font-bold text-white leading-tight mb-8">
@@ -30,12 +30,12 @@ export function HeroSection() {
         </div>
       </div>
       
-      <div className="py-16 text-center">
+      <div className="py-16 text-center bg-rose bg-opacity-10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-playfair font-semibold text-gray-900 mb-4">
             Welcome to Pilates with Fadia
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-700">
             where progress feels natural and consistency is effortless
           </p>
         </div>
