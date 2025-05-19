@@ -13,7 +13,7 @@ export default function Footer() {
             <img 
               src={SquareLogo} 
               alt="Pilates with Fadia" 
-              className="h-96 mb-4"
+              className="h-80 mb-4"
               style={{ filter: "brightness(1.1)" }}
             />
             <p className="text-white text-opacity-80 mb-4">
