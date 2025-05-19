@@ -12,8 +12,8 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         
         <div className="relative text-center px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-playfair font-bold text-white leading-tight mb-8">
-            Finding Grace Through Movement
+          <h1 className="text-4xl md:text-5xl font-playfair font-bold text-white leading-tight mb-8">
+            Ready to feel stronger, more connected, and at home in your body?
           </h1>
           
           <Link
