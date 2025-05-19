@@ -1,5 +1,6 @@
 import { Logo } from "@/components/ui/logo";
 import { Link } from "wouter";
+import SquareLogo from "../../assets/square-logo.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -145,6 +146,14 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-white border-opacity-20 mt-12 pt-8">
+          <div className="flex flex-col items-center justify-center mb-6">
+            <img 
+              src={SquareLogo} 
+              alt="Pilates with Fadia" 
+              className="h-24 mb-4"
+              style={{ filter: "brightness(1.1)" }}
+            />
+          </div>
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-white text-opacity-70 text-sm mb-4 md:mb-0">
               &copy; {currentYear} Pilates with Fadia. All rights reserved.
