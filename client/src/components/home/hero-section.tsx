@@ -36,7 +36,7 @@ export function HeroSection() {
             Welcome to Pilates with Fadia
           </h2>
           <p className="text-lg text-gray-700">
-            where progress feels natural and consistency is effortless
+            Online Pilates Classes to help you feel good in your body
           </p>
         </div>
       </div>
