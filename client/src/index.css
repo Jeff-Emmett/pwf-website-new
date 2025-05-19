@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&family=Aref+Ruqaa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Cairo:wght@300;400;500;600&family=Hind+Guntur:wght@300;400;500;600&family=Aref+Ruqaa:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -56,11 +56,15 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Hind Guntur', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .subtitle, .card-subtitle, .section-subtitle {
+    font-family: 'Cairo', sans-serif;
   }
 }
 
@@ -157,14 +161,18 @@
   color: #B55076;
 }
 
-.font-playfair {
-  font-family: 'Playfair Display', serif;
+.font-playfair, .title {
+  font-family: 'Raleway', sans-serif;
 }
 
 .font-raleway {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Hind Guntur', sans-serif;
 }
 
 .font-aref {
   font-family: 'Aref Ruqaa', serif;
+}
+
+.font-cairo, .subtitle {
+  font-family: 'Cairo', sans-serif;
 }
