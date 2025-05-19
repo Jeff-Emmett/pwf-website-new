@@ -11,7 +11,7 @@ export function HeroSection() {
            }}>
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         
-        <div className="relative text-center px-4 sm:px-6 lg:px-8 max-w-xs mx-auto">
+        <div className="relative text-center px-4 sm:px-6 lg:px-8 mx-auto" style={{ maxWidth: "160px" }}>
           <h1 className="text-2xl md:text-3xl font-playfair font-bold text-white leading-tight mb-3">
             Movement to Feel Good
           </h1>
