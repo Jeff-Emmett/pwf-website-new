@@ -13,7 +13,7 @@ export function HeroSection() {
         
         <div className="relative text-center px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-playfair font-bold text-white leading-tight mb-8">
-            Where Strength Meets Serenity
+            Moving from a place of connection
           </h1>
           
           <Link
