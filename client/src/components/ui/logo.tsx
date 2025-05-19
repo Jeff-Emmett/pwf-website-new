@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import LogoImage from "../../assets/rect-logo.png";
+import LogoImage from "../../assets/rectangular-logo.png";
 
 export function Logo({ className = "", size = "regular" }: { className?: string, size?: "small" | "regular" | "large" }) {
   const sizeClasses = {
