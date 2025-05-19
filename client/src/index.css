@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sansita:wght@400;700;800;900&family=Cairo:wght@300;400;500;600&family=Hind+Madurai:wght@300;400;500;600&family=Aref+Ruqaa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Catamaran:wght@300;400;500;600;700&family=Khula:wght@300;400;600;700&family=Aref+Ruqaa:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -56,15 +56,15 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
-    font-family: 'Hind Madurai', sans-serif;
+    font-family: 'Khula', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Sansita', sans-serif;
+    font-family: 'Raleway', sans-serif;
   }
   
   .subtitle, .card-subtitle, .section-subtitle {
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Catamaran', sans-serif;
   }
 }
 
@@ -162,11 +162,11 @@
 }
 
 .font-playfair, .title {
-  font-family: 'Sansita', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .font-raleway {
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: 'Khula', sans-serif;
 }
 
 .font-aref {
@@ -174,5 +174,5 @@
 }
 
 .font-cairo, .subtitle {
-  font-family: 'Cairo', sans-serif;
+  font-family: 'Catamaran', sans-serif;
 }
