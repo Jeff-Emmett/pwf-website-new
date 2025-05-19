@@ -18,7 +18,12 @@ export function HeroSection() {
           
           <Link
             href="/classes"
-            className="inline-block bg-teal text-white font-medium py-3 px-10 hover:bg-opacity-90 transition duration-300"
+            className="inline-block bg-teal text-white font-medium py-3 px-10 rounded-full hover:bg-opacity-90 transition duration-300"
+            style={{ 
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.08)", 
+              textShadow: "0 1px 2px rgba(0, 0, 0, 0.1)",
+              transform: "translateY(-1px)"
+            }}
           >
             Try a Free Class
           </Link>
