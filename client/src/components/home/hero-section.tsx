@@ -4,7 +4,7 @@ import FadiaHeroImage from "../../assets/Fadia-15.jpg";
 export function HeroSection() {
   return (
     <section className="relative">
-      <div className="bg-cover bg-center h-[65vh] flex items-center justify-center" 
+      <div className="bg-cover bg-center h-[20vh] flex items-center justify-center" 
            style={{
              backgroundImage: `url(${FadiaHeroImage})`,
              backgroundPosition: "center"
