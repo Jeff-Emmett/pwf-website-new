@@ -18,9 +18,9 @@ export function HeroSection() {
           
           <Link
             href="/classes"
-            className="inline-block bg-white text-teal font-medium py-3 px-10 hover:bg-opacity-90 transition duration-300"
+            className="inline-block bg-teal text-white font-medium py-3 px-10 hover:bg-opacity-90 transition duration-300"
           >
-            Start Now For Free
+            Try a Free Class
           </Link>
         </div>
       </div>
