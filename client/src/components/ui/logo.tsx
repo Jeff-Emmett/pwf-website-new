@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import LogoImage from "../../assets/square-logo.png";
+import LogoImage from "../../assets/pilates-with-fadia-logo.png";
 
 export function Logo({ className = "", size = "regular" }: { className?: string, size?: "small" | "regular" | "large" }) {
   const sizeClasses = {
