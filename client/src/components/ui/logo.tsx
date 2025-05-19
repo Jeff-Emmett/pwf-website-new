@@ -3,9 +3,9 @@ import LogoImage from "../../assets/pilates-with-fadia-logo.png";
 
 export function Logo({ className = "", size = "regular" }: { className?: string, size?: "small" | "regular" | "large" }) {
   const sizeClasses = {
-    small: "h-16", /* reduced by 2/3 */
-    regular: "h-20", /* reduced by 2/3 */
-    large: "h-28", /* reduced by 2/3 */
+    small: "h-48", /* 3x bigger */
+    regular: "h-60", /* 3x bigger */
+    large: "h-84", /* 3x bigger */
   };
 
   return (
