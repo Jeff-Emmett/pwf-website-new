@@ -33,7 +33,7 @@ export function HeroSection() {
       <div className="py-16 text-center bg-rose bg-opacity-10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-2xl md:text-3xl font-normal text-gray-900">
-            Online Pilates Classes to help you feel stronger and more connected to your body.
+            Join Fadia for online pilates classes to help you feel stronger and more connected
           </p>
         </div>
       </div>
