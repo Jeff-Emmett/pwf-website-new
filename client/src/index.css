@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Catamaran:wght@300;400;500;600;700&family=Khula:wght@300;400;600;700&family=Aref+Ruqaa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Catamaran:wght@300;400;500;600;700&family=Khula:wght@300;400;600;700&family=Aref+Ruqaa:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -60,7 +60,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
   }
   
   .subtitle, .card-subtitle, .section-subtitle {
@@ -162,7 +162,7 @@
 }
 
 .font-playfair, .title {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .font-raleway {
