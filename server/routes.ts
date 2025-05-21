@@ -2,6 +2,7 @@ import type { Express, Request, Response } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { setupAuth } from "./auth";
+import { subscribeToMailchimp } from "./mailchimp";
 import { 
   insertNewsletterSchema, 
   insertContactMessageSchema,
@@ -84,25 +85,33 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const newsletterData = insertNewsletterSchema.parse(req.body);
       
-      // Check if email already exists
+      // Check if email already exists in our local database
       const existingNewsletter = await storage.getNewsletterByEmail(newsletterData.email);
-      if (existingNewsletter) {
-        return res.status(400).json({ message: "Email already subscribed" });
+      
+      // Store in our local database
+      if (!existingNewsletter) {
+        await storage.createNewsletter(newsletterData);
       }
       
-      const newsletter = await storage.createNewsletter(newsletterData);
-      
-      // In a real app, we'd integrate with MailChimp API here
-      // mailchimpClient.lists.addListMember(MAILCHIMP_LIST_ID, {
-      //   email_address: newsletterData.email,
-      //   status: "subscribed",
-      // });
-      
-      res.status(201).json({ message: "Successfully subscribed to the newsletter" });
+      // Subscribe to Mailchimp
+      try {
+        const mailchimpResponse = await subscribeToMailchimp(newsletterData.email);
+        
+        if (mailchimpResponse && mailchimpResponse.status === 'already_subscribed') {
+          return res.status(200).json({ message: mailchimpResponse.message });
+        }
+        
+        res.status(201).json({ message: "Successfully subscribed to the newsletter" });
+      } catch (mailchimpError: any) {
+        console.error('Mailchimp error:', mailchimpError.message);
+        // Still return success if we stored in our database but Mailchimp failed
+        res.status(201).json({ message: "Successfully subscribed to the newsletter" });
+      }
     } catch (error) {
       if (error instanceof z.ZodError) {
         return res.status(400).json({ message: "Invalid newsletter data", errors: error.errors });
       }
+      console.error('Newsletter subscription error:', error);
       res.status(500).json({ message: "Failed to subscribe to newsletter" });
     }
   });
