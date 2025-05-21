@@ -20,7 +20,7 @@ export default function Footer() {
               Transforming bodies and minds through the art of Pilates with a touch of cultural elegance.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
+              <a href="https://www.instagram.com/fadia.elgharib/" target="_blank" rel="noopener noreferrer" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
                 <i className="fab fa-instagram"></i>
               </a>
               <a href="#" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
