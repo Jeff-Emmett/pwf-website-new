@@ -27,7 +27,7 @@ export function AboutSection() {
               <div className="mt-8">
                 <Link href="/about">
                   <span 
-                    className="inline-block bg-purple text-white font-medium py-2 px-6 hover:bg-opacity-90 transition duration-300 rounded-md"
+                    className="inline-block bg-purple text-white font-medium py-2 px-6 hover:bg-opacity-90 transition duration-300 rounded-full"
                     style={{ 
                       boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)", 
                       textShadow: "0 1px 2px rgba(0, 0, 0, 0.1)",
