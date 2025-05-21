@@ -4,6 +4,7 @@ import { Class } from "@shared/schema";
 import { Skeleton } from "@/components/ui/skeleton";
 import FadiaClassImage from "../../assets/Fadia-156.jpg";
 
+
 export function ClassesSection() {
   const { data: classes, isLoading, error } = useQuery<Class[]>({
     queryKey: ["/api/classes"],
@@ -56,11 +57,11 @@ export function ClassesSection() {
         )}
         
         <div className="text-center mt-12">
-          <Link to="/calendar">
+          <a href="/calendar" className="inline-block">
             <button className="px-8 py-3 bg-rose-800 text-white font-bold rounded-full hover:bg-rose-900 transition duration-300 shadow-md">
               Book a Class Now
             </button>
-          </Link>
+          </a>
         </div>
       </div>
     </section>
