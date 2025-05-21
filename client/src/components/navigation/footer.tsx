@@ -24,13 +24,10 @@ export default function Footer() {
                 <i className="fab fa-instagram"></i>
               </a>
               <a href="#" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
                 <i className="fab fa-youtube"></i>
               </a>
-              <a href="#" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
-                <i className="fab fa-twitter"></i>
+              <a href="https://www.momoyoga.com/pilates-with-fadia/schedule" target="_blank" rel="noopener noreferrer" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
+                <i className="fas fa-calendar-alt"></i>
               </a>
             </div>
           </div>
