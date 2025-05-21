@@ -30,7 +30,7 @@ export function HeroSection() {
         </div>
       </div>
       
-      <div className="py-16 text-center bg-purple bg-opacity-10">
+      <div className="py-16 text-center" style={{ backgroundColor: "rgba(157, 94, 155, 0.1)" }}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-2xl md:text-3xl font-normal text-gray-900">
             Join Fadia for online pilates classes to help you feel stronger and more connected
