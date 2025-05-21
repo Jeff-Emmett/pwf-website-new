@@ -103,30 +103,7 @@ export function ContactSection() {
                 </div>
               </div>
               
-              <div className="flex items-start">
-                <div className="mt-1 mr-3 text-teal">
-                  <i className="fas fa-phone-alt"></i>
-                </div>
-                <div>
-                  <h4 className="font-playfair font-medium">Phone</h4>
-                  <a href="tel:+20123456789" className="text-gray-600 hover:text-teal transition duration-300">
-                    +20 123 456 789
-                  </a>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="mt-1 mr-3 text-teal">
-                  <i className="fas fa-clock"></i>
-                </div>
-                <div>
-                  <h4 className="font-playfair font-medium">Hours</h4>
-                  <p className="text-gray-600">
-                    Monday - Friday: 9am - 6pm<br/>
-                    Saturday: 10am - 2pm
-                  </p>
-                </div>
-              </div>
+              {/* Phone and hours removed as requested */}
             </div>
           </div>
           
