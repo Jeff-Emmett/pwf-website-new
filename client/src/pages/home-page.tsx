@@ -17,8 +17,8 @@ export default function HomePage() {
   return (
     <main>
       <HeroSection />
-      <AboutSection />
       <ClassesSection />
+      <AboutSection />
       <CommunitySection />
       <NewsletterSection />
       <CTASection />
