@@ -8,13 +8,13 @@ interface TestimonialProps {
 
 export function Testimonial({ quote, author, memberSince, initials, color }: TestimonialProps) {
   return (
-    <div className="bg-white p-6 text-left">
+    <div className="bg-transparent text-left">
       <p className="text-gray-700 mb-6 italic">
         "{quote}"
       </p>
       
       <div className="flex items-center">
-        <div className="w-10 h-10 rounded-full flex items-center justify-center mr-3 bg-rose bg-opacity-10 text-rose">
+        <div className={`w-10 h-10 rounded-full flex items-center justify-center mr-3 bg-${color} bg-opacity-20 text-${color}`}>
           <span>{initials}</span>
         </div>
         <div>

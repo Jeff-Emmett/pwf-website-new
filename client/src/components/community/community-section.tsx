@@ -157,18 +157,7 @@ export function CommunitySection() {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {testimonials.map((testimonial, index) => (
-            <Testimonial
-              key={index}
-              quote={testimonial.quote}
-              author={testimonial.author}
-              memberSince={testimonial.memberSince}
-              initials={testimonial.initials}
-              color={testimonial.color as "teal" | "purple" | "rose"}
-            />
-          ))}
-        </div>
+        {/* Testimonials moved to a separate section */}
         
         <div className="mt-10">
           <h3 className="text-2xl font-playfair font-semibold text-teal text-center mb-8">
