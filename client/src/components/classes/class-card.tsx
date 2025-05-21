@@ -18,6 +18,7 @@ export function ClassCard({ classData }: ClassCardProps) {
       case "group": return "bg-teal-light text-teal";
       case "small-group": return "bg-purple-light text-purple";
       case "private": return "bg-rose-light text-rose";
+      case "online": return "bg-blue-100 text-blue-700";
       default: return "bg-gray-100 text-gray-800";
     }
   };
@@ -28,6 +29,7 @@ export function ClassCard({ classData }: ClassCardProps) {
       case "group": return "Group";
       case "small-group": return "Small Group";
       case "private": return "1-on-1";
+      case "online": return "Online";
       default: return type;
     }
   };
@@ -38,6 +40,7 @@ export function ClassCard({ classData }: ClassCardProps) {
       case "group": return FadiaGroupClassImage;
       case "small-group": return FadiaSmallGroupClassImage;
       case "private": return FadiaPrivateClassImage;
+      case "online": return FadiaSmallGroupClassImage; // Reusing this image for online classes
       default: return FadiaGroupClassImage;
     }
   };

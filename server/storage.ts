@@ -212,6 +212,15 @@ export class MemStorage implements IStorage {
         capacity: 1,
         classType: "private",
         imageUrl: "https://images.unsplash.com/photo-1616279969856-759f316a5ac1"
+      },
+      {
+        name: "Online Classes",
+        description: "Practice pilates from the comfort of your own home or wherever you happen to be with our convenient online sessions.",
+        duration: 50,
+        price: 2000, // $20.00
+        capacity: 20,
+        classType: "online",
+        imageUrl: "https://images.unsplash.com/photo-1518611012118-696072aa579a"
       }
     ];
 
