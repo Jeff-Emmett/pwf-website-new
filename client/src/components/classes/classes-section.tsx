@@ -1,29 +1,13 @@
-import { useState } from "react";
 import { ClassCard } from "./class-card";
-import { BookingCalendar } from "./booking-calendar";
 import { useQuery } from "@tanstack/react-query";
 import { Class } from "@shared/schema";
 import { Skeleton } from "@/components/ui/skeleton";
 import FadiaClassImage from "../../assets/Fadia-156.jpg";
 
 export function ClassesSection() {
-  const [selectedClassId, setSelectedClassId] = useState<number | null>(null);
-  
   const { data: classes, isLoading, error } = useQuery<Class[]>({
     queryKey: ["/api/classes"],
   });
-  
-  const selectedClass = selectedClassId 
-    ? classes?.find(c => c.id === selectedClassId) 
-    : null;
-  
-  const handleBookClick = (classId: number) => {
-    setSelectedClassId(classId);
-    const element = document.getElementById('booking-calendar');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
   
   return (
     <section className="py-20" style={{ backgroundColor: 'rgba(181, 80, 118, 0.1)' }}>
@@ -65,7 +49,6 @@ export function ClassesSection() {
                   <Skeleton className="h-4 w-full mb-2" />
                   <Skeleton className="h-4 w-full mb-2" />
                   <Skeleton className="h-4 w-3/4 mb-4" />
-                  <Skeleton className="h-8 w-24 mt-4" />
                 </div>
               </div>
             ))}
@@ -80,26 +63,8 @@ export function ClassesSection() {
               <ClassCard 
                 key={classData.id} 
                 classData={classData} 
-                onBookClick={handleBookClick} 
               />
             ))}
-          </div>
-        )}
-        
-        {selectedClass && (
-          <div id="booking-calendar" className="mt-20 pt-10 border-t border-gray-200">
-            <h3 className="text-2xl font-playfair font-semibold text-center mb-8">
-              Book Your {selectedClass.name} Class
-            </h3>
-            <BookingCalendar selectedClass={selectedClass} />
-            <div className="text-center mt-8">
-              <button 
-                onClick={() => setSelectedClassId(null)} 
-                className="px-6 py-2 text-gray-600 hover:text-gray-900 border border-gray-300 hover:border-gray-500 transition-colors"
-              >
-                Cancel
-              </button>
-            </div>
           </div>
         )}
       </div>
