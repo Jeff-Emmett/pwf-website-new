@@ -21,37 +21,7 @@ export function ClassesSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          <div className="bg-white p-6 md:p-8 rounded-lg border border-gray-100">
-            <div className="flex flex-col justify-between h-full">
-              <div>
-                <h3 className="font-playfair text-xl font-semibold text-gray-800 mb-3">
-                  ✨ In-Person Classes
-                </h3>
-                <p className="text-gray-700">Join Fadia for physical classes in the heart of Cairo at the renowned Nun Center, Zamalek</p>
-                <p className="text-gray-700 mt-2">📍 Classes every Wednesday & Saturday</p>
-              </div>
-              <a href="https://nuncenter.com" className="mt-4 inline-flex items-center text-rose hover:text-rose-600 transition-colors font-medium">
-                Contact Nun Center →
-              </a>
-            </div>
-          </div>
-          
-          <div className="bg-white p-6 md:p-8 rounded-lg border border-gray-100">
-            <div className="flex flex-col justify-between h-full">
-              <div>
-                <h3 className="font-playfair text-xl font-semibold text-gray-800 mb-3">
-                  🖥️ Online Classes
-                </h3>
-                <p className="text-gray-700">Experience Fadia's classes from anywhere in the world with live-streamed and on-demand sessions</p>
-                <p className="text-gray-700 mt-2">⏰ Flexible scheduling to fit your lifestyle</p>
-              </div>
-              <a href="/classes" className="mt-4 inline-flex items-center text-purple hover:text-purple-600 transition-colors font-medium">
-                Learn More →
-              </a>
-            </div>
-          </div>
-        </div>
+        {/* Class description boxes removed */}
         
         {isLoading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
