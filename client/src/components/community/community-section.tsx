@@ -109,21 +109,17 @@ export function CommunitySection() {
           </p>
           
           {/* Newsletter Section */}
-          <div className="max-w-2xl mx-auto bg-white p-8 shadow-sm mb-16">
+          <div className="max-w-2xl mx-auto bg-transparent p-6 mb-16 border border-purple border-opacity-20 rounded-lg">
             <h3 className="text-2xl font-playfair font-semibold mb-4">
               Sign up for my Newsletter
             </h3>
-            <p className="max-w-3xl mx-auto mb-8">
-              Stay updated with wellness tips, special class offerings, and community events
-            </p>
             <form onSubmit={handleNewsletterSubmit}>
               <div className="flex flex-col mb-6">
-                <label htmlFor="newsletter-email" className="mb-2 text-gray-700 font-medium">Email Address</label>
                 <input 
                   id="newsletter-email"
                   type="email" 
                   placeholder="Your email address" 
-                  className="px-4 py-3 bg-white border border-gray-300 placeholder-gray-500 text-gray-800 focus:outline-none focus:border-teal"
+                  className="px-4 py-3 bg-white bg-opacity-80 border border-purple border-opacity-30 placeholder-gray-500 text-gray-800 focus:outline-none focus:border-teal rounded-md"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -134,7 +130,7 @@ export function CommunitySection() {
                 <label className="flex items-center cursor-pointer">
                   <input 
                     type="checkbox" 
-                    className="form-checkbox h-4 w-4 border-gray-300 text-teal"
+                    className="form-checkbox h-4 w-4 border-gray-300 text-purple"
                     checked={agreedToTerms}
                     onChange={(e) => setAgreedToTerms(e.target.checked)}
                     required
@@ -145,7 +141,7 @@ export function CommunitySection() {
               
               <button 
                 type="submit" 
-                className="w-full px-6 py-3 bg-teal text-white font-medium hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
+                className="w-full px-6 py-3 bg-rose text-white font-medium hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
                 disabled={newsletterMutation.isPending}
               >
                 {newsletterMutation.isPending ? (
@@ -154,7 +150,7 @@ export function CommunitySection() {
                     Subscribing...
                   </>
                 ) : (
-                  "Subscribe"
+                  "Subscribe for Updates"
                 )}
               </button>
             </form>
