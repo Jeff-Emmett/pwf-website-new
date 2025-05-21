@@ -21,8 +21,8 @@ export default function HomePage() {
       <AboutSection />
       <TestimonialsSection />
       <CommunitySection />
-      <CTASection />
       <ContactSection />
+      <CTASection />
     </main>
   );
 }

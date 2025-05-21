@@ -2,28 +2,18 @@ import { Link } from "wouter";
 
 export function CTASection() {
   return (
-    <section className="py-20 text-white" style={{ backgroundColor: '#0c8991' }}>
+    <section className="py-16 text-white" style={{ backgroundColor: '#0c8991' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-playfair font-semibold mb-6">
+        <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-8">
           Ready to feel stronger, more connected, and at home in your body?
-        </h2>
+        </h3>
         
-        <p className="text-xl text-white text-opacity-90 font-raleway mb-10 max-w-3xl mx-auto">
-          Start with your breath. Start today.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+        <div className="flex justify-center">
           <Link
             href="/classes"
-            className="bg-white text-teal font-medium py-3 px-10 hover:bg-opacity-90 transition duration-300"
+            className="bg-white text-teal font-bold py-4 px-10 rounded-md shadow-md hover:bg-opacity-90 transition duration-300 text-lg"
           >
-            Join a Class
-          </Link>
-          <Link
-            href="/contact"
-            className="bg-transparent border border-white text-white font-medium py-3 px-10 hover:bg-white hover:text-teal transition duration-300"
-          >
-            Contact Fadia
+            Book a Class
           </Link>
         </div>
       </div>
