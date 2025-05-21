@@ -1,6 +1,6 @@
 import { Logo } from "@/components/ui/logo";
 import { Link } from "wouter";
-import SquareLogo from "../../assets/square-logo.png";
+import SquareLogo from "@assets/PwF Logo (square).png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,7 +13,7 @@ export default function Footer() {
             <img 
               src={SquareLogo} 
               alt="Pilates with Fadia" 
-              className="w-40 mb-4"
+              className="w-80 mb-4"
               style={{ filter: "brightness(1.1)" }}
             />
             <p className="text-white text-opacity-80 mb-4">
