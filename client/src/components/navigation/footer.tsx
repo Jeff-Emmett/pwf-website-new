@@ -132,18 +132,12 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <i className="fas fa-map-marker-alt mt-1 mr-2 text-white"></i>
-                <span className="text-white text-opacity-70">123 Serenity Lane, Wellness District<br/>Dubai, UAE</span>
+                <span className="text-white text-opacity-70">Nun Center<br/>Zamalek, Cairo, Egypt</span>
               </li>
               <li className="flex items-center">
                 <i className="fas fa-envelope mr-2 text-white"></i>
                 <a href="mailto:hello@pilateswithfadia.com" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
                   hello@pilateswithfadia.com
-                </a>
-              </li>
-              <li className="flex items-center">
-                <i className="fas fa-phone-alt mr-2 text-white"></i>
-                <a href="tel:+97150123567" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
-                  +971 50 123 4567
                 </a>
               </li>
             </ul>
