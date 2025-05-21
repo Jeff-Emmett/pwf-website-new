@@ -59,14 +59,9 @@ export function ClassCard({ classData }: ClassCardProps) {
             {formatClassType(classData.classType)}
           </span>
         </div>
-        <p className="text-gray-600 mb-4">
+        <p className="text-gray-600">
           {classData.description}
         </p>
-        <div className="flex items-center">
-          <span className="text-gray-700">
-            <i className="far fa-clock mr-1"></i> {formatDuration(classData.duration)}
-          </span>
-        </div>
       </div>
     </div>
   );
