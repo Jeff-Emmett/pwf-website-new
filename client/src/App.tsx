@@ -11,6 +11,7 @@ import ClassesPage from "@/pages/classes-page";
 import CommunityPage from "@/pages/community-page";
 import ContactPage from "@/pages/contact-page";
 import AuthPage from "@/pages/auth-page";
+import CalendarPage from "@/pages/calendar-page";
 import NotFound from "@/pages/not-found";
 import { ProtectedRoute } from "./lib/protected-route";
 import Header from "@/components/navigation/header";
@@ -26,6 +27,7 @@ function Router() {
         <Route path="/classes" component={ClassesPage} />
         <ProtectedRoute path="/community" component={CommunityPage} />
         <Route path="/contact" component={ContactPage} />
+        <Route path="/calendar" component={CalendarPage} />
         <Route path="/auth" component={AuthPage} />
         <Route component={NotFound} />
       </Switch>
