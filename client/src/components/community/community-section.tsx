@@ -163,8 +163,8 @@ export function CommunitySection() {
         
         <div className="text-center mt-12">
           <Link to="/auth">
-            <button className="px-8 py-3 bg-teal text-white font-medium rounded-full hover:bg-opacity-90 transition duration-300">
-              {user ? "Access Community Dashboard" : "Join Our Community"}
+            <button className="px-8 py-3 bg-rose-800 text-white font-bold rounded-full hover:bg-rose-900 transition duration-300 shadow-md">
+              {user ? "Access Community Dashboard" : "Join My Community"}
             </button>
           </Link>
         </div>
