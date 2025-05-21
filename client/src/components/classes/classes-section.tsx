@@ -54,6 +54,14 @@ export function ClassesSection() {
             ))}
           </div>
         )}
+        
+        <div className="text-center mt-12">
+          <Link to="/calendar">
+            <button className="px-8 py-3 bg-rose-800 text-white font-bold rounded-full hover:bg-rose-900 transition duration-300 shadow-md">
+              Book a Class Now
+            </button>
+          </Link>
+        </div>
       </div>
     </section>
   );
