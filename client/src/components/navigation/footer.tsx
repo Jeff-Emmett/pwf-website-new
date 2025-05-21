@@ -61,6 +61,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link 
+                  href="/calendar" 
+                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
+                >
+                  Calendar
+                </Link>
+              </li>
+              <li>
+                <Link 
                   href="/community" 
                   className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
                 >
