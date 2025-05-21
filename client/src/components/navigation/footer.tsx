@@ -108,22 +108,7 @@ export default function Footer() {
                   Private Sessions
                 </Link>
               </li>
-              <li>
-                <Link 
-                  href="/classes" 
-                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
-                >
-                  Group Classes
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/classes" 
-                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
-                >
-                  Special Workshops
-                </Link>
-              </li>
+              {/* Group Classes and Special Workshops removed */}
             </ul>
           </div>
           
