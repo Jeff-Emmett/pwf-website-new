@@ -41,32 +41,6 @@ export function AboutSection() {
             </div>
           </div>
         </div>
-        
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="text-center p-6 bg-white">
-            <i className="fas fa-certificate text-purple text-xl mb-3"></i>
-            <h4 className="font-playfair font-semibold mb-2">Certified Instructor</h4>
-            <p className="text-sm text-gray-600">Comprehensive Pilates Certification</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white">
-            <i className="fas fa-graduation-cap text-purple text-xl mb-3"></i>
-            <h4 className="font-playfair font-semibold mb-2">Advanced Training</h4>
-            <p className="text-sm text-gray-600">Specialized in Rehabilitation</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white">
-            <i className="fas fa-heartbeat text-purple text-xl mb-3"></i>
-            <h4 className="font-playfair font-semibold mb-2">Wellness Expert</h4>
-            <p className="text-sm text-gray-600">Holistic Approach to Health</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white">
-            <i className="fas fa-users text-purple text-xl mb-3"></i>
-            <h4 className="font-playfair font-semibold mb-2">10+ Years Experience</h4>
-            <p className="text-sm text-gray-600">Guiding Hundreds of Students</p>
-          </div>
-        </div>
       </div>
     </section>
   );
