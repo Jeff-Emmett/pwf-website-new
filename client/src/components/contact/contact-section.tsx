@@ -66,49 +66,16 @@ export function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-playfair font-semibold text-gray-800 mb-4">
-            Contact Us
+            Get In Touch
           </h2>
           <p className="max-w-3xl mx-auto text-gray-600">
-            Have a question or want to schedule a private session? Get in touch with us.
+            Have a question, or want to schedule a private session? Reach out below.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div>
-            <h3 className="text-2xl font-playfair font-semibold text-gray-800 mb-6">Get In Touch</h3>
-            
-            <div className="space-y-4">
-              <div className="flex items-start">
-                <div className="mt-1 mr-3 text-teal">
-                  <i className="fas fa-map-marker-alt"></i>
-                </div>
-                <div>
-                  <h4 className="font-playfair font-medium">Location</h4>
-                  <p className="text-gray-600">
-                    Nun Center, Zamalek<br/>
-                    Cairo, Egypt
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="mt-1 mr-3 text-teal">
-                  <i className="fas fa-envelope"></i>
-                </div>
-                <div>
-                  <h4 className="font-playfair font-medium">Email</h4>
-                  <a href="mailto:hello@pilateswithfadia.com" className="text-gray-600 hover:text-teal transition duration-300">
-                    hello@pilateswithfadia.com
-                  </a>
-                </div>
-              </div>
-              
-              {/* Phone and hours removed as requested */}
-            </div>
-          </div>
-          
-          <div>
-            <form onSubmit={handleSubmit} className="bg-gray-50 p-6">
+        <div className="flex justify-center">
+          <div className="max-w-xl w-full">
+            <form onSubmit={handleSubmit} className="bg-gray-50 p-8 rounded-lg shadow-sm">
               <div className="mb-4">
                 <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Name</label>
                 <input
@@ -162,7 +129,7 @@ export function ContactSection() {
               
               <button 
                 type="submit" 
-                className="w-full px-6 py-3 bg-teal text-white font-medium hover:bg-opacity-90 transition duration-300 flex items-center justify-center"
+                className="w-full px-6 py-3 bg-teal text-white font-medium hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
                 disabled={contactMutation.isPending}
               >
                 {contactMutation.isPending ? (
