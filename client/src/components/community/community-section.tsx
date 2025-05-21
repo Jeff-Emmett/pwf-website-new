@@ -48,10 +48,10 @@ export function CommunitySection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-playfair font-semibold text-gray-800 mb-4">
-            Our Community
+            Join the Pilates with Fadia Community
           </h2>
           <p className="max-w-3xl mx-auto text-gray-600">
-            Join our supportive community of like-minded individuals committed to health and wellness.
+            I curate a growing community of like-minded individuals committed to health, wellness, and positive growth.
           </p>
         </div>
         
