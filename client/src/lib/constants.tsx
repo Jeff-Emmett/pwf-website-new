@@ -76,8 +76,8 @@ export const CLASS_TYPES = {
 // SEO metadata
 export const SEO = {
   home: {
-    title: "Pilates with Fadia | Find Balance, Strength & Inner Peace",
-    description: "Transform your body and mind through the art of Pilates. Join our serene studio for personalized sessions that promote harmony, flexibility, and strength."
+    title: "Pilates with Fadia - Feel at Home in Your Body",
+    description: "Online pilates classes to help you feel stronger and more connected to your body and breath."
   },
   about: {
     title: "About Fadia | Pilates with Fadia",
