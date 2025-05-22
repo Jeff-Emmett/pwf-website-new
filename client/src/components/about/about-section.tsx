@@ -24,10 +24,10 @@ export function AboutSection() {
                 Based between Cairo and Berlin, she brings a unique approach to her teaching, combining precision with playfulness to create classes that build strength, awareness, and joy.
               </p>
               
-              <div className="mt-8">
+              <div className="mt-8 text-center">
                 <Link href="/about">
                   <span 
-                    className="inline-block bg-purple text-white font-medium py-2 px-6 hover:bg-opacity-90 transition duration-300 rounded-full"
+                    className="inline-block bg-purple text-white font-bold py-2 px-6 hover:bg-opacity-90 transition duration-300 rounded-full"
                     style={{ 
                       boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)", 
                       textShadow: "0 1px 2px rgba(0, 0, 0, 0.1)",

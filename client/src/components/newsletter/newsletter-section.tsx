@@ -87,7 +87,7 @@ export function NewsletterForm() {
       
       <button 
         type="submit" 
-        className="w-full px-6 py-3 bg-teal text-white font-medium hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
+        className="w-full px-6 py-3 bg-teal text-white font-bold hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
         disabled={newsletterMutation.isPending}
       >
         {newsletterMutation.isPending ? (
