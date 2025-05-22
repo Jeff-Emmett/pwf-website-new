@@ -69,13 +69,13 @@ export default function Header() {
               <>
                 <Link 
                   href="/auth" 
-                  className="text-teal hover:text-teal-600 transition-colors duration-200 font-raleway font-medium"
+                  className="text-teal hover:text-teal-600 transition-colors duration-200 font-raleway font-bold"
                 >
                   Login
                 </Link>
                 <Link 
                   href="/auth" 
-                  className="bg-teal text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-colors duration-200 font-raleway font-medium"
+                  className="bg-teal text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-colors duration-200 font-raleway font-bold"
                 >
                   Sign Up
                 </Link>
