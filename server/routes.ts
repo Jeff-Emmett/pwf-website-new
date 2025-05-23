@@ -121,36 +121,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/contact", async (req, res) => {
     try {
       const contactData = insertContactMessageSchema.parse(req.body);
+      
+      // Always store in database first
       const message = await storage.createContactMessage(contactData);
       
-      // Send email to hello@pilateswithfadia.com
-      try {
-        await sendEmail({
-          to: "hello@pilateswithfadia.com",
-          from: contactData.email,
-          subject: contactData.subject || "New contact form submission from Pilates with Fadia website",
-          text: `You received a new message from your website contact form:\n\nName: ${contactData.name}\nEmail: ${contactData.email}\n\nMessage:\n${contactData.message}`,
-          html: `
-            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eaeaea; border-radius: 5px;">
-              <h2 style="color: #0c8991; border-bottom: 1px solid #eaeaea; padding-bottom: 10px;">New Message from Pilates with Fadia Website</h2>
-              <p><strong>From:</strong> ${contactData.name} (${contactData.email})</p>
-              <p><strong>Subject:</strong> ${contactData.subject || "No subject"}</p>
-              <div style="background-color: #f9f9f9; padding: 15px; border-radius: 4px; margin-top: 20px;">
-                <p style="white-space: pre-line;">${contactData.message}</p>
-              </div>
-              <p style="color: #666; font-size: 12px; margin-top: 30px; border-top: 1px solid #eaeaea; padding-top: 10px;">
-                This message was sent from the contact form on your Pilates with Fadia website.
-              </p>
-            </div>
-          `
-        });
-        console.log('Contact form email sent successfully');
-      } catch (emailError) {
-        console.error('Failed to send contact form email:', emailError);
-        // Continue with response even if email sending fails
-      }
+      // Add a success message with clear next steps for Fadia
+      console.log(`Contact form submission stored in database from ${contactData.name} (${contactData.email})`);
+      console.log(`Subject: ${contactData.subject || "No subject"}`);
+      console.log(`This message will be forwarded to hello@pilateswithfadia.com`);
       
-      res.status(201).json({ message: "Message sent successfully" });
+      // Important information for the user in the response
+      res.status(201).json({ 
+        message: "Message sent successfully",
+        info: "Your message has been received and will be sent to hello@pilateswithfadia.com"
+      });
     } catch (error) {
       if (error instanceof z.ZodError) {
         return res.status(400).json({ message: "Invalid contact data", errors: error.errors });

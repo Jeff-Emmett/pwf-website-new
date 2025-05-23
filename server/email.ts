@@ -8,17 +8,15 @@ interface EmailOptions {
   html?: string;
 }
 
-// Create a transporter
+// Log email configuration (without password)
+console.log(`Email configuration: Using ${process.env.EMAIL_USER} to send emails`);
+
+// Create a transporter 
 const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com', // You may need to change this depending on your email provider
-  port: 587,
-  secure: false, // true for 465, false for other ports
+  service: 'gmail', // Use predefined settings for Gmail
   auth: {
-    user: process.env.EMAIL_USER, // email address used for sending
-    pass: process.env.EMAIL_PASSWORD, // email password or app-specific password
-  },
-  tls: {
-    rejectUnauthorized: false // only for development
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASSWORD, // This needs to be an app password for Gmail
   }
 });
 
