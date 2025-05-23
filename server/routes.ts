@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { setupAuth } from "./auth";
 import { subscribeToMailchimp } from "./mailchimp";
+import { sendEmail } from "./email";
 import { 
   insertNewsletterSchema, 
   insertContactMessageSchema,
@@ -122,13 +123,32 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const contactData = insertContactMessageSchema.parse(req.body);
       const message = await storage.createContactMessage(contactData);
       
-      // In a real app, we'd send an email here
-      // sendEmail({
-      //   to: "hello@pilateswithfadia.com",
-      //   from: contactData.email,
-      //   subject: contactData.subject || "New contact form submission",
-      //   text: `Name: ${contactData.name}\nEmail: ${contactData.email}\nMessage: ${contactData.message}`
-      // });
+      // Send email to hello@pilateswithfadia.com
+      try {
+        await sendEmail({
+          to: "hello@pilateswithfadia.com",
+          from: contactData.email,
+          subject: contactData.subject || "New contact form submission from Pilates with Fadia website",
+          text: `You received a new message from your website contact form:\n\nName: ${contactData.name}\nEmail: ${contactData.email}\n\nMessage:\n${contactData.message}`,
+          html: `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eaeaea; border-radius: 5px;">
+              <h2 style="color: #0c8991; border-bottom: 1px solid #eaeaea; padding-bottom: 10px;">New Message from Pilates with Fadia Website</h2>
+              <p><strong>From:</strong> ${contactData.name} (${contactData.email})</p>
+              <p><strong>Subject:</strong> ${contactData.subject || "No subject"}</p>
+              <div style="background-color: #f9f9f9; padding: 15px; border-radius: 4px; margin-top: 20px;">
+                <p style="white-space: pre-line;">${contactData.message}</p>
+              </div>
+              <p style="color: #666; font-size: 12px; margin-top: 30px; border-top: 1px solid #eaeaea; padding-top: 10px;">
+                This message was sent from the contact form on your Pilates with Fadia website.
+              </p>
+            </div>
+          `
+        });
+        console.log('Contact form email sent successfully');
+      } catch (emailError) {
+        console.error('Failed to send contact form email:', emailError);
+        // Continue with response even if email sending fails
+      }
       
       res.status(201).json({ message: "Message sent successfully" });
     } catch (error) {
