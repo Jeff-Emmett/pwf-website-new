@@ -1,65 +1,81 @@
-import { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
-import { insertContactMessageSchema } from "@shared/schema";
-import { useToast } from "@/hooks/use-toast";
-import { Loader2 } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 export function ContactSection() {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
+  const formContainerRef = useRef<HTMLDivElement>(null);
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: typeof formData) => {
-      const res = await apiRequest("POST", "/api/contact", data);
-      return await res.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message sent",
-        description: "Thank you for your message. We'll get back to you soon!",
-      });
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: ""
-      });
-    },
-    onError: (error: Error) => {
-      toast({
-        title: "Failed to send message",
-        description: error.message,
-        variant: "destructive",
-      });
-    },
-  });
+  useEffect(() => {
+    // Define the Mailchimp form HTML
+    const mailchimpFormHTML = `
+      <!-- Begin Mailchimp Contact Form -->
+      <div id="mc_embed_contact_form" class="bg-gray-50 p-8 rounded-lg shadow-sm">
+        <form action="https://us5.list-manage.com/contact-form?u=1d139a47cd1264b937687c37e&form_id=570823f6e3a6f36704ea241f7201c8ac" 
+              method="post" 
+              id="mc-embedded-contact-form" 
+              name="mc-embedded-contact-form" 
+              target="_blank"
+              novalidate>
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+          <div class="mb-4">
+            <label for="FNAME" class="block text-gray-700 font-medium mb-2">Name *</label>
+            <input 
+              type="text" 
+              id="FNAME" 
+              name="FNAME" 
+              class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:border-teal rounded-md" 
+              required
+            />
+          </div>
+          
+          <div class="mb-4">
+            <label for="EMAIL" class="block text-gray-700 font-medium mb-2">Email *</label>
+            <input 
+              type="email" 
+              id="EMAIL" 
+              name="EMAIL" 
+              class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:border-teal rounded-md" 
+              required
+            />
+          </div>
+          
+          <div class="mb-4">
+            <label for="SUBJECT" class="block text-gray-700 font-medium mb-2">Subject</label>
+            <input 
+              type="text" 
+              id="SUBJECT" 
+              name="SUBJECT" 
+              class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:border-teal rounded-md"
+            />
+          </div>
+          
+          <div class="mb-4">
+            <label for="MMERGE3" class="block text-gray-700 font-medium mb-2">Message *</label>
+            <textarea 
+              id="MMERGE3" 
+              name="MMERGE3" 
+              rows="5" 
+              class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:border-teal rounded-md"
+              required
+            ></textarea>
+          </div>
+          
+          <!-- Submit button styled to match our site design -->
+          <button 
+            type="submit" 
+            name="submitForm"
+            class="w-full px-6 py-3 bg-purple text-white font-bold hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+      <!-- End Mailchimp Contact Form -->
+    `;
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Missing information",
-        description: "Please fill out all required fields",
-        variant: "destructive",
-      });
-      return;
+    // Insert the form into the DOM
+    if (formContainerRef.current) {
+      formContainerRef.current.innerHTML = mailchimpFormHTML;
     }
-    
-    contactMutation.mutate(formData);
-  };
+  }, []);
 
   return (
     <section className="py-12 bg-white">
@@ -74,74 +90,8 @@ export function ContactSection() {
         </div>
         
         <div className="flex justify-center">
-          <div className="max-w-xl w-full">
-            <form onSubmit={handleSubmit} className="bg-gray-50 p-8 rounded-lg shadow-sm">
-              <div className="mb-4">
-                <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:border-teal"
-                  required
-                />
-              </div>
-              
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:border-teal"
-                  required
-                />
-              </div>
-              
-              <div className="mb-4">
-                <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:border-teal"
-                />
-              </div>
-              
-              <div className="mb-4">
-                <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={5}
-                  className="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:border-teal"
-                  required
-                ></textarea>
-              </div>
-              
-              <button 
-                type="submit" 
-                className="w-full px-6 py-3 bg-purple text-white font-bold hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
-                disabled={contactMutation.isPending}
-              >
-                {contactMutation.isPending ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Sending...
-                  </>
-                ) : (
-                  "Send Message"
-                )}
-              </button>
-            </form>
+          <div className="max-w-xl w-full" ref={formContainerRef}>
+            {/* Mailchimp form will be inserted here by the useEffect hook */}
           </div>
         </div>
       </div>
