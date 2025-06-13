@@ -3,7 +3,7 @@ import FadiaImage from "../../assets/Fadia-167-crop.jpg";
 
 export function AboutSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-purple-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 md:pr-12 mb-8 md:mb-0">
