@@ -58,7 +58,7 @@ export function ClassesSection() {
         
         <div className="text-center mt-12">
           <a href="/calendar" className="inline-block">
-            <button className="px-8 py-3 bg-rose text-white font-bold rounded-full hover:bg-rose-700 transition duration-300 shadow-md">Book a Class</button>
+            <button className="px-12 py-5 bg-rose text-white font-bold rounded-full hover:bg-rose-700 transition duration-300 shadow-md text-xl">Book a Class</button>
           </a>
         </div>
       </div>
