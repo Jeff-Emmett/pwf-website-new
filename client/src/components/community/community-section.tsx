@@ -44,22 +44,20 @@ export function CommunitySection() {
   return (
     <section className="py-20" style={{ backgroundColor: 'rgba(157, 94, 155, 0.1)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-playfair font-semibold text-gray-800 mb-4">
             Join the Pilates with Fadia Community
           </h2>
-          <p className="max-w-3xl mx-auto text-gray-600 mb-12">
+          <p className="max-w-3xl mx-auto text-gray-600 mb-6">
             I curate a growing community of like-minded individuals committed to health, wellness, and positive growth.
           </p>
-          
-
         </div>
         
         {/* Testimonials moved to a separate section */}
         
         {/* Whiteboard removed from homepage and moved to community page */}
         
-        <div className="text-center mt-12">
+        <div className="text-center">
           <Link to="/auth">
             <button className="px-8 py-3 bg-rose text-white font-bold rounded-full hover:bg-opacity-90 transition duration-300 shadow-md">
               {user ? "Access Community Dashboard" : "Join My Community"}
