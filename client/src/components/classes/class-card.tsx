@@ -2,7 +2,7 @@ import { Class } from "@shared/schema";
 import FadiaGardenImage from "@assets/fadia-garden_1749836720986.jpg";
 import PilatesClassImage from "@assets/pilates_class_1749837680834.jpeg";
 import FadiaStudioImage from "@assets/Fadia-156.jpg";
-import FadiaPrivateImage from "@assets/Fadia-6_1749838606834.jpg";
+import FadiaPrivateImage from "@assets/Fadia-7_1749842141071.jpg";
 import FadiaPoseImage from "@assets/fadia pose_1749838215401.jpg";
 
 interface ClassCardProps {
