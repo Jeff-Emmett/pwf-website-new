@@ -130,7 +130,6 @@ export const TESTIMONIALS = [
 export const NAV_LINKS = [
   { name: "Book a Class", path: "/calendar" },
   { name: "About Fadia", path: "/about" },
-  { name: "Community", path: "/community" },
   { name: "Contact", path: "/contact" },
 ];
 
