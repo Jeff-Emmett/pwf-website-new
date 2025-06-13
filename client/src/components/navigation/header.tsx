@@ -17,8 +17,8 @@ export default function Header() {
   
   const isActive = (path: string) => {
     return location === path 
-      ? "text-teal" 
-      : "text-gray-700 hover:text-teal";
+      ? "text-white" 
+      : "text-white text-opacity-80 hover:text-white";
   };
   
   const navLinks = [
@@ -29,7 +29,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 bg-white bg-opacity-95 shadow-sm z-50">
+    <header className="sticky top-0 bg-teal shadow-sm z-50">
       <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4">
         <div className="flex justify-between items-center py-1">
           <div className="flex items-center">
@@ -52,12 +52,12 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             {user ? (
               <>
-                <span className="text-gray-700 font-raleway">
+                <span className="text-white font-raleway">
                   Hi, {user.fullName || user.username}
                 </span>
                 <Button
                   variant="outline"
-                  className="text-teal hover:text-teal-600 hover:bg-gray-50"
+                  className="text-white border-white hover:bg-white hover:text-teal"
                   onClick={() => logoutMutation.mutate()}
                 >
                   Logout
@@ -67,13 +67,13 @@ export default function Header() {
               <>
                 <Link 
                   href="/auth" 
-                  className="text-teal hover:text-teal-600 transition-colors duration-200 font-raleway font-bold"
+                  className="text-white hover:text-opacity-80 transition-colors duration-200 font-raleway font-bold"
                 >
                   Login
                 </Link>
                 <Link 
                   href="/auth" 
-                  className="bg-teal text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-colors duration-200 font-raleway font-bold"
+                  className="bg-white text-teal px-4 py-2 rounded-full hover:bg-opacity-90 transition-colors duration-200 font-raleway font-bold"
                 >
                   Sign Up
                 </Link>
@@ -85,7 +85,7 @@ export default function Header() {
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
-                <button type="button" className="text-gray-700 hover:text-teal">
+                <button type="button" className="text-white hover:text-opacity-80">
                   <span className="sr-only">Open main menu</span>
                   <Menu className="h-6 w-6" />
                 </button>
