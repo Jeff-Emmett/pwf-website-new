@@ -11,7 +11,7 @@ export function CTASection() {
         <div className="flex justify-center mb-6">
           <Link
             href="/calendar"
-            className="bg-rose text-white font-bold py-4 px-10 rounded-md shadow-md hover:bg-opacity-90 transition duration-300 text-lg"
+            className="bg-rose text-white font-bold py-4 px-10 rounded-full shadow-md hover:bg-opacity-90 transition duration-300 text-lg"
           >
             Book a Class
           </Link>
