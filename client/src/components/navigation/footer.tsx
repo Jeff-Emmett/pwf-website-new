@@ -103,14 +103,7 @@ export default function Footer() {
                   About Fadia
                 </Link>
               </li>
-              <li>
-                <Link 
-                  href="/classes" 
-                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
-                >
-                  Classes
-                </Link>
-              </li>
+
               <li>
                 <Link 
                   href="/calendar" 
