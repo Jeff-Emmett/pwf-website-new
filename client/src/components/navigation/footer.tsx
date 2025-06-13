@@ -9,6 +9,55 @@ import SquareLogo from "@assets/PwF Logo (square).png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { toast } = useToast();
+  const [email, setEmail] = useState("");
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
+
+  const newsletterMutation = useMutation({
+    mutationFn: async (newsletterData: { email: string, agreedToTerms: boolean }) => {
+      const res = await apiRequest("POST", "/api/newsletter", newsletterData);
+      return await res.json();
+    },
+    onSuccess: () => {
+      toast({
+        title: "Subscription successful",
+        description: "Thank you for subscribing to our newsletter!",
+      });
+      setEmail("");
+      setAgreedToTerms(false);
+    },
+    onError: (error: Error) => {
+      toast({
+        title: "Subscription failed",
+        description: error.message,
+        variant: "destructive",
+      });
+    },
+  });
+
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email) {
+      toast({
+        title: "Email required",
+        description: "Please enter your email address",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    if (!agreedToTerms) {
+      toast({
+        title: "Consent required",
+        description: "Please agree to receive emails from Pilates with Fadia",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    newsletterMutation.mutate({ email, agreedToTerms });
+  };
   
   return (
     <footer className="bg-teal text-white py-12">
@@ -137,7 +186,56 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-white border-opacity-20 mt-12 pt-8">
+        {/* Newsletter Signup Section */}
+        <div className="border-t border-white border-opacity-20 mt-12 pt-8 mb-8">
+          <div className="max-w-md mx-auto text-center">
+            <h3 className="text-xl font-playfair font-semibold mb-4 text-white">
+              Sign up for my Newsletter
+            </h3>
+            <form onSubmit={handleNewsletterSubmit}>
+              <div className="mb-4">
+                <input 
+                  type="email" 
+                  placeholder="Your email address" 
+                  className="w-full px-4 py-3 bg-white bg-opacity-90 border border-white border-opacity-30 placeholder-gray-500 text-gray-800 focus:outline-none focus:border-white rounded-md"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+              
+              <div className="mb-4">
+                <label className="flex items-center justify-center cursor-pointer">
+                  <input 
+                    type="checkbox" 
+                    className="mr-2"
+                    checked={agreedToTerms}
+                    onChange={(e) => setAgreedToTerms(e.target.checked)}
+                    required
+                  />
+                  <span className="text-white text-opacity-80 text-sm">I agree to receive emails from Pilates with Fadia</span>
+                </label>
+              </div>
+              
+              <button 
+                type="submit" 
+                className="w-full px-6 py-3 bg-purple text-white font-bold hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
+                disabled={newsletterMutation.isPending}
+              >
+                {newsletterMutation.isPending ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Subscribing...
+                  </>
+                ) : (
+                  "Subscribe for Updates"
+                )}
+              </button>
+            </form>
+          </div>
+        </div>
+        
+        <div className="border-t border-white border-opacity-20 pt-8">
 
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-white text-opacity-70 text-sm mb-4 md:mb-0">
