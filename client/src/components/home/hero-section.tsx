@@ -29,9 +29,9 @@ export function HeroSection() {
           </Link>
         </div>
       </div>
-      <div className="py-16 text-center bg-purple-light">
+      <div className="py-8 text-center bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-2xl md:text-3xl font-normal text-gray-800">
+          <p className="text-lg md:text-xl font-normal text-gray-800">
             Online pilates classes to help you feel stronger and more connected to your body and breath
           </p>
         </div>
