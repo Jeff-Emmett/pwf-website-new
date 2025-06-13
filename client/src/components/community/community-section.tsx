@@ -56,23 +56,26 @@ export function CommunitySection() {
         
         {/* Testimonials moved to a separate section */}
         
-        {/* Community Image */}
-        <div className="flex justify-center mb-8">
-          <img 
-            src={CommunityImage} 
-            alt="Pilates Community" 
-            className="w-full max-w-2xl rounded-lg shadow-lg object-cover"
-          />
-        </div>
-        
-        {/* Whiteboard removed from homepage and moved to community page */}
-        
-        <div className="text-center">
-          <Link to="/auth">
-            <button className="px-8 py-3 bg-rose text-white font-bold rounded-full hover:bg-opacity-90 transition duration-300 shadow-md">
-              {user ? "Access Community Dashboard" : "Join My Community"}
-            </button>
-          </Link>
+        {/* Community Background with Centered Button */}
+        <div 
+          className="relative w-full h-96 rounded-lg shadow-lg overflow-hidden flex items-center justify-center"
+          style={{
+            backgroundImage: `url(${CommunityImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          {/* Translucent overlay */}
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+          
+          {/* Centered button */}
+          <div className="relative z-10">
+            <Link to="/auth">
+              <button className="px-8 py-3 bg-rose text-white font-bold rounded-full hover:bg-opacity-90 transition duration-300 shadow-lg">
+                {user ? "Access Community Dashboard" : "Join My Community"}
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
