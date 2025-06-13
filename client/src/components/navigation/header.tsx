@@ -20,7 +20,7 @@ export default function Header() {
   };
   
   const navLinks = [
-    { name: "Book a Class", path: "/calendar" },
+    { name: "Class Calendar", path: "/calendar" },
     { name: "Meet Fadia", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
@@ -39,11 +39,7 @@ export default function Header() {
               <Link 
                 key={link.path} 
                 href={link.path} 
-                className={`transition-colors duration-200 font-raleway font-bold text-lg ${
-                  link.name === "Book a Class" 
-                    ? "bg-white text-teal px-4 py-2 rounded-full hover:bg-opacity-90" 
-                    : isActive(link.path)
-                }`}
+                className={`transition-colors duration-200 font-raleway font-bold text-lg ${isActive(link.path)}`}
               >
                 {link.name}
               </Link>
@@ -67,11 +63,7 @@ export default function Header() {
                     <SheetClose asChild key={link.path}>
                       <Link 
                         href={link.path}
-                        className={`block px-3 py-2 text-base font-medium ${
-                          link.name === "Book a Class" 
-                            ? "bg-teal text-white rounded-full text-center hover:bg-opacity-90" 
-                            : isActive(link.path)
-                        }`}
+                        className={`block px-3 py-2 text-base font-medium ${isActive(link.path)}`}
                       >
                         {link.name}
                       </Link>

@@ -95,7 +95,7 @@ export default function Footer() {
                     <Link 
                       href="/calendar" 
                       className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
-                    >Book a Class</Link>
+                    >Class Calendar</Link>
                   </li>
                   <li>
                     <Link 
