@@ -128,9 +128,8 @@ export const TESTIMONIALS = [
 
 // Navigation links
 export const NAV_LINKS = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Classes", path: "/classes" },
+  { name: "Book a Class", path: "/calendar" },
+  { name: "About Fadia", path: "/about" },
   { name: "Community", path: "/community" },
   { name: "Contact", path: "/contact" },
 ];

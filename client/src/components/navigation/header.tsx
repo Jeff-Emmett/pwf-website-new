@@ -22,10 +22,8 @@ export default function Header() {
   };
   
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Classes", path: "/classes" },
-    { name: "Calendar", path: "/calendar" },
+    { name: "Book a Class", path: "/calendar" },
+    { name: "About Fadia", path: "/about" },
     { name: "Community", path: "/community" },
     { name: "Contact", path: "/contact" },
   ];
