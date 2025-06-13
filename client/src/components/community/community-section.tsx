@@ -65,8 +65,8 @@ export function CommunitySection() {
             backgroundPosition: 'center',
           }}
         >
-          {/* Translucent overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+          {/* Light translucent overlay */}
+          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
           
           {/* Centered button */}
           <div className="relative z-10">
