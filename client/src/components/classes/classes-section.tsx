@@ -17,7 +17,7 @@ export function ClassesSection() {
           <h2 className="text-3xl md:text-4xl font-playfair font-semibold text-rose mb-4">
             Available Classes
           </h2>
-          <p className="max-w-3xl mx-auto text-rose">
+          <p className="max-w-3xl mx-auto text-gray-600">
             Join personalized classes where you'll discover strength, flexibility, and mindfulness.
           </p>
         </div>
