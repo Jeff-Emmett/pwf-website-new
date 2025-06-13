@@ -141,61 +141,62 @@ export default function Footer() {
           </div>
         </div>
         
-        {/* Newsletter Signup Section */}
-        <div className="border-t border-white border-opacity-20 mt-12 pt-8 mb-8">
-          <div className="max-w-md mx-auto text-center">
-            <h3 className="text-xl font-playfair font-semibold mb-4 text-white">
-              Sign up for my Newsletter
-            </h3>
-            <form onSubmit={handleNewsletterSubmit}>
-              <div className="mb-4">
+        <div className="border-t border-white border-opacity-20 mt-12 pt-8">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+            <div className="flex-1">
+              <p className="text-white text-opacity-70 text-sm mb-4 lg:mb-0">
+                &copy; {currentYear} Pilates with Fadia. All rights reserved.
+              </p>
+              <p className="text-white text-opacity-70 text-sm">
+                Online pilates classes and in-person sessions in Cairo, Egypt.
+              </p>
+            </div>
+            
+            {/* Newsletter Signup - Compact Version */}
+            <div className="w-full lg:w-80">
+              <h4 className="text-sm font-playfair font-semibold mb-2 text-white">
+                Newsletter Signup
+              </h4>
+              <form onSubmit={handleNewsletterSubmit} className="space-y-2">
                 <input 
                   type="email" 
                   placeholder="Your email address" 
-                  className="w-full px-4 py-3 bg-white bg-opacity-90 border border-white border-opacity-30 placeholder-gray-500 text-gray-800 focus:outline-none focus:border-white rounded-md"
+                  className="w-full px-3 py-2 text-sm bg-white bg-opacity-90 border border-white border-opacity-30 placeholder-gray-500 text-gray-800 focus:outline-none focus:border-white rounded-md"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
-              </div>
-              
-              <div className="mb-4">
-                <label className="flex items-center justify-center cursor-pointer">
+                
+                <div className="flex items-start gap-2">
                   <input 
                     type="checkbox" 
-                    className="mr-2"
+                    className="mt-1 flex-shrink-0"
                     checked={agreedToTerms}
                     onChange={(e) => setAgreedToTerms(e.target.checked)}
                     required
                   />
-                  <span className="text-white text-opacity-80 text-sm">I agree to receive emails from Pilates with Fadia</span>
-                </label>
-              </div>
-              
-              <button 
-                type="submit" 
-                className="w-full px-6 py-3 bg-purple text-white font-bold hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
-                disabled={newsletterMutation.isPending}
-              >
-                {newsletterMutation.isPending ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Subscribing...
-                  </>
-                ) : (
-                  "Subscribe for Updates"
-                )}
-              </button>
-            </form>
+                  <span className="text-white text-opacity-80 text-xs">I agree to receive emails from Pilates with Fadia</span>
+                </div>
+                
+                <button 
+                  type="submit" 
+                  className="w-full px-4 py-2 text-sm bg-purple text-white font-bold hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
+                  disabled={newsletterMutation.isPending}
+                >
+                  {newsletterMutation.isPending ? (
+                    <>
+                      <Loader2 className="mr-1 h-3 w-3 animate-spin" />
+                      Subscribing...
+                    </>
+                  ) : (
+                    "Subscribe"
+                  )}
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
-        
-        <div className="border-t border-white border-opacity-20 pt-8">
-
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-white text-opacity-70 text-sm mb-4 md:mb-0">
-              &copy; {currentYear} Pilates with Fadia. All rights reserved.
-            </p>
+          
+          <div className="flex flex-col md:flex-row justify-center items-center mt-6 pt-4 border-t border-white border-opacity-10">
             <div className="flex space-x-6">
               <a href="#" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 text-sm transition duration-300">Privacy Policy</a>
               <a href="#" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 text-sm transition duration-300">Terms of Service</a>
