@@ -27,7 +27,7 @@ export const CONTACT_INFO = {
   socialMedia: {
     instagram: "https://instagram.com/pilateswithfadia",
     facebook: "https://facebook.com/pilateswithfadia",
-    youtube: "https://youtube.com/pilateswithfadia",
+    youtube: "https://www.youtube.com/channel/UCUbMEjCowuRroSFzkP31Jlw",
     twitter: "https://twitter.com/pilateswithfadia"
   }
 };
