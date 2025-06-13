@@ -3,10 +3,10 @@ import { Testimonial } from "@/components/community/testimonial";
 export function TestimonialsSection() {
   const testimonials = [
     {
-      quote: "Fadia's approach to Pilates has completely transformed my relationship with my body. The community she's built is supportive and encouraging.",
-      author: "Sarah H.",
-      memberSince: "2021",
-      initials: "SH",
+      quote: "I dropped in at Fadia's Pilates more than two years ago and since then I have tried my utmost not to miss a class. It's not just a workout, it's an amazing vibe created by sweating together, laughing together and pushing the limits together.",
+      author: "Ingrid from Estonia",
+      memberSince: "2022",
+      initials: "IE",
       color: "teal",
     },
     {
