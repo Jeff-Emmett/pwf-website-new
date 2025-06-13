@@ -120,7 +120,7 @@ export default function Footer() {
                     Subscribing...
                   </>
                 ) : (
-                  "Subscribe to Newsletter"
+                  "Subscribe"
                 )}
               </button>
             </form>

@@ -16,6 +16,7 @@ export function CTASection() {
             Book a Class
           </Link>
         </div>
+        <br />
       </div>
     </section>
   );
