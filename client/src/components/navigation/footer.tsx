@@ -70,50 +70,7 @@ export default function Footer() {
               className="w-80 mb-4"
               style={{ filter: "brightness(1.1)" }}
             />
-            <p className="text-white text-opacity-80 mb-6">Online pilates classes to help you feel stronger and more connected to your body and breath</p>
-            
-            {/* Newsletter Signup Form */}
-            <div className="mb-6">
-              <h4 className="font-playfair font-bold text-base mb-3 text-white">
-                Newsletter Signup
-              </h4>
-              <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-                <input 
-                  type="email" 
-                  placeholder="Your email address" 
-                  className="w-full px-3 py-2 text-sm bg-white bg-opacity-90 border border-white border-opacity-30 placeholder-gray-500 text-gray-800 focus:outline-none focus:border-white rounded-md"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-                
-                <div className="flex items-start gap-2">
-                  <input 
-                    type="checkbox" 
-                    className="mt-1 flex-shrink-0"
-                    checked={agreedToTerms}
-                    onChange={(e) => setAgreedToTerms(e.target.checked)}
-                    required
-                  />
-                  <span className="text-white text-opacity-80 text-xs">I agree to receive emails from Pilates with Fadia</span>
-                </div>
-                
-                <button 
-                  type="submit" 
-                  className="w-full px-4 py-2 text-sm bg-purple text-white font-bold hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
-                  disabled={newsletterMutation.isPending}
-                >
-                  {newsletterMutation.isPending ? (
-                    <>
-                      <Loader2 className="mr-1 h-3 w-3 animate-spin" />
-                      Subscribing...
-                    </>
-                  ) : (
-                    "Subscribe"
-                  )}
-                </button>
-              </form>
-            </div>
+            <p className="text-white text-opacity-80 mb-4">Online pilates classes to help you feel stronger and more connected to your body and breath</p>
             
             <div className="flex space-x-4">
               <a href="https://www.instagram.com/fadia.elgharib/" target="_blank" rel="noopener noreferrer" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
@@ -128,59 +85,102 @@ export default function Footer() {
             </div>
           </div>
           
-          <div>
-            <h3 className="font-playfair font-bold text-lg mb-4 text-white">Quick Links</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link 
-                  href="/calendar" 
-                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
-                >
-                  Book Classes
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/about" 
-                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
-                >
-                  About Fadia
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/community" 
-                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
-                >
-                  Community
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/contact" 
-                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-            <div className="mt-6 pt-6 border-t border-white border-opacity-20"></div>
-          </div>
-          
-          <div>
-            <h3 className="font-playfair font-bold text-lg mb-4 text-white">Contact</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <i className="fas fa-map-marker-alt mt-1 mr-2 text-white"></i>
-                <span className="text-white text-opacity-70">Nun Center<br/>Zamalek, Cairo, Egypt</span>
-              </li>
-              <li className="flex items-center">
-                <i className="fas fa-envelope mr-2 text-white"></i>
-                <a href="mailto:hello@pilateswithfadia.com" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
-                  hello@pilateswithfadia.com
-                </a>
-              </li>
-            </ul>
+          {/* Newsletter Signup Section spanning columns 2 and 3 */}
+          <div className="md:col-span-2">
+            <h3 className="font-playfair font-bold text-lg mb-4 text-white">Newsletter Signup</h3>
+            <form onSubmit={handleNewsletterSubmit} className="space-y-4">
+              <input 
+                type="email" 
+                placeholder="Your email address" 
+                className="w-full px-4 py-3 text-sm bg-white bg-opacity-90 border border-white border-opacity-30 placeholder-gray-500 text-gray-800 focus:outline-none focus:border-white rounded-md"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              
+              <div className="flex items-start gap-2">
+                <input 
+                  type="checkbox" 
+                  className="mt-1 flex-shrink-0"
+                  checked={agreedToTerms}
+                  onChange={(e) => setAgreedToTerms(e.target.checked)}
+                  required
+                />
+                <span className="text-white text-opacity-80 text-sm">I agree to receive emails from Pilates with Fadia</span>
+              </div>
+              
+              <button 
+                type="submit" 
+                className="w-full px-6 py-3 text-sm bg-purple text-white font-bold hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
+                disabled={newsletterMutation.isPending}
+              >
+                {newsletterMutation.isPending ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Subscribing...
+                  </>
+                ) : (
+                  "Subscribe to Newsletter"
+                )}
+              </button>
+            </form>
+            
+            {/* Quick Links and Contact below newsletter */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 pt-6 border-t border-white border-opacity-20">
+              <div>
+                <h4 className="font-playfair font-bold text-base mb-3 text-white">Quick Links</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <Link 
+                      href="/calendar" 
+                      className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300 text-sm"
+                    >
+                      Book Classes
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/about" 
+                      className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300 text-sm"
+                    >
+                      About Fadia
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/community" 
+                      className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300 text-sm"
+                    >
+                      Community
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/contact" 
+                      className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300 text-sm"
+                    >
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="font-playfair font-bold text-base mb-3 text-white">Contact</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <i className="fas fa-map-marker-alt mt-1 mr-2 text-white text-sm"></i>
+                    <span className="text-white text-opacity-70 text-sm">Nun Center<br/>Zamalek, Cairo, Egypt</span>
+                  </li>
+                  <li className="flex items-center">
+                    <i className="fas fa-envelope mr-2 text-white text-sm"></i>
+                    <a href="mailto:hello@pilateswithfadia.com" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300 text-sm">
+                      hello@pilateswithfadia.com
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         
