@@ -25,7 +25,7 @@ export function ClassesSection() {
         {/* Class description boxes removed */}
         
         {isLoading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[1, 2, 3].map((_, i) => (
               <div key={i} className="bg-white rounded-lg overflow-hidden shadow-lg">
                 <Skeleton className="w-full h-48" />
@@ -46,7 +46,7 @@ export function ClassesSection() {
             <p>Error loading classes. Please try again later.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {classes?.map((classData) => (
               <ClassCard 
                 key={classData.id} 
