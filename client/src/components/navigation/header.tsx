@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Logo } from "@/components/ui/logo";
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hooks/use-auth";
+
 import { 
   Sheet, 
   SheetContent, 
@@ -13,7 +12,6 @@ import { Menu } from "lucide-react";
 
 export default function Header() {
   const [location] = useLocation();
-  const { user, logoutMutation } = useAuth();
   
   const isActive = (path: string) => {
     return location === path 
@@ -48,37 +46,7 @@ export default function Header() {
             ))}
           </nav>
           
-          <div className="hidden md:flex items-center space-x-4">
-            {user ? (
-              <>
-                <span className="text-white font-raleway">
-                  Hi, {user.fullName || user.username}
-                </span>
-                <Button
-                  variant="outline"
-                  className="text-white border-white hover:bg-white hover:text-teal"
-                  onClick={() => logoutMutation.mutate()}
-                >
-                  Logout
-                </Button>
-              </>
-            ) : (
-              <>
-                <Link 
-                  href="/auth" 
-                  className="text-white hover:text-opacity-80 transition-colors duration-200 font-raleway font-bold"
-                >
-                  Login
-                </Link>
-                <Link 
-                  href="/auth" 
-                  className="bg-white text-teal px-4 py-2 rounded-full hover:bg-opacity-90 transition-colors duration-200 font-raleway font-bold"
-                >
-                  Sign Up
-                </Link>
-              </>
-            )}
-          </div>
+
           
           {/* Mobile Menu */}
           <div className="md:hidden">
@@ -101,42 +69,7 @@ export default function Header() {
                       </Link>
                     </SheetClose>
                   ))}
-                  <div className="border-t border-gray-200 my-2"></div>
-                  {user ? (
-                    <>
-                      <div className="px-3 py-2 text-base font-medium text-gray-700">
-                        Hi, {user.fullName || user.username}
-                      </div>
-                      <SheetClose asChild>
-                        <Button
-                          variant="outline"
-                          className="w-full justify-start px-3 py-2 text-base font-medium text-teal hover:text-teal-600"
-                          onClick={() => logoutMutation.mutate()}
-                        >
-                          Logout
-                        </Button>
-                      </SheetClose>
-                    </>
-                  ) : (
-                    <>
-                      <SheetClose asChild>
-                        <Link 
-                          href="/auth"
-                          className="block px-3 py-2 text-base font-medium text-teal hover:text-teal-600"
-                        >
-                          Login
-                        </Link>
-                      </SheetClose>
-                      <SheetClose asChild>
-                        <Link 
-                          href="/auth"
-                          className="block px-3 py-2 text-base font-medium text-white bg-teal rounded-full text-center hover:bg-opacity-90"
-                        >
-                          Sign Up
-                        </Link>
-                      </SheetClose>
-                    </>
-                  )}
+
                 </div>
               </SheetContent>
             </Sheet>

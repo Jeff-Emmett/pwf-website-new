@@ -113,14 +113,7 @@ export default function Footer() {
                       Contact
                     </Link>
                   </li>
-                  <li>
-                    <Link 
-                      href="/auth" 
-                      className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
-                    >
-                      Login
-                    </Link>
-                  </li>
+
                 </ul>
               </div>
               
