@@ -129,7 +129,7 @@ export const TESTIMONIALS = [
 // Navigation links
 export const NAV_LINKS = [
   { name: "Book a Class", path: "/calendar" },
-  { name: "About Fadia", path: "/about" },
+  { name: "Meet Fadia", path: "/about" },
   { name: "Contact", path: "/contact" },
 ];
 

@@ -23,7 +23,7 @@ export default function Header() {
   
   const navLinks = [
     { name: "Book a Class", path: "/calendar" },
-    { name: "About Fadia", path: "/about" },
+    { name: "Meet Fadia", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
 

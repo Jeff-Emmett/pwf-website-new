@@ -102,7 +102,7 @@ export default function Footer() {
                       href="/about" 
                       className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
                     >
-                      About Fadia
+                      Meet Fadia
                     </Link>
                   </li>
                   <li>
