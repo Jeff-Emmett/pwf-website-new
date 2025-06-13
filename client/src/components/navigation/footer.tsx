@@ -70,7 +70,51 @@ export default function Footer() {
               className="w-80 mb-4"
               style={{ filter: "brightness(1.1)" }}
             />
-            <p className="text-white text-opacity-80 mb-4">Online pilates classes to help you feel stronger and more connected to your body and breath</p>
+            <p className="text-white text-opacity-80 mb-6">Online pilates classes to help you feel stronger and more connected to your body and breath</p>
+            
+            {/* Newsletter Signup Form */}
+            <div className="mb-6">
+              <h4 className="font-playfair font-bold text-base mb-3 text-white">
+                Newsletter Signup
+              </h4>
+              <form onSubmit={handleNewsletterSubmit} className="space-y-3">
+                <input 
+                  type="email" 
+                  placeholder="Your email address" 
+                  className="w-full px-3 py-2 text-sm bg-white bg-opacity-90 border border-white border-opacity-30 placeholder-gray-500 text-gray-800 focus:outline-none focus:border-white rounded-md"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                
+                <div className="flex items-start gap-2">
+                  <input 
+                    type="checkbox" 
+                    className="mt-1 flex-shrink-0"
+                    checked={agreedToTerms}
+                    onChange={(e) => setAgreedToTerms(e.target.checked)}
+                    required
+                  />
+                  <span className="text-white text-opacity-80 text-xs">I agree to receive emails from Pilates with Fadia</span>
+                </div>
+                
+                <button 
+                  type="submit" 
+                  className="w-full px-4 py-2 text-sm bg-purple text-white font-bold hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
+                  disabled={newsletterMutation.isPending}
+                >
+                  {newsletterMutation.isPending ? (
+                    <>
+                      <Loader2 className="mr-1 h-3 w-3 animate-spin" />
+                      Subscribing...
+                    </>
+                  ) : (
+                    "Subscribe"
+                  )}
+                </button>
+              </form>
+            </div>
+            
             <div className="flex space-x-4">
               <a href="https://www.instagram.com/fadia.elgharib/" target="_blank" rel="noopener noreferrer" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
                 <i className="fab fa-instagram"></i>
@@ -140,55 +184,7 @@ export default function Footer() {
           </div>
         </div>
         
-        {/* Newsletter Signup Section - 2-column layout aligned right */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-          <div className="flex items-center">
-            <p className="text-white text-opacity-80 text-sm leading-relaxed">
-              Online pilates classes to help you feel stronger and more connected to your body & breath
-            </p>
-          </div>
-          <div>
-            <h4 className="font-playfair font-bold text-base mb-3 text-white">
-              Newsletter Signup
-            </h4>
-            <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                className="w-full px-3 py-2 text-sm bg-white bg-opacity-90 border border-white border-opacity-30 placeholder-gray-500 text-gray-800 focus:outline-none focus:border-white rounded-md"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              
-              <div className="flex items-start gap-2">
-                <input 
-                  type="checkbox" 
-                  className="mt-1 flex-shrink-0"
-                  checked={agreedToTerms}
-                  onChange={(e) => setAgreedToTerms(e.target.checked)}
-                  required
-                />
-                <span className="text-white text-opacity-80 text-xs">I agree to receive emails from Pilates with Fadia</span>
-              </div>
-              
-              <button 
-                type="submit" 
-                className="w-full px-4 py-2 text-sm bg-purple text-white font-bold hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
-                disabled={newsletterMutation.isPending}
-              >
-                {newsletterMutation.isPending ? (
-                  <>
-                    <Loader2 className="mr-1 h-3 w-3 animate-spin" />
-                    Subscribing...
-                  </>
-                ) : (
-                  "Subscribe"
-                )}
-              </button>
-            </form>
-          </div>
-        </div>
+
         
         <div className="border-t border-white border-opacity-20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
