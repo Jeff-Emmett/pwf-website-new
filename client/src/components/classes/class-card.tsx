@@ -1,7 +1,5 @@
 import { Class } from "@shared/schema";
-import FadiaGroupClassImage from "../../assets/Fadia-15.jpg";
-import FadiaSmallGroupClassImage from "../../assets/Fadia-156.jpg";
-import FadiaPrivateClassImage from "../../assets/Fadia-132.jpg";
+import FadiaGardenImage from "@assets/fadia-garden_1749836720986.jpg";
 
 interface ClassCardProps {
   classData: Class;
@@ -34,15 +32,9 @@ export function ClassCard({ classData }: ClassCardProps) {
     }
   };
 
-  // Get class image based on class type
+  // Get class image - using the beautiful garden class photo for all types
   const getClassImage = () => {
-    switch (classData.classType) {
-      case "group": return FadiaGroupClassImage;
-      case "small-group": return FadiaSmallGroupClassImage;
-      case "private": return FadiaPrivateClassImage;
-      case "online": return FadiaSmallGroupClassImage; // Reusing this image for online classes
-      default: return FadiaGroupClassImage;
-    }
+    return FadiaGardenImage;
   };
 
   return (
