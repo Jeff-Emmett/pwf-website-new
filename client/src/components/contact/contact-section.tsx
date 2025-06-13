@@ -16,7 +16,7 @@ export function ContactSection() {
             <iframe
               src="https://us5.list-manage.com/contact-form?u=1d139a47cd1264b937687c37e&form_id=570823f6e3a6f36704ea241f7201c8ac"
               width="100%"
-              height="800"
+              height="1000"
               frameBorder="0"
               marginHeight={0}
               marginWidth={0}
@@ -24,7 +24,8 @@ export function ContactSection() {
               style={{
                 border: 'none',
                 overflow: 'hidden',
-                backgroundColor: 'transparent'
+                backgroundColor: 'transparent',
+                minHeight: '1000px'
               }}
               title="Contact Form"
             >
