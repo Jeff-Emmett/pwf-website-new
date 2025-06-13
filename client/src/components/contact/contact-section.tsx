@@ -12,7 +12,7 @@ export function ContactSection() {
               method="post" 
               id="mc-embedded-contact-form" 
               name="mc-embedded-contact-form" 
-              target="_blank"
+              target="_self"
               novalidate>
 
           <div class="mb-4">
