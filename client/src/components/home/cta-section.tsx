@@ -8,7 +8,7 @@ export function CTASection() {
           Ready to feel stronger, more connected, and at home in your body?
         </h3>
         
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-6">
           <Link
             href="/calendar"
             className="bg-purple text-white font-bold py-4 px-10 rounded-md shadow-md hover:bg-opacity-90 transition duration-300 text-lg"
@@ -16,7 +16,10 @@ export function CTASection() {
             Book a Class
           </Link>
         </div>
-        <br />
+        
+        <div className="max-w-2xl mx-auto">
+          <hr className="border-white border-opacity-30" />
+        </div>
       </div>
     </section>
   );
