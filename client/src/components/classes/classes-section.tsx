@@ -11,10 +11,10 @@ export function ClassesSection() {
   });
   
   return (
-    <section className="py-20" style={{ backgroundColor: 'rgba(181, 80, 118, 0.1)' }}>
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-playfair font-semibold text-gray-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-playfair font-semibold text-rose mb-4">
             Available Classes
           </h2>
           <p className="max-w-3xl mx-auto text-gray-600">
