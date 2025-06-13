@@ -125,7 +125,7 @@ export default function Footer() {
               </div>
               
               <div>
-                <h3 className="font-playfair font-bold text-lg mb-4 text-white">Find Fadia Here</h3>
+                <h3 className="font-playfair font-bold text-lg mb-4 text-white">Find Me Here</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <i className="fas fa-map-marker-alt mt-1 mr-2 text-white"></i>
