@@ -1,5 +1,8 @@
 import { Class } from "@shared/schema";
 import FadiaGardenImage from "@assets/fadia-garden_1749836720986.jpg";
+import PilatesClassImage from "@assets/pilates_class_1749837680834.jpeg";
+import FadiaStudioImage from "@assets/Fadia-156.jpg";
+import FadiaPrivateImage from "@assets/Fadia-132.jpg";
 
 interface ClassCardProps {
   classData: Class;
@@ -32,9 +35,15 @@ export function ClassCard({ classData }: ClassCardProps) {
     }
   };
 
-  // Get class image - using the beautiful garden class photo for all types
+  // Get class image based on class type - using four different images
   const getClassImage = () => {
-    return FadiaGardenImage;
+    switch (classData.classType) {
+      case "group": return FadiaGardenImage; // Garden outdoor class
+      case "small-group": return PilatesClassImage; // New uploaded class image
+      case "private": return FadiaPrivateImage; // Studio private session
+      case "online": return FadiaStudioImage; // Studio setting for online classes
+      default: return FadiaGardenImage;
+    }
   };
 
   return (
