@@ -120,6 +120,7 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
+            <div className="mt-6 pt-6 border-t border-white border-opacity-20"></div>
           </div>
           
           <div>
@@ -140,7 +141,7 @@ export default function Footer() {
         </div>
         
         {/* Newsletter Signup Section - Spanning Quick Links and Contact columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 pt-6 border-t border-white border-opacity-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
           <div></div> {/* Empty space for logo column */}
           <div className="md:col-span-2">
             <h4 className="font-playfair font-bold text-base mb-3 text-white">
