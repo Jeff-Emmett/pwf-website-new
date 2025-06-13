@@ -42,7 +42,7 @@ export default function Header() {
               <Link 
                 key={link.path} 
                 href={link.path} 
-                className={`transition-colors duration-200 font-raleway font-medium ${isActive(link.path)}`}
+                className={`transition-colors duration-200 font-raleway font-bold text-lg ${isActive(link.path)}`}
               >
                 {link.name}
               </Link>
