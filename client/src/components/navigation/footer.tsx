@@ -62,7 +62,7 @@ export default function Footer() {
   return (
     <footer className="bg-teal text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <img 
               src={SquareLogo} 
@@ -139,14 +139,12 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-        </div>
-        
-        {/* Newsletter Signup Section */}
-        <div className="border-t border-white border-opacity-20 mt-12 pt-8 pb-8">
-          <div className="max-w-sm mx-auto text-center">
-            <h4 className="text-lg font-playfair font-semibold mb-3 text-white">
+
+          {/* Newsletter Signup Section */}
+          <div>
+            <h3 className="font-playfair font-bold text-lg mb-4 text-white">
               Newsletter Signup
-            </h4>
+            </h3>
             <form onSubmit={handleNewsletterSubmit} className="space-y-3">
               <input 
                 type="email" 
@@ -157,10 +155,10 @@ export default function Footer() {
                 required
               />
               
-              <div className="flex items-center justify-center gap-2">
+              <div className="flex items-start gap-2">
                 <input 
                   type="checkbox" 
-                  className="flex-shrink-0"
+                  className="mt-1 flex-shrink-0"
                   checked={agreedToTerms}
                   onChange={(e) => setAgreedToTerms(e.target.checked)}
                   required
