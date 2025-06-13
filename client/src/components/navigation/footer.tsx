@@ -87,7 +87,7 @@ export default function Footer() {
           
           {/* Newsletter Signup Section spanning columns 2 and 3 */}
           <div className="md:col-span-2">
-            <h3 className="font-playfair font-bold text-lg mb-4 text-white">Newsletter Signup</h3>
+            <h3 className="font-playfair font-bold text-lg mb-4 text-white">Stay in touch with my newsletter</h3>
             <form onSubmit={handleNewsletterSubmit} className="space-y-4">
               <input 
                 type="email" 
