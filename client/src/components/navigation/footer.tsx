@@ -62,7 +62,7 @@ export default function Footer() {
   return (
     <footer className="bg-teal text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <img 
               src={SquareLogo} 
@@ -120,9 +120,50 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
+            
+            {/* Newsletter Signup Section - Below Quick Links */}
+            <div className="mt-8 pt-6 border-t border-white border-opacity-20">
+              <h4 className="font-playfair font-bold text-base mb-3 text-white">
+                Newsletter Signup
+              </h4>
+              <form onSubmit={handleNewsletterSubmit} className="space-y-3">
+                <input 
+                  type="email" 
+                  placeholder="Your email address" 
+                  className="w-full px-3 py-2 text-sm bg-white bg-opacity-90 border border-white border-opacity-30 placeholder-gray-500 text-gray-800 focus:outline-none focus:border-white rounded-md"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                
+                <div className="flex items-start gap-2">
+                  <input 
+                    type="checkbox" 
+                    className="mt-1 flex-shrink-0"
+                    checked={agreedToTerms}
+                    onChange={(e) => setAgreedToTerms(e.target.checked)}
+                    required
+                  />
+                  <span className="text-white text-opacity-80 text-xs">I agree to receive emails from Pilates with Fadia</span>
+                </div>
+                
+                <button 
+                  type="submit" 
+                  className="w-full px-4 py-2 text-sm bg-purple text-white font-bold hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
+                  disabled={newsletterMutation.isPending}
+                >
+                  {newsletterMutation.isPending ? (
+                    <>
+                      <Loader2 className="mr-1 h-3 w-3 animate-spin" />
+                      Subscribing...
+                    </>
+                  ) : (
+                    "Subscribe"
+                  )}
+                </button>
+              </form>
+            </div>
           </div>
-          
-
           
           <div>
             <h3 className="font-playfair font-bold text-lg mb-4 text-white">Contact</h3>
@@ -138,49 +179,6 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
-
-          {/* Newsletter Signup Section */}
-          <div>
-            <h3 className="font-playfair font-bold text-lg mb-4 text-white">
-              Newsletter Signup
-            </h3>
-            <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                className="w-full px-3 py-2 text-sm bg-white bg-opacity-90 border border-white border-opacity-30 placeholder-gray-500 text-gray-800 focus:outline-none focus:border-white rounded-md"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              
-              <div className="flex items-start gap-2">
-                <input 
-                  type="checkbox" 
-                  className="mt-1 flex-shrink-0"
-                  checked={agreedToTerms}
-                  onChange={(e) => setAgreedToTerms(e.target.checked)}
-                  required
-                />
-                <span className="text-white text-opacity-80 text-xs">I agree to receive emails from Pilates with Fadia</span>
-              </div>
-              
-              <button 
-                type="submit" 
-                className="w-full px-4 py-2 text-sm bg-purple text-white font-bold hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
-                disabled={newsletterMutation.isPending}
-              >
-                {newsletterMutation.isPending ? (
-                  <>
-                    <Loader2 className="mr-1 h-3 w-3 animate-spin" />
-                    Subscribing...
-                  </>
-                ) : (
-                  "Subscribe"
-                )}
-              </button>
-            </form>
           </div>
         </div>
         
