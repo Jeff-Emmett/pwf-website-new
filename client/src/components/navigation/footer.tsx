@@ -1,5 +1,10 @@
 import { Logo } from "@/components/ui/logo";
 import { Link } from "wouter";
+import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
+import { useToast } from "@/hooks/use-toast";
+import { Loader2 } from "lucide-react";
 import SquareLogo from "@assets/PwF Logo (square).png";
 
 export default function Footer() {
