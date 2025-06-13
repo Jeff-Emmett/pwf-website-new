@@ -18,7 +18,7 @@ export function HeroSection() {
           
           <Link
             href="/calendar"
-            className="inline-block bg-teal text-white font-bold py-3 px-10 rounded-full hover:bg-opacity-90 transition duration-300"
+            className="inline-block bg-teal text-white font-bold py-6 px-20 rounded-full hover:bg-opacity-90 transition duration-300 text-xl"
             style={{ 
               boxShadow: "0 6px 10px rgba(0, 0, 0, 0.25), 0 3px 6px rgba(0, 0, 0, 0.12)", 
               textShadow: "0 1px 3px rgba(0, 0, 0, 0.15)",
