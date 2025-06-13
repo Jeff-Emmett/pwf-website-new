@@ -144,7 +144,7 @@ export default function Footer() {
             </div>
             
             {/* Newsletter Signup below links and contact */}
-            <div className="mt-8 pt-6 border-t border-white border-opacity-20">
+            <div className="mt-8 pt-6 pb-4 border-t border-white border-opacity-20">
               <h4 className="font-playfair font-bold text-base mb-4 text-white">Stay in touch with my newsletter</h4>
               <form onSubmit={handleNewsletterSubmit} className="space-y-4">
                 <input 
