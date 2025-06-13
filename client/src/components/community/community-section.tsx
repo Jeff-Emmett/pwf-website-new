@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "@/hooks/use-auth";
 import { Link } from "wouter";
+import CommunityImage from "@assets/pilates-community_1749840293503.jpeg";
 
 export function CommunitySection() {
   const { user } = useAuth();
@@ -54,6 +55,15 @@ export function CommunitySection() {
         </div>
         
         {/* Testimonials moved to a separate section */}
+        
+        {/* Community Image */}
+        <div className="flex justify-center mb-8">
+          <img 
+            src={CommunityImage} 
+            alt="Pilates Community" 
+            className="w-full max-w-2xl rounded-lg shadow-lg object-cover"
+          />
+        </div>
         
         {/* Whiteboard removed from homepage and moved to community page */}
         
