@@ -62,7 +62,7 @@ export default function Footer() {
   return (
     <footer className="bg-teal text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <img 
               src={SquareLogo} 
@@ -131,36 +131,7 @@ export default function Footer() {
             </ul>
           </div>
           
-          <div>
-            <h3 className="font-playfair font-bold text-lg mb-4 text-white">Classes</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link 
-                  href="/classes" 
-                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
-                >
-                  Mat Pilates
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/classes" 
-                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
-                >
-                  Reformer
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/classes" 
-                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
-                >
-                  Private Sessions
-                </Link>
-              </li>
-              {/* Group Classes and Special Workshops removed */}
-            </ul>
-          </div>
+
           
           <div>
             <h3 className="font-playfair font-bold text-lg mb-4 text-white">Contact</h3>
