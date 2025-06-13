@@ -107,18 +107,18 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link 
-                      href="/community" 
-                      className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
-                    >
-                      Community
-                    </Link>
-                  </li>
-                  <li>
-                    <Link 
                       href="/contact" 
                       className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
                     >
                       Contact
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/auth" 
+                      className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
+                    >
+                      Login
                     </Link>
                   </li>
                 </ul>
