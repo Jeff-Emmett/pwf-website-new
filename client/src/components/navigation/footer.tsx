@@ -89,10 +89,10 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link 
-                  href="/" 
+                  href="/calendar" 
                   className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
                 >
-                  Home
+                  Book Classes
                 </Link>
               </li>
               <li>
@@ -101,15 +101,6 @@ export default function Footer() {
                   className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
                 >
                   About Fadia
-                </Link>
-              </li>
-
-              <li>
-                <Link 
-                  href="/calendar" 
-                  className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"
-                >
-                  Calendar
                 </Link>
               </li>
               <li>
