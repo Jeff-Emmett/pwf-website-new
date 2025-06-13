@@ -1,30 +1,14 @@
 import { Link } from "wouter";
-import { useEffect, useState } from "react";
 import FadiaHeroImage from "../../assets/Fadia-15.jpg";
 
 export function HeroSection() {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <section className="relative overflow-hidden">
-      <div 
-        className="bg-cover bg-center h-[90vh] flex items-center justify-center" 
-        style={{
-          backgroundImage: `url(${FadiaHeroImage})`,
-          backgroundPosition: "center",
-          transform: `translateY(${scrollY * 0.5}px)`,
-          willChange: "transform"
-        }}
-      >
+    <section className="relative">
+      <div className="bg-cover bg-center h-[90vh] flex items-center justify-center" 
+           style={{
+             backgroundImage: `url(${FadiaHeroImage})`,
+             backgroundPosition: "center"
+           }}>
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         
         <div className="relative text-center px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
