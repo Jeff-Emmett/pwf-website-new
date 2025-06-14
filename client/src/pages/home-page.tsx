@@ -3,6 +3,8 @@ import { HeroSection } from "@/components/home/hero-section";
 import { AboutSection } from "@/components/about/about-section";
 import { ClassesSection } from "@/components/classes/classes-section";
 import { TestimonialsSection } from "@/components/testimonials/testimonials-section";
+import { EnhancedTestimonials } from "@/components/enhanced-testimonials";
+import { PhotoGallery } from "@/components/photo-gallery";
 
 import { ContactSection } from "@/components/contact/contact-section";
 import { CTASection } from "@/components/home/cta-section";
@@ -46,6 +48,8 @@ export default function HomePage() {
       <ClassesSection />
       <AboutSection />
       <TestimonialsSection />
+      <EnhancedTestimonials />
+      <PhotoGallery />
       <ContactSection />
       <CTASection />
     </main>
