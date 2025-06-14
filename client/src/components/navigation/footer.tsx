@@ -7,6 +7,8 @@ import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 import SquareLogo from "@assets/PwF Logo (square).png";
 
+import PwF_Logo__square_ from "@assets/PwF Logo (square).png";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const { toast } = useToast();
@@ -65,7 +67,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <img 
-              src={SquareLogo} 
+              src={PwF_Logo__square_} 
               alt="Pilates with Fadia" 
               className="w-80 mb-4"
               style={{ filter: "brightness(1.1)" }}
