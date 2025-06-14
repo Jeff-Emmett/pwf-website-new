@@ -3,15 +3,16 @@ import FadiaHeroImage from "../../assets/Fadia-15.jpg";
 
 export function HeroSection() {
   return (
-    <section className="relative">
-      <div className="bg-cover bg-center h-[90vh] flex items-center justify-center" 
+    <section className="relative bg-transparent">
+      <div className="relative bg-cover bg-center h-[90vh] flex items-center justify-center bg-transparent" 
            style={{
              backgroundImage: `url(${FadiaHeroImage})`,
-             backgroundPosition: "center"
+             backgroundPosition: "center",
+             backgroundColor: "transparent"
            }}>
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-20 z-10"></div>
         
-        <div className="relative text-center px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+        <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-playfair font-bold text-white leading-tight mb-48">
             Feel at Home in your Body
           </h1>
