@@ -17,18 +17,10 @@ export function PhotoGallery() {
             <div className="bg-gray-50 rounded-lg p-8 text-center">
               <div className="mb-6">
                 <i className="fab fa-instagram text-6xl text-pink-500 mb-4"></i>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">@fadia.elgharib</h3>
                 <p className="text-gray-600 mb-6">Follow me on Instagram for daily inspiration, movement tips, and behind-the-scenes content from my classes.</p>
               </div>
               
-              <a 
-                href="https://www.instagram.com/fadia.elgharib/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-8 rounded-full hover:from-purple-600 hover:to-pink-600 transition duration-300 shadow-lg"
-              >
-                View on Instagram
-              </a>
+              
               
               {/* Instagram embed placeholder - this would typically be replaced with actual Instagram embed code */}
               <div className="mt-8 bg-white rounded-lg border border-gray-200 p-6">
