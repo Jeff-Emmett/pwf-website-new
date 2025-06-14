@@ -1,5 +1,6 @@
 import { ClassesSection } from "@/components/classes/classes-section";
-import { NewsletterSection } from "@/components/newsletter/newsletter-section";
+import { EnhancedTestimonials } from "@/components/enhanced-testimonials";
+import { PhotoGallery } from "@/components/photo-gallery";
 import { useEffect } from "react";
 
 export default function ClassesPage() {
@@ -16,7 +17,8 @@ export default function ClassesPage() {
     <main>
       <div className="pt-10"></div>
       <ClassesSection />
-      <NewsletterSection />
+      <EnhancedTestimonials />
+      <PhotoGallery />
     </main>
   );
 }
