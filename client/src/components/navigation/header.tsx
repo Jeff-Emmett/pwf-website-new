@@ -63,7 +63,7 @@ export default function Header() {
                     <SheetClose asChild key={link.path}>
                       <Link 
                         href={link.path}
-                        className={`block px-3 py-2 text-base font-medium text-white hover:text-white hover:text-opacity-80`}
+                        className={`block px-4 py-4 text-xl font-bold text-white hover:text-white hover:text-opacity-80`}
                       >
                         {link.name}
                       </Link>
