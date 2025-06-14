@@ -51,16 +51,16 @@ export function ClassCard({ classData }: ClassCardProps) {
       <img 
         src={getClassImage()} 
         alt={classData.name} 
-        className="w-full h-48 object-cover" 
+        className="w-full h-36 object-cover" 
       />
-      <div className="p-6">
-        <div className="flex justify-between items-center mb-3">
-          <h3 className="font-playfair font-bold text-xl">{classData.name}</h3>
-          <span className={`${badgeColor()} text-xs px-3 py-1 rounded-full font-semibold`}>
+      <div className="p-4">
+        <div className="flex justify-between items-start mb-2">
+          <h3 className="font-playfair font-bold text-lg leading-tight">{classData.name}</h3>
+          <span className={`${badgeColor()} text-xs px-2 py-1 rounded-full font-semibold ml-2 flex-shrink-0`}>
             {formatClassType(classData.classType)}
           </span>
         </div>
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-sm leading-snug">
           {classData.description}
         </p>
       </div>
