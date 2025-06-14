@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import FadiaImage from "../../assets/Fadia-167-crop.jpg";
 import FadiaBridgeImage from "@assets/fadia-bridge3_1749866400701.jpg";
 import FadiaStretchImage from "@assets/fadia-stretch_1749866078708.jpg";
+import { Testimonial } from "@/components/community/testimonial";
 
 export function AboutSection() {
   return (
@@ -58,6 +59,39 @@ export function AboutSection() {
               <p className="text-gray-600">
                 Having had movement as an integral part of my healing and personal development for the past 8 years, I've explored not only Pilates, but also martial arts like Capoeira and Parkour, alongside dance. Through this journey, I came to realize that movement is a powerful game changer—not just for the body, but also on a psychological and neurological level. It transforms us from passive observers into people who feel grounded in their strength and capable of taking agency in different areas of life.
               </p>
+            </div>
+          </div>
+        </div>
+        
+        {/* Testimonials Section */}
+        <div className="mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-purple bg-opacity-10 rounded-lg p-6 shadow-sm transition-transform duration-300 hover:scale-105">
+              <Testimonial
+                quote="I dropped in at Fadia's Pilates more than two years ago and since then I have tried my utmost not to miss a class. It's not just a workout, it's an amazing vibe created by sweating together, laughing together and pushing the limits together."
+                author="Ingrid from Estonia"
+                memberSince="2022"
+                initials="IE"
+                color="teal"
+              />
+            </div>
+            <div className="bg-purple bg-opacity-10 rounded-lg p-6 shadow-sm transition-transform duration-300 hover:scale-105">
+              <Testimonial
+                quote="I've seen incredible improvements in my posture and core strength since joining Fadia's classes. She truly understands how to help each individual."
+                author="Ahmed M."
+                memberSince="2022"
+                initials="AM"
+                color="purple"
+              />
+            </div>
+            <div className="bg-purple bg-opacity-10 rounded-lg p-6 shadow-sm transition-transform duration-300 hover:scale-105">
+              <Testimonial
+                quote="The mindful approach to movement has helped my chronic back pain tremendously. I look forward to every class!"
+                author="Laila K."
+                memberSince="2023"
+                initials="LK"
+                color="rose"
+              />
             </div>
           </div>
         </div>
