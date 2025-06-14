@@ -66,7 +66,7 @@ export function AboutSection() {
         {/* Testimonials Section */}
         <div className="mt-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-purple bg-opacity-10 rounded-lg p-6 shadow-sm transition-transform duration-300 hover:scale-105">
+            <div className="bg-teal-light rounded-lg p-6 shadow-sm transition-transform duration-300 hover:scale-105">
               <Testimonial
                 quote="I dropped in at Fadia's Pilates more than two years ago and since then I have tried my utmost not to miss a class. It's not just a workout, it's an amazing vibe created by sweating together, laughing together and pushing the limits together."
                 author="Ingrid from Estonia"
@@ -75,7 +75,7 @@ export function AboutSection() {
                 color="teal"
               />
             </div>
-            <div className="bg-purple bg-opacity-10 rounded-lg p-6 shadow-sm transition-transform duration-300 hover:scale-105">
+            <div className="bg-teal-light rounded-lg p-6 shadow-sm transition-transform duration-300 hover:scale-105">
               <Testimonial
                 quote="I've seen incredible improvements in my posture and core strength since joining Fadia's classes. She truly understands how to help each individual."
                 author="Ahmed M."
@@ -84,7 +84,7 @@ export function AboutSection() {
                 color="purple"
               />
             </div>
-            <div className="bg-purple bg-opacity-10 rounded-lg p-6 shadow-sm transition-transform duration-300 hover:scale-105">
+            <div className="bg-teal-light rounded-lg p-6 shadow-sm transition-transform duration-300 hover:scale-105">
               <Testimonial
                 quote="The mindful approach to movement has helped my chronic back pain tremendously. I look forward to every class!"
                 author="Laila K."
