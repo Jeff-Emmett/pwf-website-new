@@ -17,8 +17,10 @@ export function HeroSection() {
             Feel at Home in your Body
           </h1>
           
-          <Link
-            href="/calendar"
+          <a
+            href="https://pilateswithfadia.setmore.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block text-white font-bold py-6 px-20 rounded-full hover:bg-opacity-90 transition duration-300 text-xl bg-[#916398]"
             style={{ 
               boxShadow: "0 6px 10px rgba(0, 0, 0, 0.25), 0 3px 6px rgba(0, 0, 0, 0.12)", 
@@ -27,7 +29,7 @@ export function HeroSection() {
             }}
           >
             Book a Class
-          </Link>
+          </a>
         </div>
       </div>
       <div className="py-8 text-center bg-[#7ebdc5] text-[#ffffff]">

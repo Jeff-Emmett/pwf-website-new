@@ -9,12 +9,14 @@ export function CTASection() {
         </h3>
         
         <div className="flex justify-center mb-6">
-          <Link
-            href="/calendar"
+          <a
+            href="https://pilateswithfadia.setmore.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-rose text-white font-bold py-4 px-10 rounded-full shadow-md hover:bg-opacity-90 transition duration-300 text-lg"
           >
             Book a Class
-          </Link>
+          </a>
         </div>
       </div>
       
