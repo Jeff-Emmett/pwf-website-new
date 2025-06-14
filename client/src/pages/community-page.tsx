@@ -1,5 +1,5 @@
 import { CommunitySection } from "@/components/community/community-section";
-import { EnhancedTestimonials } from "@/components/enhanced-testimonials";
+import { TestimonialsSection } from "@/components/testimonials/testimonials-section";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { useEffect } from "react";
 
@@ -17,7 +17,7 @@ export default function CommunityPage() {
     <main>
       <div className="pt-10"></div>
       <CommunitySection />
-      <EnhancedTestimonials />
+      <TestimonialsSection />
       <PhotoGallery />
     </main>
   );
