@@ -16,28 +16,25 @@ export function AboutSection() {
           
           <div className="md:w-1/2">
             <div className="prose max-w-none">
-              <h3 className="text-2xl font-playfair font-semibold text-purple mb-4">Meet Fadia</h3>
+              <h3 className="text-2xl font-playfair font-semibold text-purple mb-4">My Pilates Story</h3>
               <p className="text-gray-600 mb-4">
-                Fadia is a certified Pilates instructor, former lawyer, and community builder with a passion for helping people connect with their bodies through mindful movement.
+                I came to movement as a way to feel good in my body and begin healing emotions I hadn't yet processed. It started simply—with home yoga classes—and slowly turned into something much deeper.
               </p>
               <p className="text-gray-600 mb-4">
-                Based between Cairo and Berlin, she brings a unique approach to her teaching, combining precision with playfulness to create classes that build strength, awareness, and joy.
+                Eventually, I joined a two-year foundational dance program at a dance school in Berlin, where I was first introduced to Pilates. One of my teachers recommended it to help me build strength and develop the kind of body awareness that could support my dancing.
               </p>
-              
-              <div className="mt-8 text-center">
-                <Link href="/about">
-                  <span 
-                    className="inline-block bg-purple text-white font-bold py-2 px-6 hover:bg-opacity-90 transition duration-300 rounded-full"
-                    style={{ 
-                      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)", 
-                      textShadow: "0 1px 2px rgba(0, 0, 0, 0.1)",
-                      transform: "translateY(-1px)"
-                    }}
-                  >
-                    Learn More About Me
-                  </span>
-                </Link>
-              </div>
+              <p className="text-gray-600 mb-4">
+                My first Pilates class was... okay. I wasn't sure what to expect, and I was surprised by the minimalist approach and the detailed verbal cueing. But by the second class, something shifted—I was hooked. Within a month, I was completely sold, not just by the method but by the transformation I saw and felt in my own body.
+              </p>
+              <p className="text-gray-600 mb-4">
+                That experience led me to enrol in a comprehensive teacher training program rooted in the classical repertoire and as close as possible to the original method, aligned with the German Pilates Association. Today, I teach both mat and equipment Pilates—including the Reformer, Wunda Chair, Cadillac, and Spine Corrector.
+              </p>
+              <p className="text-gray-600 mb-4">
+                My goal is to help others reconnect with their bodies, build deep, functional strength, and move with more ease and confidence in their daily lives.
+              </p>
+              <p className="text-gray-600">
+                Having had movement as an integral part of my healing and personal development for the past 8 years, I've explored not only Pilates, but also martial arts like Capoeira and Parkour, alongside dance. Through this journey, I came to realize that movement is a powerful game changer—not just for the body, but also on a psychological and neurological level. It transforms us from passive observers into people who feel grounded in their strength and capable of taking agency in different areas of life.
+              </p>
             </div>
           </div>
         </div>
