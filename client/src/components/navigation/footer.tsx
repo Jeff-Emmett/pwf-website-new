@@ -81,7 +81,7 @@ export default function Footer() {
               <a href="https://www.youtube.com/channel/UCUbMEjCowuRroSFzkP31Jlw" target="_blank" rel="noopener noreferrer" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
                 <i className="fab fa-youtube text-2xl"></i>
               </a>
-              <a href="https://app.acuityscheduling.com/schedule.php?owner=36073300&ref=booking_button" target="_blank" rel="noopener noreferrer" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
+              <a href="https://pilateswithfadia.as.me/" target="_blank" rel="noopener noreferrer" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
                 <i className="fas fa-calendar-alt text-2xl"></i>
               </a>
             </div>
@@ -95,7 +95,7 @@ export default function Footer() {
                 <ul className="space-y-3">
                   <li>
                     <a 
-                      href="https://app.acuityscheduling.com/schedule.php?owner=36073300&ref=booking_button" 
+                      href="https://pilateswithfadia.as.me/" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300"

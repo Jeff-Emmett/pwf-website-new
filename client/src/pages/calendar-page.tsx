@@ -6,7 +6,7 @@ export default function CalendarPage() {
     document.title = "Pilates with Fadia | Class Schedule & Booking";
     
     // Redirect to Acuity Scheduling after component mounts
-    window.location.href = "https://app.acuityscheduling.com/schedule.php?owner=36073300&ref=booking_button";
+    window.location.href = "https://pilateswithfadia.as.me/";
   }, []);
 
   return (
@@ -20,7 +20,7 @@ export default function CalendarPage() {
           please click the button below.
         </p>
         <a 
-          href="https://app.acuityscheduling.com/schedule.php?owner=36073300&ref=booking_button"
+          href="https://pilateswithfadia.as.me/"
           className="bg-teal text-white font-bold py-3 px-8 rounded-md hover:bg-teal-dark transition duration-300"
           target="_blank"
           rel="noopener noreferrer"

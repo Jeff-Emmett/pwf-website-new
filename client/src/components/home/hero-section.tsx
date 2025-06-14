@@ -18,7 +18,7 @@ export function HeroSection() {
           </h1>
           
           <a
-            href="https://app.acuityscheduling.com/schedule.php?owner=36073300&ref=booking_button"
+            href="https://pilateswithfadia.as.me/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-white font-bold py-6 px-20 rounded-full hover:bg-opacity-90 transition duration-300 text-xl bg-[#916398]"
