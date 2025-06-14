@@ -18,7 +18,7 @@ export function HeroSection() {
           </h1>
           
           <a
-            href="https://pilateswithfadia.as.me/"
+            href="https://pilateswithfadia.setmore.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-white font-bold py-6 px-20 rounded-full hover:bg-opacity-90 transition duration-300 text-xl bg-[#916398]"
