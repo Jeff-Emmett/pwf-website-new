@@ -51,7 +51,7 @@ export function ClassCard({ classData }: ClassCardProps) {
       <img 
         src={getClassImage()} 
         alt={classData.name} 
-        className="w-full h-36 object-cover" 
+        className="w-full h-50 object-cover" 
       />
       <div className="p-4">
         <div className="flex justify-between items-start mb-2">
