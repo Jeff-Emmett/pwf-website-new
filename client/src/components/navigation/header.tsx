@@ -57,13 +57,13 @@ export default function Header() {
                   <Menu className="h-6 w-6" />
                 </button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-teal">
                 <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
                   {navLinks.map((link) => (
                     <SheetClose asChild key={link.path}>
                       <Link 
                         href={link.path}
-                        className={`block px-3 py-2 text-base font-medium ${isActive(link.path)}`}
+                        className={`block px-3 py-2 text-base font-medium text-white hover:text-white hover:text-opacity-80`}
                       >
                         {link.name}
                       </Link>
