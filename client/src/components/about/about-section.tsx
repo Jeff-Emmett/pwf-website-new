@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import FadiaImage from "../../assets/Fadia-167-crop.jpg";
-import FadiaBridgeImage from "@assets/fadia-bridge2_1749866078706.jpg";
+import FadiaBridgeImage from "@assets/fadia-bridge3_1749866400701.jpg";
 import FadiaStretchImage from "@assets/fadia-stretch_1749866078708.jpg";
 
 export function AboutSection() {
