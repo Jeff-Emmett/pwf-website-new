@@ -2,6 +2,7 @@ import { HeroSection } from "@/components/home/hero-section";
 
 import { HomeAboutSection } from "@/components/about/home-about-section";
 import { ClassesSection } from "@/components/classes/classes-section";
+import { TestimonialsSection } from "@/components/testimonials/testimonials-section";
 
 import { ContactSection } from "@/components/contact/contact-section";
 import { CTASection } from "@/components/home/cta-section";
@@ -44,6 +45,7 @@ export default function HomePage() {
       <HeroSection />
       <ClassesSection />
       <HomeAboutSection />
+      <TestimonialsSection />
       <ContactSection />
       <CTASection />
     </main>

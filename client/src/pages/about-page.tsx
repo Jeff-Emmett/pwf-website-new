@@ -1,4 +1,5 @@
 import { AboutSection } from "@/components/about/about-section";
+import { TestimonialsSection } from "@/components/testimonials/testimonials-section";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { useEffect } from "react";
 
@@ -16,6 +17,7 @@ export default function AboutPage() {
     <main>
       <div className="pt-10"></div>
       <AboutSection />
+      <TestimonialsSection />
       <PhotoGallery />
     </main>
   );
