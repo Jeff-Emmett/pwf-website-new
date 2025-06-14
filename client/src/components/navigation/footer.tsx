@@ -74,7 +74,7 @@ export default function Footer() {
             />
             <p className="text-white text-opacity-80 mb-4">Online pilates classes to help you feel stronger and more connected to your body and breath</p>
             
-            <div className="flex space-x-4">
+            <div className="flex justify-center space-x-8">
               <a href="https://www.instagram.com/fadia.elgharib/" target="_blank" rel="noopener noreferrer" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
                 <i className="fab fa-instagram text-2xl"></i>
               </a>
