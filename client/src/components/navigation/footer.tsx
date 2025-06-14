@@ -69,7 +69,7 @@ export default function Footer() {
             <img 
               src={PwF_Logo__square_} 
               alt="Pilates with Fadia" 
-              className="w-36 mb-4"
+              className="w-44 mb-4"
               style={{ filter: "brightness(1.1)" }}
             />
             <p className="text-white text-opacity-80 mb-4">Online pilates classes to help you feel stronger and more connected to your body and breath</p>
