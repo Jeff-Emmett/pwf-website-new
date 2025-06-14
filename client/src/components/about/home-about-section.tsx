@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import FadiaImage from "@assets/Fadia-6_1749838606834.jpg";
+import FadiaImage from "@assets/Fadia-167-crop_1749865267638.jpg";
 
 export function HomeAboutSection() {
   return (
