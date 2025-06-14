@@ -137,13 +137,13 @@ export default function Footer() {
             </div>
             
             {/* Newsletter Signup below links and contact */}
-            <div className="mt-8 pt-6 pb-4 border-t border-white border-opacity-20">
-              <h4 className="font-playfair font-bold text-base mb-4 text-white">Stay in touch with my newsletter</h4>
-              <form onSubmit={handleNewsletterSubmit} className="space-y-4">
+            <div className="mt-6 pt-5 pb-3 border-t border-white border-opacity-20">
+              <h4 className="font-playfair font-bold text-sm mb-3 text-white">Stay in touch with my newsletter</h4>
+              <form onSubmit={handleNewsletterSubmit} className="space-y-3">
                 <input 
                   type="email" 
                   placeholder="Your email address" 
-                  className="w-full px-4 py-3 text-sm bg-white bg-opacity-90 border border-white border-opacity-30 placeholder-gray-500 text-gray-800 focus:outline-none focus:border-white rounded-md"
+                  className="w-full px-3 py-2 text-sm bg-white bg-opacity-90 border border-white border-opacity-30 placeholder-gray-500 text-gray-800 focus:outline-none focus:border-white rounded-md"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -162,7 +162,7 @@ export default function Footer() {
                 
                 <button 
                   type="submit" 
-                  className="w-full px-6 py-3 text-sm bg-purple text-white font-bold hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
+                  className="w-full px-5 py-2 text-sm bg-purple text-white font-bold hover:bg-opacity-90 transition duration-300 rounded-full flex items-center justify-center"
                   disabled={newsletterMutation.isPending}
                 >
                   {newsletterMutation.isPending ? (
