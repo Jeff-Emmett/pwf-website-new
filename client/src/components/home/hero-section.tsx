@@ -32,7 +32,7 @@ export function HeroSection() {
       </div>
       <div className="py-8 text-center bg-[#7ebdc5] text-[#ffffff]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-lg md:text-xl font-normal text-gray-800">
+          <p className="text-lg md:text-xl text-[#ffffff] font-bold">
             Online pilates classes to help you feel stronger and more connected to your body and breath
           </p>
         </div>
