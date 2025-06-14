@@ -1,5 +1,7 @@
 import { Link } from "wouter";
 import FadiaImage from "../../assets/Fadia-167-crop.jpg";
+import FadiaBridgeImage from "@assets/fadia-bridge2_1749866078706.jpg";
+import FadiaStretchImage from "@assets/fadia-stretch_1749866078708.jpg";
 
 export function AboutSection() {
   return (
@@ -7,11 +9,32 @@ export function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 md:pr-12 mb-8 md:mb-0">
-            <img 
-              src={FadiaImage} 
-              alt="Fadia smiling" 
-              className="w-full h-auto rounded-md" 
-            />
+            {/* Top image */}
+            <div className="mb-6">
+              <img 
+                src={FadiaBridgeImage} 
+                alt="Fadia demonstrating bridge pose in a beautiful studio setting" 
+                className="w-full h-auto rounded-md" 
+              />
+            </div>
+            
+            {/* Main center image */}
+            <div className="mb-6">
+              <img 
+                src={FadiaImage} 
+                alt="Fadia smiling" 
+                className="w-full h-auto rounded-md" 
+              />
+            </div>
+            
+            {/* Bottom image */}
+            <div>
+              <img 
+                src={FadiaStretchImage} 
+                alt="Fadia performing a stretching movement during practice" 
+                className="w-full h-auto rounded-md" 
+              />
+            </div>
           </div>
           
           <div className="md:w-1/2">
