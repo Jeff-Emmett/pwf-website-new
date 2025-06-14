@@ -31,7 +31,7 @@ export function TestimonialsSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div className="bg-purple bg-opacity-10 rounded-lg p-6 shadow-sm transition-transform duration-300 hover:scale-105" key={index}>
+            <div className="rounded-lg p-6 shadow-sm transition-transform duration-300 hover:scale-105 bg-[#92bbc45c]" key={index}>
               <Testimonial
                 quote={testimonial.quote}
                 author={testimonial.author}
