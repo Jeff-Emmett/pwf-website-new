@@ -5,8 +5,8 @@ export default function CalendarPage() {
     // Set meta data for SEO
     document.title = "Pilates with Fadia | Class Schedule & Booking";
     
-    // Redirect to Setmore after component mounts
-    window.location.href = "https://pilateswithfadia.setmore.com";
+    // Redirect to Acuity Scheduling after component mounts
+    window.location.href = "https://app.acuityscheduling.com/schedule.php?owner=36073300&ref=booking_button";
   }, []);
 
   return (
@@ -20,7 +20,7 @@ export default function CalendarPage() {
           please click the button below.
         </p>
         <a 
-          href="https://pilateswithfadia.setmore.com"
+          href="https://app.acuityscheduling.com/schedule.php?owner=36073300&ref=booking_button"
           className="bg-teal text-white font-bold py-3 px-8 rounded-md hover:bg-teal-dark transition duration-300"
           target="_blank"
           rel="noopener noreferrer"

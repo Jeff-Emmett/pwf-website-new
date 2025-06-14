@@ -10,7 +10,7 @@ export function CTASection() {
         
         <div className="flex justify-center mb-6">
           <a
-            href="https://pilateswithfadia.setmore.com"
+            href="https://app.acuityscheduling.com/schedule.php?owner=36073300&ref=booking_button"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-rose text-white font-bold py-4 px-10 rounded-full shadow-md hover:bg-opacity-90 transition duration-300 text-lg"
