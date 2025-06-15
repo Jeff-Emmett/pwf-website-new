@@ -19,7 +19,7 @@ export function Testimonial({ quote, author, memberSince, initials, color }: Tes
         </div>
         <div>
           <h5 className="font-playfair">{author}</h5>
-          <p className="text-sm text-gray-500">Member since {memberSince}</p>
+          {memberSince && <p className="text-sm text-gray-500">Member since {memberSince}</p>}
         </div>
       </div>
     </div>
