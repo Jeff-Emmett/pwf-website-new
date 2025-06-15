@@ -45,10 +45,10 @@ export function PhotoGallery() {
                   <i className="fab fa-instagram text-6xl text-pink-500 mb-4"></i>
                   <p className="text-gray-600 mb-6">Follow me on Instagram for daily inspiration, movement tips, and behind-the-scenes content from my classes.</p>
                   <a 
-                    href="https://www.instagram.com/pilateswithfadia/" 
+                    href="https://www.instagram.com/fadia.elgharib/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:from-purple-600 hover:to-pink-600 transition duration-300"
+                    className="inline-flex items-center px-6 py-3 bg-rose text-white font-semibold rounded-full hover:bg-opacity-90 transition duration-300"
                   >
                     <i className="fab fa-instagram mr-2"></i>
                     Visit Instagram
@@ -108,10 +108,10 @@ export function PhotoGallery() {
 
                 <div className="text-center mt-8">
                   <a 
-                    href="https://www.instagram.com/pilateswithfadia/" 
+                    href="https://www.instagram.com/fadia.elgharib/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:from-purple-600 hover:to-pink-600 transition duration-300"
+                    className="inline-flex items-center px-6 py-3 bg-rose text-white font-semibold rounded-full hover:bg-opacity-90 transition duration-300"
                   >
                     <i className="fab fa-instagram mr-2"></i>
                     Follow on Instagram

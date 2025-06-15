@@ -17,7 +17,7 @@ export function TestimonialsSection() {
       color: "purple",
     },
     {
-      quote: "Fadia's classes are unique and challenging. Having had many pilates trainers throughout the years, I can say that Fadia is the only teacher that involved everyone's needs into one routine and focuses on motivating and engaging everyone like no other. Every time, my body felt renewed and better, even if it was online!",
+      quote: "Having had many pilates trainers throughout the years, I can say that Fadia is the only teacher that involved everyone's needs into one routine and focuses on motivating and engaging everyone like no other. Every time, my body felt renewed and better, even if it was online!",
       author: "Leyla from Colombia",
       memberSince: "",
       initials: "LC", 
