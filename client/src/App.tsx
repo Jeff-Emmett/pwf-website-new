@@ -8,10 +8,9 @@ import { AuthProvider } from "@/hooks/use-auth";
 import HomePage from "@/pages/home-page";
 import AboutPage from "@/pages/about-page";
 import ClassesPage from "@/pages/classes-page";
-
 import ContactPage from "@/pages/contact-page";
-
 import CalendarPage from "@/pages/calendar-page";
+import PrivacyPolicyPage from "@/pages/privacy-policy-page";
 import NotFound from "@/pages/not-found";
 import Header from "@/components/navigation/header";
 import Footer from "@/components/navigation/footer";
@@ -26,6 +25,7 @@ function Router() {
         <Route path="/classes" component={ClassesPage} />
         <Route path="/contact" component={ContactPage} />
         <Route path="/calendar" component={CalendarPage} />
+        <Route path="/privacy-policy" component={PrivacyPolicyPage} />
         <Route component={NotFound} />
       </Switch>
       <Footer />

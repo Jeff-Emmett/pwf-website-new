@@ -189,7 +189,7 @@ export default function Footer() {
               &copy; {currentYear} Pilates with Fadia. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 text-sm transition duration-300">Privacy Policy</a>
+              <Link href="/privacy-policy" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 text-sm transition duration-300">Privacy Policy</Link>
               <a href="#" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 text-sm transition duration-300">Terms of Service</a>
               <a href="#" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 text-sm transition duration-300">Cookie Policy</a>
             </div>
