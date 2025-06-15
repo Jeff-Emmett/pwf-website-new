@@ -143,6 +143,44 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Instagram Feed
+  app.get("/api/instagram-feed", async (_req, res) => {
+    try {
+      const instagramAccessToken = process.env.INSTAGRAM_ACCESS_TOKEN;
+      
+      if (!instagramAccessToken) {
+        return res.status(500).json({ 
+          message: "Instagram access token not configured",
+          error: "INSTAGRAM_ACCESS_TOKEN environment variable is required"
+        });
+      }
+
+      // Fetch recent posts from Instagram Basic Display API
+      const response = await fetch(
+        `https://graph.instagram.com/me/media?fields=id,media_type,media_url,permalink,caption,timestamp&access_token=${instagramAccessToken}`
+      );
+
+      if (!response.ok) {
+        throw new Error(`Instagram API error: ${response.status} ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      
+      // Filter out only images and videos, exclude carousels for simplicity
+      const posts = data.data?.filter((post: any) => 
+        post.media_type === 'IMAGE' || post.media_type === 'VIDEO'
+      ).slice(0, 12) || []; // Limit to 12 most recent posts
+
+      res.json(posts);
+    } catch (error) {
+      console.error('Instagram API error:', error);
+      res.status(500).json({ 
+        message: "Failed to fetch Instagram posts",
+        error: error instanceof Error ? error.message : "Unknown error"
+      });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
