@@ -6,15 +6,12 @@ export function PhotoGallery() {
           <h2 className="text-3xl md:text-4xl font-playfair font-semibold text-rose mb-4">
             Follow My Journey
           </h2>
-          <p className="max-w-3xl mx-auto text-gray-600">
-            See the latest from my Pilates practice and teaching on Instagram
-          </p>
         </div>
         
         <div className="flex justify-center">
           <div className="w-full max-w-4xl">
             {/* Instagram Feed Embed */}
-            <div className="bg-gray-50 rounded-lg p-8 text-center">
+            <div className="rounded-lg p-8 text-center bg-[#a3587554]">
               <div className="mb-6">
                 <i className="fab fa-instagram text-6xl text-pink-500 mb-4"></i>
                 <p className="text-gray-600 mb-6">Follow me on Instagram for daily inspiration, movement tips, and behind-the-scenes content from my classes.</p>
