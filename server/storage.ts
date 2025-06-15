@@ -196,7 +196,7 @@ export class MemStorage implements IStorage {
         imageUrl: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f"
       },
       {
-        name: "Reformer",
+        name: "Reformer Classes",
         description: "Equipment-based sessions that enhance resistance training for deeper muscle engagement.",
         duration: 55,
         price: 4000, // $40.00
