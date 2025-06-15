@@ -8,7 +8,7 @@ export default function TermsOfServicePage() {
           </h1>
           
           <div className="bg-gray-100 p-4 rounded-lg mb-8 italic">
-            <strong>Last Updated:</strong> December 2024
+            <strong>Last Updated:</strong> June 2025
           </div>
 
           <p className="text-gray-700 mb-6 leading-relaxed">
