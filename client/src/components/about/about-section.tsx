@@ -9,14 +9,7 @@ export function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 md:pr-12 mb-8 md:mb-0">
-            {/* Top image */}
-            <div className="mb-6">
-              <img 
-                src={FadiaBridgeImage} 
-                alt="Fadia demonstrating bridge pose in a beautiful studio setting" 
-                className="w-full h-auto rounded-md" 
-              />
-            </div>
+            
             
             {/* Main center image */}
             <div className="mb-6">

@@ -19,9 +19,6 @@ export function CTASection() {
           </a>
         </div>
       </div>
-      <div className="w-full">
-        <hr className="border-white border-opacity-30" />
-      </div>
     </section>
   );
 }
