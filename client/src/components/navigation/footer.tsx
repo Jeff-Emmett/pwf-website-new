@@ -190,8 +190,8 @@ export default function Footer() {
             </p>
             <div className="flex space-x-6">
               <Link href="/privacy-policy" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 text-sm transition duration-300">Privacy Policy</Link>
-              <a href="#" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 text-sm transition duration-300">Terms of Service</a>
-              <a href="#" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 text-sm transition duration-300">Cookie Policy</a>
+              <Link href="/terms-of-service" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 text-sm transition duration-300">Terms of Service</Link>
+              <Link href="/cookie-policy" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 text-sm transition duration-300">Cookie Policy</Link>
             </div>
           </div>
         </div>

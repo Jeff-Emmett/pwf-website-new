@@ -11,6 +11,8 @@ import ClassesPage from "@/pages/classes-page";
 import ContactPage from "@/pages/contact-page";
 import CalendarPage from "@/pages/calendar-page";
 import PrivacyPolicyPage from "@/pages/privacy-policy-page";
+import TermsOfServicePage from "@/pages/terms-of-service-page";
+import CookiePolicyPage from "@/pages/cookie-policy-page";
 import NotFound from "@/pages/not-found";
 import Header from "@/components/navigation/header";
 import Footer from "@/components/navigation/footer";
@@ -26,6 +28,8 @@ function Router() {
         <Route path="/contact" component={ContactPage} />
         <Route path="/calendar" component={CalendarPage} />
         <Route path="/privacy-policy" component={PrivacyPolicyPage} />
+        <Route path="/terms-of-service" component={TermsOfServicePage} />
+        <Route path="/cookie-policy" component={CookiePolicyPage} />
         <Route component={NotFound} />
       </Switch>
       <Footer />
