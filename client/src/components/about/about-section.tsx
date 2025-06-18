@@ -18,7 +18,7 @@ export function AboutSection() {
           
           <div className="md:w-1/2">
             <div className="prose max-w-none">
-              <h3 className="text-2xl font-playfair font-semibold text-purple mb-4">My Pilates Story</h3>
+              <h3 className="text-3xl font-playfair font-semibold text-purple mb-4 text-center">My Pilates Story</h3>
               <p className="text-gray-600 mb-4">
                 I came to movement as a way to feel good in my body and begin healing emotions I hadn't yet processed. It started simply—with home yoga classes—and slowly turned into something much deeper.
               </p>

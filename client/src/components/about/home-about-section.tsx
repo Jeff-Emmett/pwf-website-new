@@ -16,7 +16,7 @@ export function HomeAboutSection() {
           
           <div className="md:w-1/2">
             <div className="prose max-w-none">
-              <h3 className="text-2xl font-playfair font-semibold text-purple mb-4">Meet Fadia</h3>
+              <h3 className="text-3xl font-playfair font-semibold text-purple mb-6 text-center">Meet Fadia</h3>
               <p className="text-gray-600 mb-4">
                 Fadia is a certified Pilates instructor, former lawyer, and community builder with a passion for helping people connect with their bodies through mindful movement.
               </p>

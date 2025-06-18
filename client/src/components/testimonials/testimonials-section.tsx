@@ -10,10 +10,10 @@ export function TestimonialsSection() {
       color: "teal",
     },
     {
-      quote: "I've seen incredible improvements in my posture and core strength since joining Fadia's classes. She truly understands how to help each individual.",
-      author: "Ahmed M.",
+      quote: "Fadia’s calm and soothingly cueing had me go through the flow steadily, challenging my muscles without even realizing and that felt great!",
+      author: "Sara from Cairo",
       memberSince: "",
-      initials: "AM",
+      initials: "SC",
       color: "purple",
     },
     {
