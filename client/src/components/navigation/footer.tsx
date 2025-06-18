@@ -126,7 +126,9 @@ export default function Footer() {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <i className="fas fa-map-marker-alt mt-1 mr-2 text-white"></i>
-                    <span className="text-white text-opacity-70">Nun Center<br/>Zamalek, Cairo, Egypt</span>
+                    <a href="https://nuncenter.com/" target="_blank" rel="noopener noreferrer" className="text-white text-opacity-70 hover:text-white hover:text-opacity-100 transition duration-300">
+                      Nun Center<br/>Zamalek, Cairo, Egypt
+                    </a>
                   </li>
                   <li className="flex items-center">
                     <i className="fas fa-envelope mr-2 text-white"></i>
