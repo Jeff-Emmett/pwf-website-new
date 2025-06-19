@@ -24,10 +24,7 @@ jobs:
     - name: Build project
       run: npm run build
     
+    # This step will trigger Vercel deployment via GitHub integration
+    # Make sure you have connected your GitHub repo to Vercel
     - name: Deploy to Vercel
-      uses: amondnet/vercel-action@v25
-      with:
-        vercel-token: ${{ secrets.VERCEL_TOKEN }}
-        vercel-org-id: ${{ secrets.ORG_ID }}
-        vercel-project-id: ${{ secrets.PROJECT_ID }}
-        vercel-args: '--prod' 
+      run: echo "Deployment will be handled by Vercel GitHub integration" 
