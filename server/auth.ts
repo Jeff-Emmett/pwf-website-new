@@ -4,12 +4,17 @@ import { Express } from "express";
 import session from "express-session";
 import { scrypt, randomBytes, timingSafeEqual } from "crypto";
 import { promisify } from "util";
-import { storage } from "./storage";
-import { User as SelectUser, insertUserSchema } from "@shared/schema";
+import { storage, User } from "./storage";
 
 declare global {
   namespace Express {
-    interface User extends SelectUser {}
+    interface User {
+      id: number;
+      username: string;
+      email: string;
+      fullName?: string;
+      createdAt: Date;
+    }
   }
 }
 
@@ -21,11 +26,10 @@ async function hashPassword(password: string) {
   return `${buf.toString("hex")}.${salt}`;
 }
 
-async function comparePasswords(supplied: string, stored: string) {
-  const [hashed, salt] = stored.split(".");
-  const hashedBuf = Buffer.from(hashed, "hex");
-  const suppliedBuf = (await scryptAsync(supplied, salt, 64)) as Buffer;
-  return timingSafeEqual(hashedBuf, suppliedBuf);
+async function comparePasswords(password: string, hashedPassword: string) {
+  const [hash, salt] = hashedPassword.split(".");
+  const buf = (await scryptAsync(password, salt, 64)) as Buffer;
+  return timingSafeEqual(buf, Buffer.from(hash, "hex"));
 }
 
 export function setupAuth(app: Express) {
@@ -66,23 +70,34 @@ export function setupAuth(app: Express) {
 
   app.post("/api/register", async (req, res, next) => {
     try {
-      const validatedUser = insertUserSchema.parse(req.body);
+      const { username, email, password, fullName } = req.body;
+      
+      // Basic validation
+      if (!username || !email || !password) {
+        return res.status(400).json({ message: "Username, email, and password are required" });
+      }
+      
+      if (password.length < 8) {
+        return res.status(400).json({ message: "Password must be at least 8 characters" });
+      }
       
       // Check if username already exists
-      const existingUserByUsername = await storage.getUserByUsername(validatedUser.username);
+      const existingUserByUsername = await storage.getUserByUsername(username);
       if (existingUserByUsername) {
         return res.status(400).json({ message: "Username already exists" });
       }
       
       // Check if email already exists
-      const existingUserByEmail = await storage.getUserByEmail(validatedUser.email);
+      const existingUserByEmail = await storage.getUserByEmail(email);
       if (existingUserByEmail) {
         return res.status(400).json({ message: "Email already in use" });
       }
 
       const user = await storage.createUser({
-        ...validatedUser,
-        password: await hashPassword(validatedUser.password),
+        username,
+        email,
+        password: await hashPassword(password),
+        fullName
       });
 
       req.login(user, (err) => {
@@ -98,7 +113,7 @@ export function setupAuth(app: Express) {
   });
 
   app.post("/api/login", (req, res, next) => {
-    passport.authenticate("local", (err: Error, user: SelectUser) => {
+    passport.authenticate("local", (err: Error, user: User) => {
       if (err) return next(err);
       if (!user) {
         return res.status(401).json({ message: "Invalid username or password" });
@@ -121,11 +136,12 @@ export function setupAuth(app: Express) {
     });
   });
 
-  app.get("/api/user", (req, res) => {
-    if (!req.isAuthenticated()) return res.sendStatus(401);
-    
-    // Return user without password
-    const { password, ...userWithoutPassword } = req.user;
-    res.json(userWithoutPassword);
+  app.get("/api/me", (req, res) => {
+    if (req.isAuthenticated()) {
+      const { password, ...userWithoutPassword } = req.user as User;
+      res.json(userWithoutPassword);
+    } else {
+      res.status(401).json({ message: "Not authenticated" });
+    }
   });
 }

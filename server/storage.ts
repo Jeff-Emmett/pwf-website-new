@@ -1,43 +1,82 @@
-import { users, classes, bookings, newsletters, contactMessages } from "@shared/schema";
-import type { 
-  User, InsertUser, 
-  Class, InsertClass,
-  Booking, InsertBooking,
-  Newsletter, InsertNewsletter,
-  ContactMessage, InsertContactMessage
-} from "@shared/schema";
 import session from "express-session";
 import createMemoryStore from "memorystore";
 
 const MemoryStore = createMemoryStore(session);
+
+// Simple TypeScript interfaces for in-memory data
+export interface User {
+  id: number;
+  username: string;
+  email: string;
+  password: string;
+  fullName?: string;
+  createdAt: Date;
+}
+
+export interface Class {
+  id: number;
+  name: string;
+  description: string;
+  duration: number;
+  price: number;
+  capacity: number;
+  classType: string;
+  imageUrl?: string;
+}
+
+export interface Booking {
+  id: number;
+  userId: number;
+  classId: number;
+  date: Date;
+  paid: boolean;
+  status: string;
+  createdAt: Date;
+}
+
+export interface Newsletter {
+  id: number;
+  email: string;
+  agreedToTerms: boolean;
+  createdAt: Date;
+}
+
+export interface ContactMessage {
+  id: number;
+  name: string;
+  email: string;
+  subject?: string;
+  message: string;
+  createdAt: Date;
+}
 
 export interface IStorage {
   // User Management
   getUser(id: number): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
   getUserByEmail(email: string): Promise<User | undefined>;
-  createUser(user: InsertUser): Promise<User>;
+  createUser(user: Omit<User, 'id' | 'createdAt'>): Promise<User>;
   
   // Class Management
   getClasses(): Promise<Class[]>;
   getClass(id: number): Promise<Class | undefined>;
-  createClass(classData: InsertClass): Promise<Class>;
+  createClass(classData: Omit<Class, 'id'>): Promise<Class>;
   
   // Booking Management
   getBookings(userId?: number): Promise<Booking[]>;
   getBooking(id: number): Promise<Booking | undefined>;
-  createBooking(booking: InsertBooking): Promise<Booking>;
+  createBooking(booking: Omit<Booking, 'id' | 'createdAt'>): Promise<Booking>;
   updateBookingStatus(id: number, status: string): Promise<Booking | undefined>;
   
   // Newsletter Management
   getNewsletterByEmail(email: string): Promise<Newsletter | undefined>;
-  createNewsletter(newsletter: InsertNewsletter): Promise<Newsletter>;
+  createNewsletter(newsletter: Omit<Newsletter, 'id' | 'createdAt'>): Promise<Newsletter>;
   
   // Contact Management
-  createContactMessage(message: InsertContactMessage): Promise<ContactMessage>;
+  createContactMessage(message: Omit<ContactMessage, 'id' | 'createdAt'>): Promise<ContactMessage>;
 
   // Session Store
-  sessionStore: session.SessionStore;
+  sessionStore: any;
 }
 
 export class MemStorage implements IStorage {
@@ -52,7 +91,7 @@ export class MemStorage implements IStorage {
   currentBookingId: number;
   currentNewsletterId: number;
   currentContactMessageId: number;
-  sessionStore: session.SessionStore;
+  sessionStore: any;
 
   constructor() {
     this.users = new Map();
@@ -92,7 +131,7 @@ export class MemStorage implements IStorage {
     );
   }
 
-  async createUser(insertUser: InsertUser): Promise<User> {
+  async createUser(insertUser: Omit<User, 'id' | 'createdAt'>): Promise<User> {
     const id = this.currentUserId++;
     const user: User = { 
       ...insertUser, 
@@ -112,7 +151,7 @@ export class MemStorage implements IStorage {
     return this.classes.get(id);
   }
 
-  async createClass(classData: InsertClass): Promise<Class> {
+  async createClass(classData: Omit<Class, 'id'>): Promise<Class> {
     const id = this.currentClassId++;
     const newClass: Class = { ...classData, id };
     this.classes.set(id, newClass);
@@ -132,7 +171,7 @@ export class MemStorage implements IStorage {
     return this.bookings.get(id);
   }
 
-  async createBooking(booking: InsertBooking): Promise<Booking> {
+  async createBooking(booking: Omit<Booking, 'id' | 'createdAt'>): Promise<Booking> {
     const id = this.currentBookingId++;
     const newBooking: Booking = { 
       ...booking, 
@@ -160,7 +199,7 @@ export class MemStorage implements IStorage {
     );
   }
 
-  async createNewsletter(newsletter: InsertNewsletter): Promise<Newsletter> {
+  async createNewsletter(newsletter: Omit<Newsletter, 'id' | 'createdAt'>): Promise<Newsletter> {
     const id = this.currentNewsletterId++;
     const newNewsletter: Newsletter = { 
       ...newsletter, 
@@ -172,7 +211,7 @@ export class MemStorage implements IStorage {
   }
 
   // Contact Management
-  async createContactMessage(message: InsertContactMessage): Promise<ContactMessage> {
+  async createContactMessage(message: Omit<ContactMessage, 'id' | 'createdAt'>): Promise<ContactMessage> {
     const id = this.currentContactMessageId++;
     const newMessage: ContactMessage = { 
       ...message, 
@@ -185,7 +224,7 @@ export class MemStorage implements IStorage {
 
   // Seed default data
   private seedClasses() {
-    const defaultClasses: InsertClass[] = [
+    const defaultClasses: Omit<Class, 'id'>[] = [
       {
         name: "Mat Pilates",
         description: "A foundational class focusing on core strength, proper alignment, and mindful movement patterns.",

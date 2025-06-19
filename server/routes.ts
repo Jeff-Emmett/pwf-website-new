@@ -3,13 +3,27 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { setupAuth } from "./auth";
 import { subscribeToMailchimp } from "./mailchimp";
-import { sendEmail } from "./email";
-import { 
-  insertNewsletterSchema, 
-  insertContactMessageSchema,
-  insertBookingSchema
-} from "@shared/schema";
 import { z } from "zod";
+
+// Simple validation schemas (since we removed the shared schema)
+const newsletterSchema = z.object({
+  email: z.string().email(),
+  agreedToTerms: z.boolean()
+});
+
+const contactMessageSchema = z.object({
+  name: z.string().min(2).max(100),
+  email: z.string().email(),
+  subject: z.string().min(2).max(200).optional(),
+  message: z.string().min(10).max(2000)
+});
+
+const bookingSchema = z.object({
+  classId: z.number(),
+  date: z.string(),
+  paid: z.boolean().default(false),
+  status: z.string().default("pending")
+});
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Set up authentication routes
@@ -53,7 +67,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
     
     try {
-      const bookings = await storage.getBookings(req.user.id);
+      const user = req.user as any;
+      const bookings = await storage.getBookings(user.id);
       res.json(bookings);
     } catch (error) {
       res.status(500).json({ message: "Failed to fetch bookings" });
@@ -66,12 +81,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
     
     try {
-      const bookingData = insertBookingSchema.parse({
-        ...req.body,
-        userId: req.user.id
-      });
+      const user = req.user as any;
+      const bookingData = bookingSchema.parse(req.body);
       
-      const booking = await storage.createBooking(bookingData);
+      const booking = await storage.createBooking({
+        ...bookingData,
+        userId: user.id,
+        date: new Date(bookingData.date)
+      });
       res.status(201).json(booking);
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -84,7 +101,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Newsletter signup
   app.post("/api/newsletter", async (req, res) => {
     try {
-      const newsletterData = insertNewsletterSchema.parse(req.body);
+      const newsletterData = newsletterSchema.parse(req.body);
       
       // Check if email already exists in our local database
       const existingNewsletter = await storage.getNewsletterByEmail(newsletterData.email);
@@ -120,64 +137,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form
   app.post("/api/contact", async (req, res) => {
     try {
-      const contactData = insertContactMessageSchema.parse(req.body);
+      const contactData = contactMessageSchema.parse(req.body);
       
-      // Always store in database first
+      // Store in database
       const message = await storage.createContactMessage(contactData);
       
-      // Add a success message with clear next steps for Fadia
-      console.log(`Contact form submission stored in database from ${contactData.name} (${contactData.email})`);
+      // Log the contact request
+      console.log(`Contact form submission from ${contactData.name} (${contactData.email})`);
       console.log(`Subject: ${contactData.subject || "No subject"}`);
-      console.log(`This message will be forwarded to hello@pilateswithfadia.com`);
+      console.log(`Message: ${contactData.message}`);
       
-      // Important information for the user in the response
       res.status(201).json({ 
         message: "Message sent successfully",
-        info: "Your message has been received and will be sent to hello@pilateswithfadia.com"
+        info: "Your message has been received and will be reviewed shortly."
       });
     } catch (error) {
       if (error instanceof z.ZodError) {
         return res.status(400).json({ message: "Invalid contact data", errors: error.errors });
       }
       res.status(500).json({ message: "Failed to send message" });
-    }
-  });
-
-  // Instagram Feed
-  app.get("/api/instagram-feed", async (_req, res) => {
-    try {
-      const instagramAccessToken = process.env.INSTAGRAM_ACCESS_TOKEN;
-      
-      if (!instagramAccessToken) {
-        return res.status(500).json({ 
-          message: "Instagram access token not configured",
-          error: "INSTAGRAM_ACCESS_TOKEN environment variable is required"
-        });
-      }
-
-      // Fetch recent posts from Instagram Basic Display API
-      const response = await fetch(
-        `https://graph.instagram.com/me/media?fields=id,media_type,media_url,permalink,caption,timestamp&access_token=${instagramAccessToken}`
-      );
-
-      if (!response.ok) {
-        throw new Error(`Instagram API error: ${response.status} ${response.statusText}`);
-      }
-
-      const data = await response.json();
-      
-      // Filter out only images and videos, exclude carousels for simplicity
-      const posts = data.data?.filter((post: any) => 
-        post.media_type === 'IMAGE' || post.media_type === 'VIDEO'
-      ).slice(0, 12) || []; // Limit to 12 most recent posts
-
-      res.json(posts);
-    } catch (error) {
-      console.error('Instagram API error:', error);
-      res.status(500).json({ 
-        message: "Failed to fetch Instagram posts",
-        error: error instanceof Error ? error.message : "Unknown error"
-      });
     }
   });
 
