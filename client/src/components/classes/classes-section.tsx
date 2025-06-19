@@ -2,12 +2,17 @@ import { ClassCard } from "./class-card";
 import { useQuery } from "@tanstack/react-query";
 import { Class } from "@/lib/schema";
 import { Skeleton } from "@/components/ui/skeleton";
+import { apiRequest } from "@/lib/queryClient";
 import FadiaClassImage from "../../assets/Fadia-156.jpg";
 
 
 export function ClassesSection() {
   const { data: classes, isLoading, error } = useQuery<Class[]>({
     queryKey: ["/api/classes"],
+    queryFn: async () => {
+      const res = await apiRequest("GET", "/api/classes");
+      return await res.json();
+    },
   });
   
   return (
