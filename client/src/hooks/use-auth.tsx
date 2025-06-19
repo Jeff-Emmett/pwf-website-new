@@ -4,12 +4,11 @@ import {
   useMutation,
   UseMutationResult,
 } from "@tanstack/react-query";
-import { insertUserSchema, User as SelectUser, InsertUser, Login } from "@shared/schema";
-import { getQueryFn, apiRequest, queryClient } from "../lib/queryClient";
+import { apiRequest, getQueryFn, queryClient } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
-
-type User = Omit<SelectUser, "password">;
+import { insertUserSchema, User, InsertUser, Login } from "@/lib/schema";
+import { Loader2 } from "lucide-react";
 
 type AuthContextType = {
   user: User | null;
@@ -52,7 +51,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       queryClient.setQueryData(["/api/user"], user);
       toast({
         title: "Login successful",
-        description: `Welcome back, ${user.fullName || user.username}!`,
+        description: `Welcome back, ${user.name}!`,
       });
     },
     onError: (error: Error) => {

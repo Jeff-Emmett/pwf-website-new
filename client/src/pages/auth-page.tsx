@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useAuth, registrationSchema, RegistrationData } from "@/hooks/use-auth";
 import { useLocation } from "wouter";
-import { loginSchema, Login } from "@shared/schema";
+import { loginSchema, Login } from "@/lib/schema";
 import { 
   Form, 
   FormControl, 
@@ -44,7 +44,7 @@ export default function AuthPage() {
   const loginForm = useForm<Login>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      username: "",
+      email: "",
       password: "",
     },
   });
@@ -53,9 +53,8 @@ export default function AuthPage() {
   const registerForm = useForm<RegistrationData>({
     resolver: zodResolver(registrationSchema),
     defaultValues: {
-      username: "",
       email: "",
-      fullName: "",
+      name: "",
       password: "",
       confirmPassword: "",
     },
@@ -104,12 +103,12 @@ export default function AuthPage() {
                       <form onSubmit={loginForm.handleSubmit(onLoginSubmit)} className="space-y-6">
                         <FormField
                           control={loginForm.control}
-                          name="username"
+                          name="email"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Username</FormLabel>
+                              <FormLabel>Email</FormLabel>
                               <FormControl>
-                                <Input placeholder="Enter your username" {...field} />
+                                <Input placeholder="Enter your email" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -166,19 +165,6 @@ export default function AuthPage() {
                       <form onSubmit={registerForm.handleSubmit(onRegisterSubmit)} className="space-y-6">
                         <FormField
                           control={registerForm.control}
-                          name="username"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Username</FormLabel>
-                              <FormControl>
-                                <Input placeholder="Choose a username" {...field} />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        <FormField
-                          control={registerForm.control}
                           name="email"
                           render={({ field }) => (
                             <FormItem>
@@ -192,12 +178,12 @@ export default function AuthPage() {
                         />
                         <FormField
                           control={registerForm.control}
-                          name="fullName"
+                          name="name"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Full Name</FormLabel>
+                              <FormLabel>Name</FormLabel>
                               <FormControl>
-                                <Input placeholder="Enter your full name" {...field} value={typeof field.value === 'string' ? field.value : ''} />
+                                <Input placeholder="Enter your name" {...field} value={typeof field.value === 'string' ? field.value : ''} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>

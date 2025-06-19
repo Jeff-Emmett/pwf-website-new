@@ -1,4 +1,4 @@
-import { Class } from "@shared/schema";
+import { Class } from "@/lib/schema";
 import { Link } from "wouter";
 import FadiaGardenImage from "@assets/fadia-garden_1749836720986.jpg";
 import PilatesClassImage from "@assets/pilates_class_1749837680834.jpeg";

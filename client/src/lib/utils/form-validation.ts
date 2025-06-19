@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { insertUserSchema, insertContactMessageSchema, insertNewsletterSchema } from "@shared/schema";
+import { insertUserSchema, insertContactMessageSchema, insertNewsletterSchema } from "@/lib/schema";
 
 /**
  * Extended registration schema with password confirmation
