@@ -168,7 +168,7 @@ export function NewsletterSection() {
         </div>
         
         <div className="max-w-2xl mx-auto">
-          <form className="bg-white p-8 shadow-sm" onSubmit={handleSubmit}>
+          <form className="bg-white rounded-lg shadow-lg p-8" style={{ backgroundColor: '#fff' }} onSubmit={handleSubmit}>
             <div className="flex flex-col mb-6">
               <label htmlFor="email" className="mb-2 text-gray-700 font-medium">Email Address</label>
               <input 
