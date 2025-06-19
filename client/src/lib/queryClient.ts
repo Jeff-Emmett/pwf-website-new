@@ -44,11 +44,11 @@ export const getQueryFn: <T>(options: {
 export const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      queryFn: getQueryFn({ on401: "throw" }),
+      retry: false,
       refetchInterval: false,
       refetchOnWindowFocus: false,
       staleTime: Infinity,
-      retry: false,
+      gcTime: 5 * 60 * 1000, // 5 minutes
     },
     mutations: {
       retry: false,

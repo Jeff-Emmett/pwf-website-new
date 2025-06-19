@@ -1,8 +1,12 @@
 import type { Config } from "tailwindcss";
+import path from "path";
 
 export default {
   darkMode: ["class"],
-  content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    path.resolve(__dirname, "index.html"),
+    path.resolve(__dirname, "src/**/*.{js,jsx,ts,tsx}")
+  ],
   theme: {
     extend: {
       borderRadius: {
@@ -92,5 +96,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
