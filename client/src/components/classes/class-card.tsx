@@ -1,3 +1,4 @@
+import React from "react";
 import { StaticClass } from "@/lib/static-data";
 import { Link } from "wouter";
 import FadiaGardenImage from "@assets/fadia-garden_1749836720986.jpg";

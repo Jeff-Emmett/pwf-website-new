@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { HeroSection } from "@/components/home/hero-section";
 
 import { HomeAboutSection } from "@/components/about/home-about-section";
@@ -5,7 +6,6 @@ import { ClassesSection } from "@/components/classes/classes-section";
 import { TestimonialsSection } from "@/components/testimonials/testimonials-section";
 
 import { ContactSection } from "@/components/contact/contact-section";
-import { useEffect } from "react";
 
 export default function HomePage() {
   // Set meta data for SEO

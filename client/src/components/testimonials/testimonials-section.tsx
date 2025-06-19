@@ -1,3 +1,4 @@
+import React from "react";
 import { Testimonial } from "@/components/community/testimonial";
 
 export function TestimonialsSection() {
@@ -10,7 +11,7 @@ export function TestimonialsSection() {
       color: "teal",
     },
     {
-      quote: "Fadia’s calm and soothingly cueing had me go through the flow steadily, challenging my muscles without even realizing and that felt great!",
+      quote: "Fadia's calm and soothing cueing had me go through the flow steadily, challenging my muscles without even realizing and that felt great!",
       author: "Sara from Cairo",
       memberSince: "",
       initials: "SC",
@@ -31,7 +32,7 @@ export function TestimonialsSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div className="rounded-lg p-6 shadow-sm transition-transform duration-300 hover:scale-105 bg-[#92bbc45c]" key={index}>
+            <div className="rounded-lg p-6 shadow-sm transition-transform duration-300 hover:scale-105 bg-[#92bbc45c] flex flex-col h-full" key={index}>
               <Testimonial
                 quote={testimonial.quote}
                 author={testimonial.author}

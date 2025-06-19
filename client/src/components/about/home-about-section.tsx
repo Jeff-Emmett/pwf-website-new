@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "wouter";
 import FadiaImage from "@assets/Fadia-167-crop.jpg";
 
