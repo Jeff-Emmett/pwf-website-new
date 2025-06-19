@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Calendar } from "@/components/ui/calendar";
-import { Class, insertBookingSchema } from "@shared/schema";
+import { Class, insertBookingSchema } from "@/lib/schema";
 import { apiRequest, queryClient } from "@/lib/queryClient";
 import { useMutation } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";

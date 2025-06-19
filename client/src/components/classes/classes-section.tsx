@@ -1,6 +1,6 @@
 import { ClassCard } from "./class-card";
 import { useQuery } from "@tanstack/react-query";
-import { Class } from "@shared/schema";
+import { Class } from "@/lib/schema";
 import { Skeleton } from "@/components/ui/skeleton";
 import FadiaClassImage from "../../assets/Fadia-156.jpg";
 
