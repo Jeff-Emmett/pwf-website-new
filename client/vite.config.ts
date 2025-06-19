@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [
     react(),
   ],
-  base: "./",
   root: path.resolve(__dirname),
   resolve: {
     alias: {
