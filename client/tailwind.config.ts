@@ -5,7 +5,9 @@ export default {
   darkMode: ["class"],
   content: [
     path.resolve(__dirname, "index.html"),
-    path.resolve(__dirname, "src/**/*.{js,jsx,ts,tsx}")
+    path.resolve(__dirname, "src/**/*.{js,jsx,ts,tsx}"),
+    path.resolve(__dirname, "src/**/*.{html,js,jsx,ts,tsx}"),
+    path.resolve(__dirname, "../**/*.{js,jsx,ts,tsx}"),
   ],
   theme: {
     extend: {
