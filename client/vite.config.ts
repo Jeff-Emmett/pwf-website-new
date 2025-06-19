@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [
     react(),
   ],
+  base: "./",
   root: path.resolve(__dirname),
   resolve: {
     alias: {
@@ -17,6 +18,14 @@ export default defineConfig({
   build: {
     outDir: "dist",
     emptyOutDir: true,
+    assetsDir: "assets",
+    rollupOptions: {
+      output: {
+        assetFileNames: "assets/[name]-[hash][extname]",
+        chunkFileNames: "assets/[name]-[hash].js",
+        entryFileNames: "assets/[name]-[hash].js",
+      },
+    },
   },
   optimizeDeps: {
     force: true,
