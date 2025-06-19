@@ -1,4 +1,4 @@
-import { Class } from "@/lib/schema";
+import { StaticClass } from "@/lib/static-data";
 import { Link } from "wouter";
 import FadiaGardenImage from "@assets/fadia-garden_1749836720986.jpg";
 import PilatesClassImage from "@assets/pilates_class_1749837680834.jpeg";
@@ -6,7 +6,7 @@ import FadiaPrivateImage from "@assets/Fadia-7_1749842141071.jpg";
 import FadiaBallImage from "@assets/fadia-ball_1749842241591.jpg";
 
 interface ClassCardProps {
-  classData: Class;
+  classData: StaticClass;
 }
 
 export function ClassCard({ classData }: ClassCardProps) {
