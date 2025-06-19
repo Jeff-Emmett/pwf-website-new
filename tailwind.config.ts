@@ -4,7 +4,12 @@ export default {
   darkMode: ["class"],
   content: [
     "./client/index.html",
-    "./client/src/**/*.{js,jsx,ts,tsx,html}",
+    "./client/src/**/*.{js,jsx,ts,tsx}",
+    "./client/src/**/*.{html,js,jsx,ts,tsx}",
+    "./client/src/components/**/*.{js,jsx,ts,tsx}",
+    "./client/src/pages/**/*.{js,jsx,ts,tsx}",
+    "./client/src/hooks/**/*.{js,jsx,ts,tsx}",
+    "./client/src/lib/**/*.{js,jsx,ts,tsx}",
   ],
   safelist: [
     // Layout
@@ -20,10 +25,14 @@ export default {
     'text-white', 'text-black', 'text-gray-500', 'text-gray-600', 'text-gray-700', 'text-gray-800', 'text-gray-900',
     'bg-teal', 'bg-purple', 'bg-rose', 'text-teal', 'text-purple', 'text-rose',
     'bg-teal-light', 'bg-purple-light', 'bg-rose-light',
+    'bg-opacity-20', 'bg-opacity-30', 'bg-opacity-90',
+    'text-opacity-70', 'text-opacity-80', 'text-opacity-100',
+    'border-opacity-20', 'border-opacity-30',
     // Typography
     'text-xs', 'text-sm', 'text-base', 'text-lg', 'text-xl', 'text-2xl', 'text-3xl', 'text-4xl', 'text-5xl',
     'font-normal', 'font-medium', 'font-semibold', 'font-bold',
     'text-left', 'text-center', 'text-right',
+    'font-playfair', 'font-raleway', 'font-aref', 'font-cairo',
     // Flexbox
     'flex-row', 'flex-col', 'items-start', 'items-center', 'items-end', 'items-stretch',
     'justify-start', 'justify-center', 'justify-end', 'justify-between', 'justify-around',
@@ -53,6 +62,11 @@ export default {
     'overflow-hidden', 'overflow-auto', 'overflow-x-auto', 'overflow-y-auto',
     // Display
     'block', 'inline-block', 'inline', 'flex', 'inline-flex', 'grid', 'hidden',
+    // Transitions
+    'transition-all', 'transition-colors', 'transition-transform', 'transition-opacity',
+    'duration-200', 'duration-300',
+    // Hover states
+    'hover:bg-opacity-90', 'hover:text-white', 'hover:text-opacity-100', 'hover:scale-105',
     // Responsive prefixes
     'sm:', 'md:', 'lg:', 'xl:', '2xl:',
   ],
@@ -123,20 +137,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
@@ -146,4 +152,4 @@ export default {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+} satisfies Config; 

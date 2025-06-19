@@ -1,3 +1,5 @@
+import React from "react";
+
 export function ContactSection() {
   return (
     <section className="pt-6 pb-12 bg-white">

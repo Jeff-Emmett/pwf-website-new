@@ -1,3 +1,4 @@
+import React from "react";
 import { ClassCard } from "./class-card";
 import { STATIC_CLASSES } from "@/lib/static-data";
 

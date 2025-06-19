@@ -1,3 +1,5 @@
+import React from "react";
+
 interface TestimonialProps {
   quote: string;
   author: string;
@@ -8,12 +10,14 @@ interface TestimonialProps {
 
 export function Testimonial({ quote, author, memberSince, initials, color }: TestimonialProps) {
   return (
-    <div className="bg-transparent text-left">
-      <p className="text-gray-700 mb-6 italic">
-        "{quote}"
-      </p>
+    <div className="bg-transparent text-left flex flex-col h-full">
+      <div className="flex-grow">
+        <p className="text-gray-700 mb-6 italic">
+          "{quote}"
+        </p>
+      </div>
       
-      <div className="flex items-center">
+      <div className="flex items-center mt-auto">
         <div className={`w-10 h-10 rounded-full flex items-center justify-center mr-3 bg-${color} bg-opacity-20 text-${color}`}>
           <span>{initials}</span>
         </div>
